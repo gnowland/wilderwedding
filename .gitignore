@@ -22,9 +22,16 @@ sitemap.xml.gz
 ###
 .DS_Store
 *alias
+thumbs.db
+__MACOSX
+._*
 
 #####################################################################
 # Sublime Text
 ###
 *.sublime-workspace
 sftp-config.json
+
+# ignore logs 
+.ftpquota
+/.idea/
