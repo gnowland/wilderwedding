@@ -1,210 +1,189 @@
 <?php
+ob_start();
+/*********************
+INCLUDE NEEDED FILES
+*********************/
 
-/**
- * Big Blank functions and definitions
- *
- * Set up the theme and provides some helper functions, which are used in the
- * theme as custom template tags. Others are attached to action and filter
- * hooks in WordPress to change core functionality.
- *
- * When using a child theme you can override certain functions (those wrapped
- * in a function_exists() call) by defining them first in your child theme's
- * functions.php file. The child theme's functions.php file is included before
- * the parent theme's file, so the child theme functions would be used.
- *
- * @link http://codex.wordpress.org/Theme_Development
- * @link http://codex.wordpress.org/Child_Themes
- *
- * Functions that are not pluggable (not wrapped in function_exists()) are
- * instead attached to a filter or action hook.
- *
- * For more information on hooks, actions, and filters,
- * @link http://codex.wordpress.org/Plugin_API
- *
- */
-/**
- * Set up the content width value based on the theme's design.
- *
- * @see bigblank_content_width()
- *
- */
-if (!isset($content_width)) {
-    $content_width = 960;
-}
-/**
- * Big Blank only works in WordPress 3.8 or later.
- */
-if (version_compare($GLOBALS['wp_version'], '3.8', '<')) {
-    require_once(get_template_directory() . '/inc/admin-back-compat.php');
-}
+// LOAD JOINTSWP CORE (if you remove this, the theme will break)
+require_once(get_template_directory().'/library/joints.php'); 
 
-/**
- * Download all the plugins required for our theme to work properly
- * @link http://tgmpluginactivation.com/
- */
-require_once(get_template_directory() . '/inc/admin-theme-plugins.php');
+// USE THIS TEMPLATE TO CREATE CUSTOM POST TYPES EASILY
+require_once(get_template_directory().'/library/custom-post-type.php'); // you can disable this if you like
 
+// CUSTOMIZE THE WORDPRESS ADMIN (off by default)
+// require_once(get_template_directory().'/library/admin.php'); 
 
-if (!function_exists('bigblank_setup')) :
+// SUPPORT FOR OTHER LANGUAGES (off by default)
+// require_once(get_template_directory().'/library/translation/translation.php'); 
 
-    /**
-     * Big Blank setup.
-     *
-     * Set up theme defaults and registers support for various WordPress features.
-     *
-     * Note that this function is hooked into the after_setup_theme hook, which
-     * runs before the init hook. The init hook is too late for some features, such
-     * as indicating support post thumbnails.
-     *
-     */
-    function bigblank_setup() {
-        /*
-         * Make Big Blank available for translation.
-         *
-         * Translations can be added to the /languages/ directory.
-         * If you're building a theme based on Big Blank, use a find and
-         * replace to change 'bigblank' to the name of your theme in all
-         * template files.
-         */
-        load_theme_textdomain('bigblank', get_template_directory() . '/languages');
+/*********************
+MENUS & NAVIGATION
+*********************/
+// REGISTER MENUS
+register_nav_menus(
+	array(
+		'top-nav' => __( 'The Top Menu' ),   // main nav in header
+		'main-nav' => __( 'The Main Menu' ),   // main nav in header
+		'footer-links' => __( 'Footer Links' ) // secondary nav in footer
+	)
+);
 
-        // Theme options menu
-        require(get_template_directory() . '/inc/admin-theme-options.php');
+// THE TOP MENU
+function joints_top_nav() {
+    wp_nav_menu(array(
+    	'container' => false,                           // remove nav container
+    	'container_class' => '',           // class of container (should you choose to use it)
+    	'menu' => __( 'The Top Menu', 'jointstheme' ),  // nav name
+    	'menu_class' => '',         // adding custom nav class
+    	'theme_location' => 'top-nav',                 // where it's located in the theme
+    	'before' => '',                                 // before the menu
+        'after' => '',                                  // after the menu
+        'link_before' => '',                            // before each link
+        'link_after' => '',                             // after each link
+    	'fallback_cb' => 'joints_main_nav_fallback'      // fallback function
+	));
+} /* end joints main nav */
 
-        // This theme styles the visual editor to resemble the theme style.
-        add_editor_style(array('css/editor-style.css'));
-        // Add RSS feed links to <head> for posts and comments.
-        add_theme_support('automatic-feed-links');
-        // Enable support for Post Thumbnails, and declare thumbnail sizes.
-        add_theme_support('post-thumbnails');
-        set_post_thumbnail_size(1440, 480, FALSE);
-        // This theme uses wp_nav_menu() in two locations.
-        register_nav_menus(array(
-            'main_menu' => __('Top Primary Menu', 'bigblank'),
-            'footer_menu' => __('Footer Menu', 'bigblank'),
-        ));
-        /*
-         * Switch default core markup for search form, comment form, and comments
-         * to output valid HTML5.
-         */
-        add_theme_support('html5', array(
-            'search-form', 'comment-form', 'comment-list',
-        ));
-        // This theme uses its own gallery styles.
-        add_filter('use_default_gallery_style', '__return_false');
+// THE MAIN MENU
+function joints_main_nav() {
+    wp_nav_menu(array(
+    	'container' => false,                           // remove nav container
+    	'container_class' => '',           // class of container (should you choose to use it)
+    	'menu' => __( 'The Main Menu', 'jointstheme' ),  // nav name
+    	'menu_class' => '',         // adding custom nav class
+    	'theme_location' => 'main-nav',                 // where it's located in the theme
+    	'before' => '',                                 // before the menu
+        'after' => '',                                  // after the menu
+        'link_before' => '',                            // before each link
+        'link_after' => '',                             // after each link
+    	'fallback_cb' => 'joints_main_nav_fallback'      // fallback function
+	));
+} /* end joints main nav */
 
-        // add custom metaboxs and save the data
-        add_action('add_meta_boxes', 'bigblank_add_custom_box');
-        add_action('save_post', 'bigblank_save_post');
-    }
+// THE FOOTER MENU
+function joints_footer_links() {
+    wp_nav_menu(array(
+    	'container' => '',                              // remove nav container
+    	'container_class' => 'footer-links clearfix',   // class of container (should you choose to use it)
+    	'menu' => __( 'Footer Links', 'jointstheme' ),   // nav name
+    	'menu_class' => 'sub-nav',      // adding custom nav class
+    	'theme_location' => 'footer-links',             // where it's located in the theme
+    	'before' => '',                                 // before the menu
+        'after' => '',                                  // after the menu
+        'link_before' => '',                            // before each link
+        'link_after' => '',                             // after each link
+        'depth' => 0,                                   // limit the depth of the nav
+    	'fallback_cb' => 'joints_footer_links_fallback'  // fallback function
+	));
+} /* end joints footer link */
 
-endif; // bigblank_setup
-add_action('after_setup_theme', 'bigblank_setup');
-
-/**
- * Adjust content_width value for image attachment template.
- *
- *
- * @return void
- */
-function bigblank_content_width() {
-    if (is_attachment() && wp_attachment_is_image()) {
-        $GLOBALS['content_width'] = 960;
-    }
+// HEADER FALLBACK MENU
+function joints_main_nav_fallback() {
+	wp_page_menu( array(
+		'show_home' => true,
+    	'menu_class' => '',      // adding custom nav class
+		'include'     => '',
+		'exclude'     => '',
+		'echo'        => true,
+        'link_before' => '',                            // before each link
+        'link_after' => ''                             // after each link
+	) );
 }
 
-add_action('template_redirect', 'bigblank_content_width');
-
-/**
- * Let's remove some code and cleanup <head>
- */
-function bigblank_head_cleanup() {
-    /**
-     * remove Really Simple Discoverability; Roll it in if you want to use 
-     * Weblog Clients that use XML-RPC Support
-     * @link http://codex.wordpress.org/XML-RPC_Support
-     */
-    remove_action('wp_head', 'rsd_link');
-    // remove Windows Live Writer Manifest link
-    remove_action('wp_head', 'wlwmanifest_link');
-    // remove WordPress version meta
-    remove_action('wp_head', 'wp_generator');
+// FOOTER FALLBACK MENU
+function joints_footer_links_fallback() {
+	/* you can put a default here if you like */
 }
 
-add_action('init', 'bigblank_head_cleanup');
+/*********************
+SIDEBARS
+*********************/
 
-/**
- * Remove version from CSS and JS files for Caching
- * @param string|array $src Query key or keys to remove.
- * @return string New URL query string.
- */
-function bigblank_remove_wp_ver_css_js($src) {
-    if (strpos($src, 'ver=')) {
-        $src = remove_query_arg('ver', $src);
-    }
-    return $src;
-}
+// SIDEBARS AND WIDGETIZED AREAS
+function joints_register_sidebars() {
+	register_sidebar(array(
+		'id' => 'sidebar1',
+		'name' => __('Sidebar 1', 'jointstheme'),
+		'description' => __('The first (primary) sidebar.', 'jointstheme'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
 
-add_filter('style_loader_src', 'bigblank_remove_wp_ver_css_js');
-add_filter('script_loader_src', 'bigblank_remove_wp_ver_css_js');
+	register_sidebar(array(
+		'id' => 'offcanvas',
+		'name' => __('Offcanvas', 'jointstheme'),
+		'description' => __('The offcanvas sidebar.', 'jointstheme'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
 
-/**
- * Enqueue scripts and styles for the front end.
- *
- * Read more about wp_register_script at: 
- * @link http://codex.wordpress.org/Function_Reference/wp_register_script
- * @return void
- */
-function bigblank_scripts() {
+	/*
+	to add more sidebars or widgetized areas, just copy
+	and edit the above sidebar code. In order to call
+	your new sidebar just use the following code:
 
-    // Load our main stylesheet.
-    wp_enqueue_style('style', get_stylesheet_uri());
-    // Load the Internet Explorer specific stylesheet.
-    wp_enqueue_style('ie-styles', get_template_directory_uri() . '/css/ie.css', false, '20140416');
-    wp_style_add_data('ie-styles', 'conditional', 'lt IE 9');
+	Just change the name to whatever your new
+	sidebar's id is, for example:
 
-    // jQuery.js
-    // 1. load the latest jQuery from theme library
-    //    wp_deregister_script('jquery');
-    //    wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.js', false, '2.1.0', true);
-    // 2. load from Google CDN        
-    //    wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', false, false, true);
-    // 3. load from WP included library, Loading jQuery in footer sometimes causes 
-    //    for some plugins to not work since they do not register jQuery as dependancy 
-    //    wp_register_script('jquery', false, false, false, true);
-    // 4. or do nothing and jQuery will load from current WordPress install
-    if (is_singular() && comments_open() && get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply', false, false, false, true);
-    }
-    wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.min.js', array('jquery'), '20140222', true);
-    wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery', 'scripts'), '20140222', true);
-}
+	register_sidebar(array(
+		'id' => 'sidebar2',
+		'name' => __('Sidebar 2', 'jointstheme'),
+		'description' => __('The second (secondary) sidebar.', 'jointstheme'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
 
-add_action('wp_enqueue_scripts', 'bigblank_scripts');
+	To call the sidebar in your template, you can just copy
+	the sidebar.php file and rename it to your sidebar's name.
+	So using the above example, it would be:
+	sidebar-sidebar2.php
 
-// Widgets and Sidebars
-require_once(get_template_directory() . '/inc/widget-title.php');
-require_once(get_template_directory() . '/inc/widget-call-to-action.php');
-require_once(get_template_directory() . '/inc/widgets-sidebars.php');
+	*/
+} // don't remove this bracket!
 
-// Custom post types & Taxanomies
-require_once(get_template_directory() . '/inc/custom-post-types.php');
-require_once(get_template_directory() . '/inc/custom-taxanomies.php');
+/*********************
+COMMENT LAYOUT
+*********************/
 
-// Filters and functions to manipulate content
-require_once(get_template_directory() . '/inc/filters.php');
+// Comment Layout
+function joints_comments($comment, $args, $depth) {
+   $GLOBALS['comment'] = $comment; ?>
+	<li <?php comment_class('panel'); ?>>
+		<article id="comment-<?php comment_ID(); ?>" class="clearfix large-12 columns">
+			<header class="comment-author">
+				<?php
+				/*
+					this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
+					echo get_avatar($comment,$size='32',$default='<path_to_url>' );
+				*/
+				?>
+				<!-- custom gravatar call -->
+				<?php
+					// create variable
+					$bgauthemail = get_comment_author_email();
+				?>
+				<?php printf(__('<cite class="fn">%s</cite>', 'jointstheme'), get_comment_author_link()) ?> on
+				<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__(' F jS, Y - g:ia', 'jointstheme')); ?> </a></time>
+				<?php edit_comment_link(__('(Edit)', 'jointstheme'),'  ','') ?>
+			</header>
+			<?php if ($comment->comment_approved == '0') : ?>
+				<div class="alert alert-info">
+					<p><?php _e('Your comment is awaiting moderation.', 'jointstheme') ?></p>
+				</div>
+			<?php endif; ?>
+			<section class="comment_content clearfix">
+				<?php comment_text() ?>
+			</section>
+			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+		</article>
+	<!-- </li> is added by WordPress automatically -->
+<?php
+} // don't remove this bracket!
 
-// Custom template tags for this theme.
-require_once(get_template_directory() . '/inc/template-tags.php');
-
-// Custom shortcodes.
-require_once(get_template_directory() . '/inc/shortcodes.php');
-
-// Add Theme Customizer functionality.
-require_once(get_template_directory() . '/inc/admin-customizer.php');
-
-// Modify TinyMCE to accomodate custom styles
-require_once(get_template_directory() . '/inc/admin-editor.php');
-
-// Add Schema.org MicroData to our content
-require_once(get_template_directory() . '/inc/schema.php');
+?>
