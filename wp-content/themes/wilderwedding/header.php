@@ -8,9 +8,15 @@
 		<!-- Force IE to use the latest rendering engine available -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<title><?php wp_title(''); ?></title>
+		<title><?php //Page Title
+			if(is_front_page()) { bloginfo('name'); echo ' - '; bloginfo('description'); }
+			else { bloginfo('name'); wp_title('-', true,'left'); }
+		?></title>
 
-		<!-- Mobile Neta -->
+
+		<!-- Mobile Meta -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="width">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 		<!-- Icons & Favicons -->
