@@ -35,3 +35,8 @@ sftp-config.json
 # ignore logs 
 .ftpquota
 /.idea/
+
+#####################################################################
+# Fonts
+###
+fonts/
