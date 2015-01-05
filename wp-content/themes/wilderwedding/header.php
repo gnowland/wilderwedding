@@ -4,7 +4,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		
+
 		<!-- Force IE to use the latest rendering engine available -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -37,11 +37,11 @@
 			<div class="inner-wrap">
 				<div id="container">
 					<header class="header" role="banner">
-							
-						 <!-- This navs will be applied to the topbar, above all content 
+
+						 <!-- This navs will be applied to the topbar, above all content
 							  To see additional nav styles, visit the /partials directory -->
 						 <?php get_template_part( 'partials/nav', 'top-offcanvas' ); ?>
-								 
+
 						<div id="inner-header" class="row">
 							<div class="large-12 medium-12 columns">
 								<h1>
@@ -53,11 +53,11 @@
 									</small>
 								</h1>
 							</div>
-							
-							 <!-- This navs will be applied to the main, under the logo 
+
+							 <!-- This navs will be applied to the main, under the logo
 								  To see additional nav styles, visit the /partials directory -->
-								  
+
 							 <?php // get_template_part( 'partials/nav', 'main-offcanvas' ); ?>
-	
+
 						</div> <!-- end #inner-header -->
 					</header> <!-- end .header -->
