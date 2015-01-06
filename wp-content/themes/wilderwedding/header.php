@@ -19,15 +19,30 @@
 		<meta name="MobileOptimized" content="width">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-		<!-- Icons & Favicons -->
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-		<link href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png" rel="apple-touch-icon" />
+		<!-- favicons -->
+		<link rel="shortcut icon"                                   href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+		<link rel="icon"                  sizes="16x16 32x32 64x64" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+		<link rel="icon" type="image/png" sizes="196x196"           href="<?php echo get_template_directory_uri(); ?>/library/images/favicons/favicon-196.png">
+		<link rel="icon" type="image/png" sizes="160x160"           href="<?php echo get_template_directory_uri(); ?>/library/images/favicons/favicon-160.png">
+		<link rel="icon" type="image/png" sizes="96x96"             href="<?php echo get_template_directory_uri(); ?>/library/images/favicons/favicon-96.png">
+		<link rel="icon" type="image/png" sizes="64x64"             href="<?php echo get_template_directory_uri(); ?>/library/images/favicons/favicon-64.png">
+		<link rel="icon" type="image/png" sizes="32x32"             href="<?php echo get_template_directory_uri(); ?>/library/images/favicons/favicon-32.png">
+		<link rel="icon" type="image/png" sizes="16x16"             href="<?php echo get_template_directory_uri(); ?>/library/images/favicons/favicon-16.png">
+		<link rel="apple-touch-icon"      sizes="152x152"           href="<?php echo get_template_directory_uri(); ?>/library/images/favicons/favicon-152.png">
+		<link rel="apple-touch-icon"      sizes="144x144"           href="<?php echo get_template_directory_uri(); ?>/library/images/favicons/favicon-144.png">
+		<link rel="apple-touch-icon"      sizes="120x120"           href="<?php echo get_template_directory_uri(); ?>/library/images/favicons/favicon-120.png">
+		<link rel="apple-touch-icon"      sizes="114x114"           href="<?php echo get_template_directory_uri(); ?>/library/images/favicons/favicon-114.png">
+		<link rel="apple-touch-icon"      sizes="76x76"             href="<?php echo get_template_directory_uri(); ?>/library/images/favicons/favicon-76.png">
+		<link rel="apple-touch-icon"      sizes="72x72"             href="<?php echo get_template_directory_uri(); ?>/library/images/favicons/favicon-72.png">
+		<link rel="apple-touch-icon"                                href="<?php echo get_template_directory_uri(); ?>/library/images/favicons/favicon-57.png">
+		<meta name="msapplication-TileColor" content="#152348">
+		<meta name="msapplication-TileImage"                     content="<?php echo get_template_directory_uri(); ?>/library/images/favicons/favicon-144.png">
+		<meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/library/images/favicons/browserconfig.xml">
 		<!--[if IE]>
 			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 		<![endif]-->
-		<meta name="msapplication-TileColor" content="#f01d4f">
-		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
-		 <meta name="theme-color" content="#121212">
+
+		<meta name="theme-color" content="#152348">
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
