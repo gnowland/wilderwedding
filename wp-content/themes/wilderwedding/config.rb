@@ -3,16 +3,15 @@
 # quickly dive right in.
 # For more info about compass + SASS: http://net.tutsplus.com/tutorials/html-css-techniques/using-compass-and-sass-for-css-in-your-next-project/
 
-
 #########
 # 1. Set this to the root of your project when deployed:
 http_path = "/"
 
 # 2. probably don't need to touch these
-css_dir = "../css"
-sass_dir = "./"
-images_dir = "../images"
-javascripts_dir = "../js"
+css_dir = "/library/css"
+sass_dir = "/library/scss"
+images_dir = "/library/images"
+javascripts_dir = "/library/js"
 environment = :development
 relative_assets = true
 
