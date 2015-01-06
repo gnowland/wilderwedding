@@ -7,12 +7,18 @@ loaded by mobile devices. You want to keep it as minimal as
 possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
+blue: #152348
+gold: #D1AC5E
+
 ******************************************************************/
 
 /*********************
 GENERAL STYLES
 *********************/
-body {}
+body {
+background-color: #152348;
+background-image: url:('/library/images/background.gif');
+}
 
 /********************
 WORDPRESS BODY CLASSES
