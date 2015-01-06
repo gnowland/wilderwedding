@@ -16,8 +16,11 @@ gold: #D1AC5E
 GENERAL STYLES
 *********************/
 body {
-background-color: #152348;
-background-image: url('/library/images/background.gif');
+// background-image: url('/library/images/background.gif');
+background-color: #02283f; // Old browsers
+@include filter-gradient(#02283f, #1c7794, vertical); // IE6-9
+@include background-image(linear-gradient(top,  #02283f 0%,#1c7794 100%));
+
 }
 
 /********************
