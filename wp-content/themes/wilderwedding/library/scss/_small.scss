@@ -188,7 +188,7 @@ HEADER STYLES
 		list-style: none;
 	}
 }
-    
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -196,7 +196,7 @@ NAVIGATION STYLES
 	.title-area {
 		z-index: 1;
 	}
-} 
+}
 
 .off-canvas-list {
 	ul {
@@ -235,7 +235,9 @@ POSTS & CONTENT STYLES
 
 .page-title {}
 
-.archive-title { }
+.archive-title {}
+
+.article-header {}
 
 /* want to style individual post classes? Booya! */
 .post-id {}         /* post by id (i.e. post-3) */
@@ -548,7 +550,7 @@ COMMENT STYLES
 
 		&:hover,
 		&:focus {
-		
+
 		}
 
 	} /* end .commentlist .comment-reply-link */
@@ -682,15 +684,16 @@ SIDEBARS & ASIDES
 #sidebar-offcanvas {
 	.widgettitle {
 		color: #fff;
-	}	
+	}
 }
 /*********************
 FOOTER STYLES
 *********************/
 
-.footer {
+footer {
 	clear: both;
 	margin-top: 1em;
+	text-align: center;
 }
 
 	/*
@@ -714,7 +717,7 @@ FOOTER STYLES
 
 
 	.copyright { }
-	
+
 /*********************
 FOUNDATION STYLES
 *********************/

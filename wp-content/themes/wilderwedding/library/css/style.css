@@ -9776,7 +9776,7 @@ gold: #D1AC5E
 
 ******************************************************************/
 /*********************
-GENERAL STYLES
+GLOBAL STYLES
 *********************/
 /* line 18, ../scss/_small.scss */
 .together {
@@ -9886,13 +9886,13 @@ LAYOUT & GRID STYLES
 /*********************
 LINK STYLES
 *********************/
-/* line 77, ../scss/_small.scss */
+/* line 121, ../scss/_small.scss */
 a, a:visited {
   /*adds highlight on hover */
   /* on click */
   /* mobile tap color */
 }
-/* line 91, ../scss/_small.scss */
+/* line 135, ../scss/_small.scss */
 a:link, a:visited:link {
   /*
   this highlights links on iPhones/iPads.
@@ -9905,7 +9905,7 @@ a:link, a:visited:link {
 /******************************************************************
 H1, H2, H3, H4, H5 P STYLES
 ******************************************************************/
-/* line 106, ../scss/_small.scss */
+/* line 150, ../scss/_small.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   /*
   if you're going to use webfonts, be sure to check your weights
@@ -9913,7 +9913,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   */
   /* removing text decoration from all headline links */
 }
-/* line 113, ../scss/_small.scss */
+/* line 157, ../scss/_small.scss */
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none;
 }
@@ -9921,7 +9921,7 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 /*********************
 HEADER STYLES
 *********************/
-/* line 143, ../scss/_small.scss */
+/* line 187, ../scss/_small.scss */
 .header ul.off-canvas-list li {
   list-style: none;
 }
@@ -9929,20 +9929,20 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 152, ../scss/_small.scss */
+/* line 196, ../scss/_small.scss */
 .top-bar .title-area {
   z-index: 1;
 }
 
-/* line 158, ../scss/_small.scss */
+/* line 202, ../scss/_small.scss */
 .off-canvas-list ul {
   margin-left: 0;
 }
-/* line 161, ../scss/_small.scss */
+/* line 205, ../scss/_small.scss */
 .off-canvas-list ul li a {
   border-bottom: 0px;
 }
-/* line 165, ../scss/_small.scss */
+/* line 209, ../scss/_small.scss */
 .off-canvas-list ul .dropdown {
   margin-left: 20px;
 }
@@ -9961,13 +9961,13 @@ POSTS & CONTENT STYLES
 /* style by category (i.e. category-videos) */
 /* style by tag (i.e. tag-news) */
 /* post meta */
-/* line 207, ../scss/_small.scss */
+/* line 253, ../scss/_small.scss */
 .byline {
   color: #999;
 }
 
 /* entry content */
-/* line 213, ../scss/_small.scss */
+/* line 259, ../scss/_small.scss */
 .entry-content {
   /*
   image alignment on a screen this size may be
@@ -9976,24 +9976,24 @@ POSTS & CONTENT STYLES
   but it's up to you. Feel free to change it up.
   */
 }
-/* line 247, ../scss/_small.scss */
+/* line 293, ../scss/_small.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 254, ../scss/_small.scss */
+/* line 300, ../scss/_small.scss */
 .entry-content img {
   max-width: 100%;
   height: auto;
 }
-/* line 269, ../scss/_small.scss */
+/* line 315, ../scss/_small.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 274, ../scss/_small.scss */
+/* line 320, ../scss/_small.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -10001,20 +10001,20 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 282, ../scss/_small.scss */
+/* line 328, ../scss/_small.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 288, ../scss/_small.scss */
+/* line 334, ../scss/_small.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 294, ../scss/_small.scss */
+/* line 340, ../scss/_small.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -10028,7 +10028,7 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 331, ../scss/_small.scss */
+/* line 377, ../scss/_small.scss */
 .pagination a:hover {
   color: black;
 }
@@ -10037,17 +10037,17 @@ PAGE NAVI STYLES
 COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
-/* line 341, ../scss/_small.scss */
+/* line 387, ../scss/_small.scss */
 #comments {
   /* number of comments span */
 }
 
-/* line 349, ../scss/_small.scss */
+/* line 395, ../scss/_small.scss */
 #respond ul {
   margin-left: 0px;
 }
 
-/* line 364, ../scss/_small.scss */
+/* line 410, ../scss/_small.scss */
 .commentlist {
   /* general comment classes */
   /* vcard */
@@ -10058,7 +10058,7 @@ COMMENT STYLES
   /* comment reply link */
   /* end .commentlist .comment-reply-link */
 }
-/* line 366, ../scss/_small.scss */
+/* line 412, ../scss/_small.scss */
 .commentlist li {
   position: relative;
   clear: both;
@@ -10068,59 +10068,59 @@ COMMENT STYLES
   padding: 0.7335em 10px;
   /* end .commentlist li ul.children */
 }
-/* line 374, ../scss/_small.scss */
+/* line 420, ../scss/_small.scss */
 .commentlist li:last-child {
   margin-bottom: 0;
 }
-/* line 378, ../scss/_small.scss */
+/* line 424, ../scss/_small.scss */
 .commentlist li ul.children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 396, ../scss/_small.scss */
+/* line 442, ../scss/_small.scss */
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
 }
-/* line 400, ../scss/_small.scss */
+/* line 446, ../scss/_small.scss */
 .commentlist li.depth-1 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 405, ../scss/_small.scss */
+/* line 451, ../scss/_small.scss */
 .commentlist li:not(.depth-1) {
   margin-left: 10px;
   margin-top: 0;
   padding-bottom: 0;
   background: #e7e7e7;
 }
-/* line 413, ../scss/_small.scss */
+/* line 459, ../scss/_small.scss */
 .commentlist li.depth-3 {
   background: #dadada;
 }
-/* line 437, ../scss/_small.scss */
+/* line 483, ../scss/_small.scss */
 .commentlist .vcard {
   margin-left: 50px;
 }
-/* line 440, ../scss/_small.scss */
+/* line 486, ../scss/_small.scss */
 .commentlist .vcard cite.fn {
   font-weight: 700;
   font-style: normal;
 }
-/* line 448, ../scss/_small.scss */
+/* line 494, ../scss/_small.scss */
 .commentlist .vcard time {
   float: right;
 }
-/* line 451, ../scss/_small.scss */
+/* line 497, ../scss/_small.scss */
 .commentlist .vcard time a {
   color: #999;
   text-decoration: none;
 }
-/* line 455, ../scss/_small.scss */
+/* line 501, ../scss/_small.scss */
 .commentlist .vcard time a:hover {
   text-decoration: underline;
 }
-/* line 465, ../scss/_small.scss */
+/* line 511, ../scss/_small.scss */
 .commentlist .vcard img.avatar {
   position: absolute;
   left: 10px;
@@ -10128,13 +10128,13 @@ COMMENT STYLES
   border: 1px solid #cecece;
   background: #fff;
 }
-/* line 492, ../scss/_small.scss */
+/* line 538, ../scss/_small.scss */
 .commentlist .comment_content p {
   margin: 0.7335em 0 1.5em;
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 501, ../scss/_small.scss */
+/* line 547, ../scss/_small.scss */
 .commentlist .comment-reply-link {
   border-style: solid;
   border-width: 0;
@@ -10173,27 +10173,27 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 518, ../scss/_small.scss */
+/* line 564, ../scss/_small.scss */
 .respond-form {
   margin: 1.5em 10px;
   padding-bottom: 2.2em;
 }
-/* line 522, ../scss/_small.scss */
+/* line 568, ../scss/_small.scss */
 .respond-form form {
   margin: 0.75em 0;
 }
-/* line 525, ../scss/_small.scss */
+/* line 571, ../scss/_small.scss */
 .respond-form form li {
   list-style-type: none;
   clear: both;
   margin-bottom: 0.7335em;
 }
-/* line 530, ../scss/_small.scss */
+/* line 576, ../scss/_small.scss */
 .respond-form form li label,
 .respond-form form li small {
   display: none;
 }
-/* line 536, ../scss/_small.scss */
+/* line 582, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url],
@@ -10204,14 +10204,14 @@ COMMENT FORM STYLES
   line-height: 1.5em;
   /* form validation */
 }
-/* line 545, ../scss/_small.scss */
+/* line 591, ../scss/_small.scss */
 .respond-form form input[type=text]:focus,
 .respond-form form input[type=email]:focus,
 .respond-form form input[type=url]:focus,
 .respond-form form textarea:focus {
   background: #fff;
 }
-/* line 550, ../scss/_small.scss */
+/* line 596, ../scss/_small.scss */
 .respond-form form input[type=text]:invalid,
 .respond-form form input[type=email]:invalid,
 .respond-form form input[type=url]:invalid,
@@ -10224,14 +10224,14 @@ COMMENT FORM STYLES
   -ms-box-shadow: none;
   box-shadow: none;
 }
-/* line 561, ../scss/_small.scss */
+/* line 607, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url] {
   max-width: 400px;
   min-width: 250px;
 }
-/* line 568, ../scss/_small.scss */
+/* line 614, ../scss/_small.scss */
 .respond-form form textarea {
   resize: none;
   width: 97.3%;
@@ -10240,7 +10240,7 @@ COMMENT FORM STYLES
 
 /* comment submit button */
 /* comment form title */
-/* line 581, ../scss/_small.scss */
+/* line 627, ../scss/_small.scss */
 #comment-form-title {
   margin: 0 0 1.1em;
 }
@@ -10248,13 +10248,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 594, ../scss/_small.scss */
+/* line 640, ../scss/_small.scss */
 #allowed_tags {
   margin: 1.5em 10px 0.7335em 0;
 }
 
 /* no comments */
-/* line 599, ../scss/_small.scss */
+/* line 645, ../scss/_small.scss */
 .nocomments {
   margin: 0 20px 1.1em;
 }
@@ -10262,17 +10262,17 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 617, ../scss/_small.scss */
+/* line 663, ../scss/_small.scss */
 .widget ul {
   margin: 0;
 }
-/* line 620, ../scss/_small.scss */
+/* line 666, ../scss/_small.scss */
 .widget ul li {
   list-style: none;
   /* deep nesting */
 }
 
-/* line 639, ../scss/_small.scss */
+/* line 685, ../scss/_small.scss */
 #sidebar-offcanvas .widgettitle {
   color: #fff;
 }
@@ -10280,10 +10280,11 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 647, ../scss/_small.scss */
-.footer {
+/* line 693, ../scss/_small.scss */
+footer {
   clear: both;
   margin-top: 1em;
+  text-align: center;
 }
 
 /*
@@ -10299,7 +10300,7 @@ view.
 /*********************
 FOUNDATION STYLES
 *********************/
-/* line 677, ../scss/_small.scss */
+/* line 724, ../scss/_small.scss */
 .clearing-assembled.clearing-blackout a:hover {
   background: none;
 }
@@ -10307,7 +10308,7 @@ FOUNDATION STYLES
 /*********************
 PLUGIN STYLES
 *********************/
-/* line 685, ../scss/_small.scss */
+/* line 732, ../scss/_small.scss */
 .gform_body ul {
   list-style: none outside none;
   margin: 0;
