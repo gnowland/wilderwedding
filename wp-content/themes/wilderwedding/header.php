@@ -53,26 +53,24 @@
 	</head>
 
 	<body <?php body_class(); ?>> <!-- Closes in footer.php -->
+		<div class="starfield"></div>
 		<div class="off-canvas-wrap" data-offcanvas> <!-- Closes in footer.php -->
 			<div class="inner-wrap">
 				<div id="container">
 					<header class="header" role="banner">
 
+<?php /*
 						<?php // get_template_part( 'partials/nav', 'top-offcanvas' ); ?>
 
 						<div id="inner-header" class="row">
 							<div class="large-12 medium-12 columns">
 								<h1>
-									<a href="<?php echo home_url(); ?>" rel="nofollow">
-										<?php bloginfo('name'); ?>
-									</a>
-									<small>
-										<?php  bloginfo('description'); ?>
-									</small>
+									<a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a>
+									<small><?php bloginfo('description'); ?></small>
 								</h1>
 							</div>
 
 						<?php // get_template_part( 'partials/nav', 'main-offcanvas' ); ?>
-
+*/ ?>
 						</div> <!-- end #inner-header -->
 					</header> <!-- end .header -->

@@ -9779,13 +9779,29 @@ gold: #D1AC5E
 GENERAL STYLES
 *********************/
 /* line 18, ../scss/_small.scss */
-body {
-  background-image: url(../images/login_logo.png) no-repeat top center;
-  /* make sure to replace this! */
+.together {
+  white-space: nowrap;
 }
-/* line 21, ../scss/_small.scss */
-body:before {
+
+/*********************
+GENERAL STYLES
+*********************/
+/* line 25, ../scss/_small.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 30, ../scss/_small.scss */
+body {
   background-color: #01182b;
+}
+
+/* line 34, ../scss/_small.scss */
+.starfield {
+  position: fixed;
+  width: 100%;
+  height: 100%;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF01182B', endColorstr='#FF123560');
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAxMTgyYiIvPjxzdG9wIG9mZnNldD0iNjAlIiBzdG9wLWNvbG9yPSIjMDIyNjQ0Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMTIzNTYwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
@@ -9795,6 +9811,23 @@ body:before {
   background-image: -webkit-linear-gradient(top, #01182b 0%, #022644 60%, #123560 100%);
   background-image: linear-gradient(to bottom, #01182b 0%, #022644 60%, #123560 100%);
 }
+/* line 41, ../scss/_small.scss */
+.starfield:before {
+  content: '';
+  background: url(../images/stars.svg) repeat top left;
+  background-size: 150px 150px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 53, ../scss/_small.scss */
+.no-svg .starfield:before {
+  background: url(../images/stars@2x.png) repeat top left;
+}
+
 
 /********************
 WORDPRESS BODY CLASSES
