@@ -9828,6 +9828,18 @@ body {
   background: url(../images/stars@2x.png) repeat top left;
 }
 
+/* line 59, ../scss/_small.scss */
+#searchform #s {
+  display: inline-block;
+  width: 100%;
+  max-width: 25rem;
+}
+/* line 64, ../scss/_small.scss */
+#searchform .button {
+  display: inline-block;
+  padding-top: 0.5624rem;
+  padding-bottom: 0.572rem;
+}
 
 /********************
 WORDPRESS BODY CLASSES

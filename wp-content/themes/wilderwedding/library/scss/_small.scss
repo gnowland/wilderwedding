@@ -54,7 +54,19 @@ body {
 	background: url(../images/stars@2x.png) repeat top left;
 }
 
+// Search Form
+#searchform {
+	#s {
+		display: inline-block;
+		width: 100%;
+		max-width: 25rem;
 	}
+	.button {
+		display: inline-block;
+		padding-top: 0.5624rem;
+		padding-bottom: 0.572rem;
+	}
+
 }
 
 /********************
