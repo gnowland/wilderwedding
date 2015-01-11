@@ -8,20 +8,21 @@ via the functions file.
 
 /************* DASHBOARD WIDGETS *****************/
 
+
 // disable default dashboard widgets
 function disable_default_dashboard_widgets() {
 	// remove_meta_box('dashboard_right_now', 'dashboard', 'core');    // Right Now Widget
-	remove_meta_box('dashboard_recent_comments', 'dashboard', 'core'); // Comments Widget
-	remove_meta_box('dashboard_incoming_links', 'dashboard', 'core');  // Incoming Links Widget
-	remove_meta_box('dashboard_plugins', 'dashboard', 'core');         // Plugins Widget
+	//remove_meta_box('dashboard_recent_comments', 'dashboard', 'core'); // Comments Widget
+	//remove_meta_box('dashboard_incoming_links', 'dashboard', 'core');  // Incoming Links Widget
+	//remove_meta_box('dashboard_plugins', 'dashboard', 'core');         // Plugins Widget
 
-	// remove_meta_box('dashboard_quick_press', 'dashboard', 'core');  // Quick Press Widget
-	remove_meta_box('dashboard_recent_drafts', 'dashboard', 'core');   // Recent Drafts Widget
-	remove_meta_box('dashboard_primary', 'dashboard', 'core');         //
-	remove_meta_box('dashboard_secondary', 'dashboard', 'core');       //
+	remove_meta_box('dashboard_quick_press', 'dashboard', 'core');  // Quick Press Widget
+	//remove_meta_box('dashboard_recent_drafts', 'dashboard', 'core');   // Recent Drafts Widget
+	remove_meta_box('dashboard_primary', 'dashboard', 'core');         // Wordpress News
+	//remove_meta_box('dashboard_secondary', 'dashboard', 'core');       //
 
 	// removing plugin dashboard boxes
-	remove_meta_box('yoast_db_widget', 'dashboard', 'normal');         // Yoast's SEO Plugin Widget
+	//remove_meta_box('yoast_db_widget', 'dashboard', 'normal');         // Yoast's SEO Plugin Widget
 
 }
 
@@ -35,7 +36,7 @@ entries from an RSS Feed.
 For more information on creating Dashboard Widgets, view:
 http://digwp.com/2010/10/customize-wordpress-dashboard/
 */
-
+/*
 // RSS Dashboard Widget
 function joints_rss_dashboard_widget() {
 	if(function_exists('fetch_feed')) {
@@ -61,18 +62,18 @@ function joints_rss_dashboard_widget() {
 // calling all custom dashboard widgets
 function joints_custom_dashboard_widgets() {
 	wp_add_dashboard_widget('joints_rss_dashboard_widget', __('Recently on Themble (Customize on admin.php)', 'jointstheme'), 'joints_rss_dashboard_widget');
-	/*
-	Be sure to drop any other created Dashboard Widgets
-	in this function and they will all load.
-	*/
-}
 
+	//	Be sure to drop any other created Dashboard Widgets in this function and they will all load.
+
+}
+*/
 
 // removing the dashboard widgets
 add_action('admin_menu', 'disable_default_dashboard_widgets');
 // adding any custom widgets
+/*
 add_action('wp_dashboard_setup', 'joints_custom_dashboard_widgets');
-
+*/
 
 /************* CUSTOM LOGIN PAGE *****************/
 
@@ -88,13 +89,21 @@ function joints_login_css() {
 function joints_login_url() {  return home_url(); }
 
 // changing the alt text on the logo to show your site name
-function joints_login_title() { return get_option('blogname'); }
+function joints_login_title() { return get_option('Wilder Wedding'); }
 
 // calling it only on the login page
 add_action( 'login_enqueue_scripts', 'joints_login_css', 10 );
-add_filter('login_headerurl', 'joints_login_url');
-add_filter('login_headertitle', 'joints_login_title');
+add_filter( 'login_headerurl', 'joints_login_url');
+add_filter( 'login_headertitle', 'joints_login_title');
 
+// Add B&W variant favicon to login & admin pages
+add_action('login_head', 'joints_admin_favicon');
+add_action('admin_head', 'joints_admin_favicon');
+
+function joints_admin_favicon() {
+  	$favicon_url = get_stylesheet_directory_uri() . '/library/images/favicons/favicon_bw.ico';
+	echo '<link rel="shortcut icon" href="' . $favicon_url . '" />';
+}
 
 /************* CUSTOMIZE ADMIN *******************/
 
@@ -104,7 +113,7 @@ as things may get funky if WordPress updates. Here
 are a few funtions which you can choose to use if
 you like.
 */
-
+/*
 // Custom Backend Footer
 function joints_custom_admin_footer() {
 	_e('<span id="footer-thankyou">Developed by <a href="http://yoursite.com" target="_blank">Your Site Name</a></span>. Built using <a href="http://themble.com/joints" target="_blank">joints</a>.', 'jointstheme');
@@ -112,5 +121,5 @@ function joints_custom_admin_footer() {
 
 // adding it to the admin area
 add_filter('admin_footer_text', 'joints_custom_admin_footer');
-
+*/
 ?>

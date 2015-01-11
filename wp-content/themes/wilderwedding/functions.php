@@ -12,7 +12,7 @@ require_once(get_template_directory().'/library/joints.php');
 require_once(get_template_directory().'/library/custom-post-type-wedding-party.php');
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
-// require_once(get_template_directory().'/library/admin.php');
+require_once(get_template_directory().'/library/admin.php');
 
 // SUPPORT FOR OTHER LANGUAGES (off by default)
 // require_once(get_template_directory().'/library/translation/translation.php');
