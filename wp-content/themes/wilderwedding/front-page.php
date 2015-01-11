@@ -1,17 +1,19 @@
 <?php get_header(); ?>
 
-      <div id="content">
+      <section id="welcome">
+        <div id="content">
 
-        <div id="inner-content" class="row">
+          <div id="inner-content" class="row">
 
-            <div id="main" class="large-8 medium-8 columns" role="main">
+              <div id="main" class="large-12 medium-12 columns" role="main">
 
-                <?php get_template_part( 'partials/loop', 'front-page' ); ?>
 
-            </div> <!-- end #main -->
 
-        </div> <!-- end #inner-content -->
+              </div> <!-- end #main -->
 
-      </div> <!-- end #content -->
+          </div> <!-- end #inner-content -->
+
+        </div> <!-- end #content -->
+      </section>
 
 <?php get_footer(); ?>
