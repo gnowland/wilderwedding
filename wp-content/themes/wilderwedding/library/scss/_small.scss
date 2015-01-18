@@ -27,12 +27,27 @@ html, body {
   height: 100%;
 }
 
+.off-canvas-wrap, .inner-wrap, #container {
+    min-height: 100%;
+    height: 100%;
+}
+.inner-wrap, #container {
+	//height: 100%; Don't do this because it breaks when content will overflows height
+}
+
+.off-canvas-wrap{
+	height: 100%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
 body {
 	background-color: rgb(1,24,43); //solid bg fallback
 }
 
 .starfield {
 	position: fixed;
+	z-index: -1;
 	width: 100%;
 	height: 100%;
 	@include filter-gradient(#01182b, #123560, vertical);
@@ -48,10 +63,6 @@ body {
 		bottom: 0;
 		left: 0;
 	}
-}
-
-.no-svg .starfield:before { // modernizr fallback
-	background: url(../images/stars@2x.png) repeat top left;
 }
 
 // Search Form
@@ -113,7 +124,22 @@ style a page via class
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-
+.one-page {
+	 min-height: 100%;
+}
+#welcome {
+	&:after {
+		content:'';
+		background: url(../images/sidewalk.svg) repeat-x top center;
+		background-size: 1060px 32.1px;
+		background-color: rgb(14, 50, 90);
+		height: 33px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+}
 /*********************
 LINK STYLES
 *********************/
@@ -732,4 +758,17 @@ PLUGIN STYLES
 .gform_body ul {
     list-style: none outside none;
     margin: 0;
+}
+
+/********************
+Modernizr Fallbacks
+********************/
+
+.no-svg {
+	.starfield:before {
+		background: url(../images/stars@2x.png) repeat top left;
+	}
+	#welcome:after {
+		background: url(../images/sidewalk.png) repeat-x top center;
+	}
 }
