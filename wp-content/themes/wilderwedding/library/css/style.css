@@ -9900,11 +9900,16 @@ LAYOUT & GRID STYLES
 /* line 131, ../scss/_small.scss */
 #welcome:before {
   content: '';
+  background: url(../images/themoon.svg) no-repeat top right;
+  background-size: contain;
+  width: 40%;
+  max-height: 40%;
+  height: 215px;
   position: absolute;
   right: 0;
   top: 0;
 }
-/* line 137, ../scss/_small.scss */
+/* line 142, ../scss/_small.scss */
 #welcome:after {
   content: '';
   background: url(../images/sidewalk.svg) repeat-x top center;
@@ -9915,17 +9920,43 @@ LAYOUT & GRID STYLES
   bottom: 0;
   left: 0;
 }
+/* line 153, ../scss/_small.scss */
+#welcome #inner-content:before {
+  content: '';
+  background: url(../images/facade1.svg) no-repeat bottom left;
+  background-size: contain;
+  width: 624px;
+  height: 425px;
+  max-height: 90%;
+  position: absolute;
+  right: 75%;
+  bottom: 23px;
+  z-index: 1;
+}
+/* line 165, ../scss/_small.scss */
+#welcome #inner-content:after {
+  content: '';
+  background: url(../images/facade2.svg) no-repeat bottom right;
+  background-size: contain;
+  width: 499px;
+  height: 447px;
+  max-height: 90%;
+  position: absolute;
+  left: 75%;
+  bottom: 23px;
+  z-index: 1;
+}
 
 /*********************
 LINK STYLES
 *********************/
-/* line 152, ../scss/_small.scss */
+/* line 183, ../scss/_small.scss */
 a, a:visited {
   /*adds highlight on hover */
   /* on click */
   /* mobile tap color */
 }
-/* line 166, ../scss/_small.scss */
+/* line 197, ../scss/_small.scss */
 a:link, a:visited:link {
   /*
   this highlights links on iPhones/iPads.
@@ -9938,7 +9969,7 @@ a:link, a:visited:link {
 /******************************************************************
 H1, H2, H3, H4, H5 P STYLES
 ******************************************************************/
-/* line 181, ../scss/_small.scss */
+/* line 212, ../scss/_small.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   /*
   if you're going to use webfonts, be sure to check your weights
@@ -9946,7 +9977,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   */
   /* removing text decoration from all headline links */
 }
-/* line 188, ../scss/_small.scss */
+/* line 219, ../scss/_small.scss */
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none;
 }
@@ -9954,7 +9985,7 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 /*********************
 HEADER STYLES
 *********************/
-/* line 218, ../scss/_small.scss */
+/* line 249, ../scss/_small.scss */
 .header ul.off-canvas-list li {
   list-style: none;
 }
@@ -9962,20 +9993,20 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 227, ../scss/_small.scss */
+/* line 258, ../scss/_small.scss */
 .top-bar .title-area {
   z-index: 1;
 }
 
-/* line 233, ../scss/_small.scss */
+/* line 264, ../scss/_small.scss */
 .off-canvas-list ul {
   margin-left: 0;
 }
-/* line 236, ../scss/_small.scss */
+/* line 267, ../scss/_small.scss */
 .off-canvas-list ul li a {
   border-bottom: 0px;
 }
-/* line 240, ../scss/_small.scss */
+/* line 271, ../scss/_small.scss */
 .off-canvas-list ul .dropdown {
   margin-left: 20px;
 }
@@ -9994,13 +10025,13 @@ POSTS & CONTENT STYLES
 /* style by category (i.e. category-videos) */
 /* style by tag (i.e. tag-news) */
 /* post meta */
-/* line 284, ../scss/_small.scss */
+/* line 315, ../scss/_small.scss */
 .byline {
   color: #999;
 }
 
 /* entry content */
-/* line 290, ../scss/_small.scss */
+/* line 321, ../scss/_small.scss */
 .entry-content {
   /*
   image alignment on a screen this size may be
@@ -10009,24 +10040,24 @@ POSTS & CONTENT STYLES
   but it's up to you. Feel free to change it up.
   */
 }
-/* line 324, ../scss/_small.scss */
+/* line 355, ../scss/_small.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 331, ../scss/_small.scss */
+/* line 362, ../scss/_small.scss */
 .entry-content img {
   max-width: 100%;
   height: auto;
 }
-/* line 346, ../scss/_small.scss */
+/* line 377, ../scss/_small.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 351, ../scss/_small.scss */
+/* line 382, ../scss/_small.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -10034,20 +10065,20 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 359, ../scss/_small.scss */
+/* line 390, ../scss/_small.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 365, ../scss/_small.scss */
+/* line 396, ../scss/_small.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 371, ../scss/_small.scss */
+/* line 402, ../scss/_small.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -10061,7 +10092,7 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 408, ../scss/_small.scss */
+/* line 439, ../scss/_small.scss */
 .pagination a:hover {
   color: black;
 }
@@ -10070,17 +10101,17 @@ PAGE NAVI STYLES
 COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
-/* line 418, ../scss/_small.scss */
+/* line 449, ../scss/_small.scss */
 #comments {
   /* number of comments span */
 }
 
-/* line 426, ../scss/_small.scss */
+/* line 457, ../scss/_small.scss */
 #respond ul {
   margin-left: 0px;
 }
 
-/* line 441, ../scss/_small.scss */
+/* line 472, ../scss/_small.scss */
 .commentlist {
   /* general comment classes */
   /* vcard */
@@ -10091,7 +10122,7 @@ COMMENT STYLES
   /* comment reply link */
   /* end .commentlist .comment-reply-link */
 }
-/* line 443, ../scss/_small.scss */
+/* line 474, ../scss/_small.scss */
 .commentlist li {
   position: relative;
   clear: both;
@@ -10101,59 +10132,59 @@ COMMENT STYLES
   padding: 0.7335em 10px;
   /* end .commentlist li ul.children */
 }
-/* line 451, ../scss/_small.scss */
+/* line 482, ../scss/_small.scss */
 .commentlist li:last-child {
   margin-bottom: 0;
 }
-/* line 455, ../scss/_small.scss */
+/* line 486, ../scss/_small.scss */
 .commentlist li ul.children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 473, ../scss/_small.scss */
+/* line 504, ../scss/_small.scss */
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
 }
-/* line 477, ../scss/_small.scss */
+/* line 508, ../scss/_small.scss */
 .commentlist li.depth-1 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 482, ../scss/_small.scss */
+/* line 513, ../scss/_small.scss */
 .commentlist li:not(.depth-1) {
   margin-left: 10px;
   margin-top: 0;
   padding-bottom: 0;
   background: #e7e7e7;
 }
-/* line 490, ../scss/_small.scss */
+/* line 521, ../scss/_small.scss */
 .commentlist li.depth-3 {
   background: #dadada;
 }
-/* line 514, ../scss/_small.scss */
+/* line 545, ../scss/_small.scss */
 .commentlist .vcard {
   margin-left: 50px;
 }
-/* line 517, ../scss/_small.scss */
+/* line 548, ../scss/_small.scss */
 .commentlist .vcard cite.fn {
   font-weight: 700;
   font-style: normal;
 }
-/* line 525, ../scss/_small.scss */
+/* line 556, ../scss/_small.scss */
 .commentlist .vcard time {
   float: right;
 }
-/* line 528, ../scss/_small.scss */
+/* line 559, ../scss/_small.scss */
 .commentlist .vcard time a {
   color: #999;
   text-decoration: none;
 }
-/* line 532, ../scss/_small.scss */
+/* line 563, ../scss/_small.scss */
 .commentlist .vcard time a:hover {
   text-decoration: underline;
 }
-/* line 542, ../scss/_small.scss */
+/* line 573, ../scss/_small.scss */
 .commentlist .vcard img.avatar {
   position: absolute;
   left: 10px;
@@ -10161,13 +10192,13 @@ COMMENT STYLES
   border: 1px solid #cecece;
   background: #fff;
 }
-/* line 569, ../scss/_small.scss */
+/* line 600, ../scss/_small.scss */
 .commentlist .comment_content p {
   margin: 0.7335em 0 1.5em;
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 578, ../scss/_small.scss */
+/* line 609, ../scss/_small.scss */
 .commentlist .comment-reply-link {
   border-style: solid;
   border-width: 0;
@@ -10206,27 +10237,27 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 595, ../scss/_small.scss */
+/* line 626, ../scss/_small.scss */
 .respond-form {
   margin: 1.5em 10px;
   padding-bottom: 2.2em;
 }
-/* line 599, ../scss/_small.scss */
+/* line 630, ../scss/_small.scss */
 .respond-form form {
   margin: 0.75em 0;
 }
-/* line 602, ../scss/_small.scss */
+/* line 633, ../scss/_small.scss */
 .respond-form form li {
   list-style-type: none;
   clear: both;
   margin-bottom: 0.7335em;
 }
-/* line 607, ../scss/_small.scss */
+/* line 638, ../scss/_small.scss */
 .respond-form form li label,
 .respond-form form li small {
   display: none;
 }
-/* line 613, ../scss/_small.scss */
+/* line 644, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url],
@@ -10237,14 +10268,14 @@ COMMENT FORM STYLES
   line-height: 1.5em;
   /* form validation */
 }
-/* line 622, ../scss/_small.scss */
+/* line 653, ../scss/_small.scss */
 .respond-form form input[type=text]:focus,
 .respond-form form input[type=email]:focus,
 .respond-form form input[type=url]:focus,
 .respond-form form textarea:focus {
   background: #fff;
 }
-/* line 627, ../scss/_small.scss */
+/* line 658, ../scss/_small.scss */
 .respond-form form input[type=text]:invalid,
 .respond-form form input[type=email]:invalid,
 .respond-form form input[type=url]:invalid,
@@ -10257,14 +10288,14 @@ COMMENT FORM STYLES
   -ms-box-shadow: none;
   box-shadow: none;
 }
-/* line 638, ../scss/_small.scss */
+/* line 669, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url] {
   max-width: 400px;
   min-width: 250px;
 }
-/* line 645, ../scss/_small.scss */
+/* line 676, ../scss/_small.scss */
 .respond-form form textarea {
   resize: none;
   width: 97.3%;
@@ -10273,7 +10304,7 @@ COMMENT FORM STYLES
 
 /* comment submit button */
 /* comment form title */
-/* line 658, ../scss/_small.scss */
+/* line 689, ../scss/_small.scss */
 #comment-form-title {
   margin: 0 0 1.1em;
 }
@@ -10281,13 +10312,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 671, ../scss/_small.scss */
+/* line 702, ../scss/_small.scss */
 #allowed_tags {
   margin: 1.5em 10px 0.7335em 0;
 }
 
 /* no comments */
-/* line 676, ../scss/_small.scss */
+/* line 707, ../scss/_small.scss */
 .nocomments {
   margin: 0 20px 1.1em;
 }
@@ -10295,17 +10326,17 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 694, ../scss/_small.scss */
+/* line 725, ../scss/_small.scss */
 .widget ul {
   margin: 0;
 }
-/* line 697, ../scss/_small.scss */
+/* line 728, ../scss/_small.scss */
 .widget ul li {
   list-style: none;
   /* deep nesting */
 }
 
-/* line 716, ../scss/_small.scss */
+/* line 747, ../scss/_small.scss */
 #sidebar-offcanvas .widgettitle {
   color: #fff;
 }
@@ -10313,7 +10344,7 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 724, ../scss/_small.scss */
+/* line 755, ../scss/_small.scss */
 footer {
   clear: both;
   margin-top: 1em;
@@ -10333,7 +10364,7 @@ view.
 /*********************
 FOUNDATION STYLES
 *********************/
-/* line 755, ../scss/_small.scss */
+/* line 786, ../scss/_small.scss */
 .clearing-assembled.clearing-blackout a:hover {
   background: none;
 }
@@ -10341,7 +10372,7 @@ FOUNDATION STYLES
 /*********************
 PLUGIN STYLES
 *********************/
-/* line 763, ../scss/_small.scss */
+/* line 794, ../scss/_small.scss */
 .gform_body ul {
   list-style: none outside none;
   margin: 0;
@@ -10350,13 +10381,25 @@ PLUGIN STYLES
 /********************
 Modernizr Fallbacks
 ********************/
-/* line 773, ../scss/_small.scss */
+/* line 804, ../scss/_small.scss */
 .no-svg .starfield:before {
   background: url(../images/stars@2x.png) repeat top left;
 }
-/* line 776, ../scss/_small.scss */
+/* line 808, ../scss/_small.scss */
+.no-svg #welcome:before {
+  background: url(../images/themoon.png) no-repeat top right;
+}
+/* line 811, ../scss/_small.scss */
 .no-svg #welcome:after {
   background: url(../images/sidewalk.png) repeat-x top center;
+}
+/* line 815, ../scss/_small.scss */
+.no-svg #welcome #inner-content:before {
+  background: url(../images/facade1.svg) no-repeat bottom left;
+}
+/* line 818, ../scss/_small.scss */
+.no-svg #welcome #inner-content:after {
+  background: url(../images/facade2.svg) no-repeat bottom right;
 }
 
 /*

@@ -130,6 +130,11 @@ LAYOUT & GRID STYLES
 #welcome {
 	&:before {
 		content: '';
+		background: url(../images/themoon.svg) no-repeat top right;
+		background-size: contain;
+		width: 40%;
+		max-height: 40%;
+		height: 215px;
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -143,6 +148,32 @@ LAYOUT & GRID STYLES
 		right: 0;
 		bottom: 0;
 		left: 0;
+	}
+	#inner-content {
+		&:before {
+			content:'';
+			background: url(../images/facade1.svg) no-repeat bottom left;
+			background-size: contain;
+			width: 624px;
+			height: 425px;
+			max-height: 90%;
+			position: absolute;
+			right: 75%;
+			bottom: 23px;
+			z-index: 1;
+		}
+		&:after {
+			content:'';
+			background: url(../images/facade2.svg) no-repeat bottom right;
+			background-size: contain;
+			width: 499px;
+			height: 447px;
+			max-height: 90%;
+			position: absolute;
+			left: 75%;
+			bottom: 23px;
+			z-index: 1;
+		}
 	}
 }
 /*********************
@@ -773,7 +804,20 @@ Modernizr Fallbacks
 	.starfield:before {
 		background: url(../images/stars@2x.png) repeat top left;
 	}
-	#welcome:after {
-		background: url(../images/sidewalk.png) repeat-x top center;
+	#welcome{
+		&:before {
+			background: url(../images/themoon.png) no-repeat top right;
+		}
+		&:after {
+			background: url(../images/sidewalk.png) repeat-x top center;
+		}
+		#inner-content {
+			&:before {
+				background: url(../images/facade1.svg) no-repeat bottom left;
+			}
+			&:after {
+				background: url(../images/facade2.svg) no-repeat bottom right;
+			}
+		}
 	}
 }
