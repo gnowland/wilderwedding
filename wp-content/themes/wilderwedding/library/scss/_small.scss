@@ -7,7 +7,7 @@ loaded by mobile devices. You want to keep it as minimal as
 possible. This is called at the top of the main stylsheet
 and will be used across all viewports.
 
-blue: #022644 //#152348
+blue: #0D3057 //#022644 //#152348
 gold: #D1AC5E
 
 ******************************************************************/
@@ -42,7 +42,7 @@ html, body {
 }
 
 body {
-	background-color: rgb(1,24,43); //solid bg fallback
+	background-color: $body-bg; //solid bg fallback
 }
 
 .starfield {
@@ -50,8 +50,6 @@ body {
 	z-index: -1;
 	width: 100%;
 	height: 100%;
-	@include filter-gradient(#01182b, #123560, vertical);
-	@include background-image(linear-gradient(top,  rgb(1,24,43) 0%,rgb(2,38,68) 60%,rgb(18,53,96) 100%));
 	// background-image: url('/library/images/background.gif');
 	&:before {
 		content: '';
@@ -64,6 +62,15 @@ body {
 		left: 0;
 	}
 }
+
+// .starfield {
+// 	position: fixed;
+// 	z-index: -1;
+// 	width: 100%;
+// 	height: 100%;
+// 	background: url(../images/stars.svg) repeat top left;
+// 	background-size: 150px 150px;
+// }
 
 // Search Form
 #searchform {
@@ -125,31 +132,63 @@ style a page via class
 LAYOUT & GRID STYLES
 *********************/
 .one-page {
-	 min-height: 100%;
-}
-#welcome {
-	&:before {
-		content: '';
-		background: url(../images/themoon.svg) no-repeat top right;
-		background-size: contain;
-		width: 40%;
-		max-height: 40%;
-		height: 215px;
-		position: absolute;
-		right: 0;
-		top: 0;
+	height: 100%;
+	//min-height: 100%;
+	#content {
+		height: 100%;
 	}
+}
+
+#container > section {
+	z-index: 1;
+	position: relative;
+}
+
+#inner-content {
+		background-color: $inner-content-bg;
+}
+
+#background {
+	@include filter-gradient(#01182b, #123560, vertical);
+	@include background-image(linear-gradient(top,  rgb(1,24,43) 0%,rgb(2,38,68) 60%,rgb(18,53,96) 100%));
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	&:after {
 		content:'';
-		background: url(../images/sidewalk.svg) repeat-x top center;
-		background-size: 1057px 33px;
-		height: 33px;
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		left: 0;
+		background: url(../images/stars.svg) repeat top left;
+		background-size: 150px 150px;
+		z-index: -1;
+		height: 100%;
+		width: 100%;
+	}
+	#content {
+		&:before {
+			content: '';
+			background: url(../images/themoon.svg) no-repeat top right;
+			background-size: contain;
+			width: 40%;
+			max-height: 40%;
+			height: 215px;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		&:after {
+			content:'';
+			background: url(../images/sidewalk.svg) repeat-x top center;
+			background-size: 1057px 33px;
+			height: 33px;
+			position: absolute;
+			right: 0;
+			bottom: 2px;
+			left: 0;
+		}
 	}
 	#inner-content {
+
 		&:before {
 			content:'';
 			background: url(../images/facade1.svg) no-repeat bottom left;
@@ -159,7 +198,7 @@ LAYOUT & GRID STYLES
 			max-height: 90%;
 			position: absolute;
 			right: 75%;
-			bottom: 23px;
+			bottom: 25px;
 			z-index: 1;
 		}
 		&:after {

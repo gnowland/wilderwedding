@@ -56,7 +56,7 @@
 		<div class="off-canvas-wrap" data-offcanvas> <!-- Closes in footer.php -->
 			<div class="inner-wrap">
 				<div id="container"> <!-- Closes in footer.php -->
-					<div class="starfield"></div>
+
 					<?php
 						if(!is_front_page()) {
 					?>
@@ -79,3 +79,4 @@
 					<?php
 						}
 					?>
+					<?php get_template_part( 'partials/nav', 'flippdown' ); ?>
