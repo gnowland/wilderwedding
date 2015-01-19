@@ -1,11 +1,5 @@
 <?php get_header(); ?>
 
-		<div id="background">
-				<div id="content">
-					<div id="inner-content" class="row"></div>
-				</div>
-		</div>
-
 		<section class="one-page" id="welcome">
 				<div id="content">
 					<div id="inner-content" class="row">

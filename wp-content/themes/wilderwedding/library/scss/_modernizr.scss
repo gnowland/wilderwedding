@@ -12,15 +12,15 @@ Modernizr Fallbacks
         background: url(../images/themoon.png) no-repeat top right;
       }
       &:after {
-        background: url(../images/sidewalk.png) repeat-x top center;
+        background: url(../images/sidewalk-b.png) repeat-x top center;
       }
     }
     #inner-content {
       &:before {
-        background: url(../images/facade1.png) no-repeat bottom left;
+        background: url(../images/facade1.png) repeat-x bottom right;
       }
       &:after {
-        background: url(../images/facade2.png) no-repeat bottom right;
+        background: url(../images/facade2.png) repeat-x bottom left;
       }
     }
   }

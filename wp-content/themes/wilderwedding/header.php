@@ -80,3 +80,9 @@
 						}
 					?>
 					<?php get_template_part( 'partials/nav', 'flippdown' ); ?>
+
+					<div id="background">
+							<div id="content">
+								<div id="inner-content" class="row"></div>
+							</div>
+					</div>
