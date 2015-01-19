@@ -133,7 +133,7 @@ LAYOUT & GRID STYLES
 	left: 0;
 	right: 0;
 	z-index: -1;
-	&:after {
+	&:before {
 		content:'';
 		background: url(../images/stars.svg) repeat top left;
 		background-size: 150px 150px;
@@ -152,7 +152,7 @@ LAYOUT & GRID STYLES
 			max-height: 40%;
 			height: 215px;
 			position: absolute;
-			right: 0;
+			right: 10px;
 			top: 0;
 		}
 		&:after {

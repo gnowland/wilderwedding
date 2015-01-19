@@ -9907,7 +9907,7 @@ LAYOUT & GRID STYLES
   z-index: -1;
 }
 /* line 136, ../scss/_small.scss */
-#background:after {
+#background:before {
   content: '';
   background: url(../images/stars.svg) repeat top left;
   background-size: 150px 150px;
@@ -9929,7 +9929,7 @@ LAYOUT & GRID STYLES
   max-height: 40%;
   height: 215px;
   position: absolute;
-  right: 0;
+  right: 10px;
   top: 0;
 }
 /* line 158, ../scss/_small.scss */
