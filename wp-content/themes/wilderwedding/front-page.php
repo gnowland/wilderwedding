@@ -1,26 +1,29 @@
 <?php get_header(); ?>
 
-		<section class="one-page" id="welcome">
-				<div id="content">
-					<div id="inner-content" class="row">
-							<div id="main" class="large-12 medium-12 columns" role="main">
+	<?php
+		// the query
+		$query1 = new WP_Query( 'post_type=page' );
 
-								<?php
-								// the query
-								$query1 = new WP_Query( 'pagename=welcome' );
-
-								if ( $query1->have_posts() ){
-									while ( $query1->have_posts() ){
-													$query1->the_post(); ?>
-													<article id="<?php the_ID(); ?>" <?php post_class('entry-content'); ?> role="article" itemprop="articleBody" >
-														<header class="article-header">
-															<h1 class="page-title"><?php the_title(); ?></h1>
-														</header> <!-- end article header -->
-														<section class="entry-content" itemprop="articleBody">
-															<?php the_content(); ?>
-														</section> <!-- end article section -->
-													</article> <!-- end article -->
-									<?php
+			if ( $query1->have_posts() ){
+				while ( $query1->have_posts() ){
+					$query1->the_post(); ?>
+					<section id="<?php echo $post->post_name; ?>" <?php if($post->post_name == 'welcome'){ echo 'class="one-page"'; } ?> >
+						<div id="content">
+							<div id="inner-content" class="row">
+								<div id="main" class="large-12 medium-12 columns <?php if($post->post_name == 'welcome'){ echo 'text-center'; } ?>" role="main">
+									<article id="<?php the_ID(); ?>" role="article" itemprop="articleBody" >
+										<header class="article-header">
+											<h1 class="page-title"><?php the_title(); ?></h1>
+										</header> <!-- end article header -->
+										<section class="entry-content" itemprop="articleBody">
+											<?php the_content(); ?>
+										</section> <!-- end article section -->
+									</article> <!-- end article -->
+								</div> <!-- end #main -->
+							</div> <!-- end #inner-content -->
+						</div> <!-- end #content -->
+					</section>
+							<?php
 									} //end of the loop/endwhile
 
 									wp_reset_postdata();
@@ -29,25 +32,4 @@
 									get_template_part( 'partials/content', 'missing' );
 								} ?>
 
-							</div> <!-- end #main -->
-
-					</div> <!-- end #inner-content -->
-
-				</div> <!-- end #content -->
-			</section>
-			<section class="" id="the-couple">
-					<div id="content">
-
-						<div id="inner-content" class="row">
-
-								<div id="main" class="large-12 medium-12 columns" role="main">
-
-								<p></p>
-
-								</div> <!-- end #main -->
-
-						</div> <!-- end #inner-content -->
-
-					</div> <!-- end #content -->
-				</section>
 <?php get_footer(); ?>
