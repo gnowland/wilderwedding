@@ -45,33 +45,6 @@ body {
 	background-color: $body-bg; //solid bg fallback
 }
 
-.starfield {
-	position: fixed;
-	z-index: -1;
-	width: 100%;
-	height: 100%;
-	// background-image: url('/library/images/background.gif');
-	&:before {
-		content: '';
-		background: url(../images/stars.svg) repeat top left;
-		background-size: 150px 150px;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
-}
-
-// .starfield {
-// 	position: fixed;
-// 	z-index: -1;
-// 	width: 100%;
-// 	height: 100%;
-// 	background: url(../images/stars.svg) repeat top left;
-// 	background-size: 150px 150px;
-// }
-
 // Search Form
 #searchform {
 	#s {
@@ -140,7 +113,6 @@ LAYOUT & GRID STYLES
 }
 
 #container > section {
-	z-index: 1;
 	position: relative;
 }
 
@@ -156,6 +128,7 @@ LAYOUT & GRID STYLES
 	bottom: 0;
 	left: 0;
 	right: 0;
+	z-index: -1;
 	&:after {
 		content:'';
 		background: url(../images/stars.svg) repeat top left;
@@ -163,6 +136,7 @@ LAYOUT & GRID STYLES
 		z-index: -1;
 		height: 100%;
 		width: 100%;
+		position: absolute;
 	}
 	#content {
 		&:before {
@@ -188,7 +162,6 @@ LAYOUT & GRID STYLES
 		}
 	}
 	#inner-content {
-
 		&:before {
 			content:'';
 			background: url(../images/facade1.svg) no-repeat bottom left;
@@ -833,30 +806,4 @@ PLUGIN STYLES
 .gform_body ul {
     list-style: none outside none;
     margin: 0;
-}
-
-/********************
-Modernizr Fallbacks
-********************/
-
-.no-svg {
-	.starfield:before {
-		background: url(../images/stars@2x.png) repeat top left;
-	}
-	#welcome{
-		&:before {
-			background: url(../images/themoon.png) no-repeat top right;
-		}
-		&:after {
-			background: url(../images/sidewalk.png) repeat-x top center;
-		}
-		#inner-content {
-			&:before {
-				background: url(../images/facade1.svg) no-repeat bottom left;
-			}
-			&:after {
-				background: url(../images/facade2.svg) no-repeat bottom right;
-			}
-		}
-	}
 }

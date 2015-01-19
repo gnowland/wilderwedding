@@ -1,0 +1,27 @@
+/********************
+Modernizr Fallbacks
+********************/
+
+.no-svg {
+  #background{
+    &:after {
+      background: url(../images/stars.png) repeat top left;
+    }
+    #content {
+      &:before {
+        background: url(../images/themoon.png) no-repeat top right;
+      }
+      &:after {
+        background: url(../images/sidewalk.png) repeat-x top center;
+      }
+    }
+    #inner-content {
+      &:before {
+        background: url(../images/facade1.png) no-repeat bottom left;
+      }
+      &:after {
+        background: url(../images/facade2.png) no-repeat bottom right;
+      }
+    }
+  }
+}

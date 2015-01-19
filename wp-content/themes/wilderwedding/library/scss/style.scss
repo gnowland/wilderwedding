@@ -119,3 +119,11 @@ be set to display none.
 @media print {
 	@import "print";
 }
+
+/*
+MODERNIZR STYLESHEET
+Modernizr Overrides
+*/
+@media print {
+  @import "modernizr";
+}
