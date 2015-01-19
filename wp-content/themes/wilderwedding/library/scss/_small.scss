@@ -128,6 +128,12 @@ LAYOUT & GRID STYLES
 	 min-height: 100%;
 }
 #welcome {
+	&:before {
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
 	&:after {
 		content:'';
 		background: url(../images/sidewalk.svg) repeat-x top center;
