@@ -58,7 +58,21 @@
 				<div id="container"> <!-- Closes in footer.php -->
 
 					<?php
-						if(!is_front_page()) {
+
+						if(is_front_page()) {
+
+					?>
+					<?php get_template_part( 'partials/nav', 'main-topbar-home' ); ?>
+
+					<div id="background">
+						<div id="content">
+							<div id="inner-content" class="row"></div>
+						</div>
+					</div>
+					<?php
+
+						} else {
+
 					?>
 						<header class="header" role="banner">
 
@@ -79,10 +93,3 @@
 					<?php
 						}
 					?>
-					<?php get_template_part( 'partials/nav', 'flippdown' ); ?>
-
-					<div id="background">
-							<div id="content">
-								<div id="inner-content" class="row"></div>
-							</div>
-					</div>

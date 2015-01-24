@@ -7061,8 +7061,8 @@ table tr td {
 }
 /* line 112, ../../bower_components/foundation/scss/foundation/components/_top-bar.scss */
 meta.foundation-mq-topbar {
-  font-family: "/only screen and (min-width:40.063em)/";
-  width: 40.063em;
+  font-family: "/only screen and (min-width: 9999px)/";
+  width: 9999px;
 }
 
 /* Wrapped around .top-bar to contain to grid width */
@@ -7547,7 +7547,7 @@ meta.foundation-mq-topbar {
   display: block;
 }
 
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 9999px) {
   /* line 455, ../../bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar {
     background: #333333;
@@ -9890,34 +9890,19 @@ LAYOUT & GRID STYLES
 #container > section:not(.one-page) {
   margin: 50px 0;
 }
-/* line 130, ../scss/_small.scss */
-#container > section:not(.one-page):nth-of-type(even) #inner-content {
-  transform: skew(3deg, -1deg);
-  box-shadow: 2px 0px 15px 0px rgba(0, 0, 0, 0.6);
-}
-/* line 133, ../scss/_small.scss */
-#container > section:not(.one-page):nth-of-type(even) #inner-content #main {
-  transform: skew(-3deg, 1deg);
-  margin-top: 10px;
-}
-/* line 140, ../scss/_small.scss */
-#container > section:not(.one-page):nth-of-type(odd) #inner-content:nth-of-type(odd) {
-  transform: skew(-3deg, 1deg);
-  box-shadow: 2px 0px 15px 0px rgba(0, 0, 0, 0.6);
-}
-/* line 143, ../scss/_small.scss */
-#container > section:not(.one-page):nth-of-type(odd) #inner-content:nth-of-type(odd) #main {
-  transform: skew(3deg, -1deg);
-  margin-top: 10px;
+/* line 129, ../scss/_small.scss */
+#container > section:not(.one-page) #main {
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), inset 0 0 40px rgba(0, 0, 0, 0.29);
 }
 
-/* line 152, ../scss/_small.scss */
+/* line 136, ../scss/_small.scss */
 #inner-content {
   background-color: #F6F6F6;
   width: 70%;
 }
 
-/* line 157, ../scss/_small.scss */
+/* line 141, ../scss/_small.scss */
 #background {
   position: fixed;
   overflow-y: scroll;
@@ -9935,7 +9920,7 @@ LAYOUT & GRID STYLES
   background-image: -webkit-linear-gradient(top, #01182b 0%, #022644 60%, #123560 100%);
   background-image: linear-gradient(to bottom, #01182b 0%, #022644 60%, #123560 100%);
 }
-/* line 167, ../scss/_small.scss */
+/* line 151, ../scss/_small.scss */
 #background:before {
   content: '';
   background: url(../images/stars.svg) repeat top left;
@@ -9945,11 +9930,11 @@ LAYOUT & GRID STYLES
   width: 100%;
   position: absolute;
 }
-/* line 176, ../scss/_small.scss */
+/* line 160, ../scss/_small.scss */
 #background #content {
   height: 100%;
 }
-/* line 178, ../scss/_small.scss */
+/* line 162, ../scss/_small.scss */
 #background #content:before {
   content: '';
   background: url(../images/themoon.svg) no-repeat top right;
@@ -9961,7 +9946,7 @@ LAYOUT & GRID STYLES
   right: 11px;
   top: 0;
 }
-/* line 189, ../scss/_small.scss */
+/* line 173, ../scss/_small.scss */
 #background #content:after {
   content: '';
   background: url(../images/sidewalk-b.svg) repeat-x top center;
@@ -9972,13 +9957,13 @@ LAYOUT & GRID STYLES
   bottom: 0;
   left: 0;
 }
-/* line 200, ../scss/_small.scss */
+/* line 184, ../scss/_small.scss */
 #background #inner-content {
   position: relative;
   height: 100%;
   background-color: transparent;
 }
-/* line 204, ../scss/_small.scss */
+/* line 188, ../scss/_small.scss */
 #background #inner-content:before {
   content: '';
   background: url(../images/facade1.svg) repeat-x bottom right;
@@ -9991,7 +9976,7 @@ LAYOUT & GRID STYLES
   bottom: 23px;
   z-index: 1;
 }
-/* line 216, ../scss/_small.scss */
+/* line 200, ../scss/_small.scss */
 #background #inner-content:after {
   content: '';
   background: url(../images/facade2.svg) repeat-x bottom left;
@@ -10005,12 +9990,12 @@ LAYOUT & GRID STYLES
   z-index: 1;
 }
 
-/* line 232, ../scss/_small.scss */
+/* line 216, ../scss/_small.scss */
 #welcome #inner-content {
   background-color: transparent;
   color: #F9F9F9;
 }
-/* line 235, ../scss/_small.scss */
+/* line 219, ../scss/_small.scss */
 #welcome #inner-content h1 {
   color: inherit;
 }
@@ -10018,13 +10003,13 @@ LAYOUT & GRID STYLES
 /*********************
 LINK STYLES
 *********************/
-/* line 244, ../scss/_small.scss */
+/* line 228, ../scss/_small.scss */
 a, a:visited {
   /*adds highlight on hover */
   /* on click */
   /* mobile tap color */
 }
-/* line 258, ../scss/_small.scss */
+/* line 242, ../scss/_small.scss */
 a:link, a:visited:link {
   /*
   this highlights links on iPhones/iPads.
@@ -10037,7 +10022,7 @@ a:link, a:visited:link {
 /******************************************************************
 H1, H2, H3, H4, H5 P STYLES
 ******************************************************************/
-/* line 273, ../scss/_small.scss */
+/* line 257, ../scss/_small.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   /*
   if you're going to use webfonts, be sure to check your weights
@@ -10045,7 +10030,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   */
   /* removing text decoration from all headline links */
 }
-/* line 280, ../scss/_small.scss */
+/* line 264, ../scss/_small.scss */
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none;
 }
@@ -10053,7 +10038,7 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 /*********************
 HEADER STYLES
 *********************/
-/* line 310, ../scss/_small.scss */
+/* line 294, ../scss/_small.scss */
 .header ul.off-canvas-list li {
   list-style: none;
 }
@@ -10061,20 +10046,70 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 319, ../scss/_small.scss */
+/* line 302, ../scss/_small.scss */
+.fixed {
+  top: 7%;
+  left: 5%;
+}
+/* line 305, ../scss/_small.scss */
+.fixed.expanded:not(.top-bar) {
+  overflow-y: visible;
+}
+
+/* line 310, ../scss/_small.scss */
+.home-nav {
+  position: absolute;
+  overflow: visible;
+}
+/* line 313, ../scss/_small.scss */
+.home-nav .name {
+  position: relative;
+}
+/* line 315, ../scss/_small.scss */
+.home-nav .name .circle {
+  background-color: red;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+}
+/* line 322, ../scss/_small.scss */
+.home-nav .toggle-topbar {
+  left: 0;
+  right: auto;
+}
+/* line 325, ../scss/_small.scss */
+.home-nav .toggle-topbar.menu-icon {
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin-top: 0;
+}
+/* line 330, ../scss/_small.scss */
+.home-nav .toggle-topbar.menu-icon a {
+  height: 45px;
+  padding: 0;
+  width: 100%;
+}
+/* line 334, ../scss/_small.scss */
+.home-nav .toggle-topbar.menu-icon a span:after {
+  left: 0.9375rem;
+  right: auto;
+}
+
+/* line 344, ../scss/_small.scss */
 .top-bar .title-area {
   z-index: 1;
 }
 
-/* line 325, ../scss/_small.scss */
+/* line 350, ../scss/_small.scss */
 .off-canvas-list ul {
   margin-left: 0;
 }
-/* line 328, ../scss/_small.scss */
+/* line 353, ../scss/_small.scss */
 .off-canvas-list ul li a {
   border-bottom: 0px;
 }
-/* line 332, ../scss/_small.scss */
+/* line 357, ../scss/_small.scss */
 .off-canvas-list ul .dropdown {
   margin-left: 20px;
 }
@@ -10093,13 +10128,13 @@ POSTS & CONTENT STYLES
 /* style by category (i.e. category-videos) */
 /* style by tag (i.e. tag-news) */
 /* post meta */
-/* line 376, ../scss/_small.scss */
+/* line 401, ../scss/_small.scss */
 .byline {
   color: #999;
 }
 
 /* entry content */
-/* line 382, ../scss/_small.scss */
+/* line 407, ../scss/_small.scss */
 .entry-content {
   /*
   image alignment on a screen this size may be
@@ -10108,24 +10143,24 @@ POSTS & CONTENT STYLES
   but it's up to you. Feel free to change it up.
   */
 }
-/* line 416, ../scss/_small.scss */
+/* line 441, ../scss/_small.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 423, ../scss/_small.scss */
+/* line 448, ../scss/_small.scss */
 .entry-content img {
   max-width: 100%;
   height: auto;
 }
-/* line 438, ../scss/_small.scss */
+/* line 463, ../scss/_small.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 443, ../scss/_small.scss */
+/* line 468, ../scss/_small.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -10133,20 +10168,20 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 451, ../scss/_small.scss */
+/* line 476, ../scss/_small.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 457, ../scss/_small.scss */
+/* line 482, ../scss/_small.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 463, ../scss/_small.scss */
+/* line 488, ../scss/_small.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -10160,7 +10195,7 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 500, ../scss/_small.scss */
+/* line 525, ../scss/_small.scss */
 .pagination a:hover {
   color: black;
 }
@@ -10169,17 +10204,17 @@ PAGE NAVI STYLES
 COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
-/* line 510, ../scss/_small.scss */
+/* line 535, ../scss/_small.scss */
 #comments {
   /* number of comments span */
 }
 
-/* line 518, ../scss/_small.scss */
+/* line 543, ../scss/_small.scss */
 #respond ul {
   margin-left: 0px;
 }
 
-/* line 533, ../scss/_small.scss */
+/* line 558, ../scss/_small.scss */
 .commentlist {
   /* general comment classes */
   /* vcard */
@@ -10190,7 +10225,7 @@ COMMENT STYLES
   /* comment reply link */
   /* end .commentlist .comment-reply-link */
 }
-/* line 535, ../scss/_small.scss */
+/* line 560, ../scss/_small.scss */
 .commentlist li {
   position: relative;
   clear: both;
@@ -10200,59 +10235,59 @@ COMMENT STYLES
   padding: 0.7335em 10px;
   /* end .commentlist li ul.children */
 }
-/* line 543, ../scss/_small.scss */
+/* line 568, ../scss/_small.scss */
 .commentlist li:last-child {
   margin-bottom: 0;
 }
-/* line 547, ../scss/_small.scss */
+/* line 572, ../scss/_small.scss */
 .commentlist li ul.children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 565, ../scss/_small.scss */
+/* line 590, ../scss/_small.scss */
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
 }
-/* line 569, ../scss/_small.scss */
+/* line 594, ../scss/_small.scss */
 .commentlist li.depth-1 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 574, ../scss/_small.scss */
+/* line 599, ../scss/_small.scss */
 .commentlist li:not(.depth-1) {
   margin-left: 10px;
   margin-top: 0;
   padding-bottom: 0;
   background: #e7e7e7;
 }
-/* line 582, ../scss/_small.scss */
+/* line 607, ../scss/_small.scss */
 .commentlist li.depth-3 {
   background: #dadada;
 }
-/* line 606, ../scss/_small.scss */
+/* line 631, ../scss/_small.scss */
 .commentlist .vcard {
   margin-left: 50px;
 }
-/* line 609, ../scss/_small.scss */
+/* line 634, ../scss/_small.scss */
 .commentlist .vcard cite.fn {
   font-weight: 700;
   font-style: normal;
 }
-/* line 617, ../scss/_small.scss */
+/* line 642, ../scss/_small.scss */
 .commentlist .vcard time {
   float: right;
 }
-/* line 620, ../scss/_small.scss */
+/* line 645, ../scss/_small.scss */
 .commentlist .vcard time a {
   color: #999;
   text-decoration: none;
 }
-/* line 624, ../scss/_small.scss */
+/* line 649, ../scss/_small.scss */
 .commentlist .vcard time a:hover {
   text-decoration: underline;
 }
-/* line 634, ../scss/_small.scss */
+/* line 659, ../scss/_small.scss */
 .commentlist .vcard img.avatar {
   position: absolute;
   left: 10px;
@@ -10260,13 +10295,13 @@ COMMENT STYLES
   border: 1px solid #cecece;
   background: #fff;
 }
-/* line 661, ../scss/_small.scss */
+/* line 686, ../scss/_small.scss */
 .commentlist .comment_content p {
   margin: 0.7335em 0 1.5em;
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 670, ../scss/_small.scss */
+/* line 695, ../scss/_small.scss */
 .commentlist .comment-reply-link {
   border-style: solid;
   border-width: 0;
@@ -10305,27 +10340,27 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 687, ../scss/_small.scss */
+/* line 712, ../scss/_small.scss */
 .respond-form {
   margin: 1.5em 10px;
   padding-bottom: 2.2em;
 }
-/* line 691, ../scss/_small.scss */
+/* line 716, ../scss/_small.scss */
 .respond-form form {
   margin: 0.75em 0;
 }
-/* line 694, ../scss/_small.scss */
+/* line 719, ../scss/_small.scss */
 .respond-form form li {
   list-style-type: none;
   clear: both;
   margin-bottom: 0.7335em;
 }
-/* line 699, ../scss/_small.scss */
+/* line 724, ../scss/_small.scss */
 .respond-form form li label,
 .respond-form form li small {
   display: none;
 }
-/* line 705, ../scss/_small.scss */
+/* line 730, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url],
@@ -10336,14 +10371,14 @@ COMMENT FORM STYLES
   line-height: 1.5em;
   /* form validation */
 }
-/* line 714, ../scss/_small.scss */
+/* line 739, ../scss/_small.scss */
 .respond-form form input[type=text]:focus,
 .respond-form form input[type=email]:focus,
 .respond-form form input[type=url]:focus,
 .respond-form form textarea:focus {
   background: #fff;
 }
-/* line 719, ../scss/_small.scss */
+/* line 744, ../scss/_small.scss */
 .respond-form form input[type=text]:invalid,
 .respond-form form input[type=email]:invalid,
 .respond-form form input[type=url]:invalid,
@@ -10356,14 +10391,14 @@ COMMENT FORM STYLES
   -ms-box-shadow: none;
   box-shadow: none;
 }
-/* line 730, ../scss/_small.scss */
+/* line 755, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url] {
   max-width: 400px;
   min-width: 250px;
 }
-/* line 737, ../scss/_small.scss */
+/* line 762, ../scss/_small.scss */
 .respond-form form textarea {
   resize: none;
   width: 97.3%;
@@ -10372,7 +10407,7 @@ COMMENT FORM STYLES
 
 /* comment submit button */
 /* comment form title */
-/* line 750, ../scss/_small.scss */
+/* line 775, ../scss/_small.scss */
 #comment-form-title {
   margin: 0 0 1.1em;
 }
@@ -10380,13 +10415,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 763, ../scss/_small.scss */
+/* line 788, ../scss/_small.scss */
 #allowed_tags {
   margin: 1.5em 10px 0.7335em 0;
 }
 
 /* no comments */
-/* line 768, ../scss/_small.scss */
+/* line 793, ../scss/_small.scss */
 .nocomments {
   margin: 0 20px 1.1em;
 }
@@ -10394,17 +10429,17 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 786, ../scss/_small.scss */
+/* line 811, ../scss/_small.scss */
 .widget ul {
   margin: 0;
 }
-/* line 789, ../scss/_small.scss */
+/* line 814, ../scss/_small.scss */
 .widget ul li {
   list-style: none;
   /* deep nesting */
 }
 
-/* line 808, ../scss/_small.scss */
+/* line 833, ../scss/_small.scss */
 #sidebar-offcanvas .widgettitle {
   color: #fff;
 }
@@ -10412,7 +10447,7 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 816, ../scss/_small.scss */
+/* line 841, ../scss/_small.scss */
 footer {
   clear: both;
   margin-top: 1em;
@@ -10432,7 +10467,7 @@ view.
 /*********************
 FOUNDATION STYLES
 *********************/
-/* line 847, ../scss/_small.scss */
+/* line 872, ../scss/_small.scss */
 .clearing-assembled.clearing-blackout a:hover {
   background: none;
 }
@@ -10440,7 +10475,7 @@ FOUNDATION STYLES
 /*********************
 PLUGIN STYLES
 *********************/
-/* line 855, ../scss/_small.scss */
+/* line 880, ../scss/_small.scss */
 .gform_body ul {
   list-style: none outside none;
   margin: 0;
