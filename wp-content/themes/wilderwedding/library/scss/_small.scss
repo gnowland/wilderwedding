@@ -300,10 +300,14 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
 .fixed {
-	top: 7%;
-	left: 5%;
+	top: calc( 5% + 3px );
+	left: calc( 5% + 10px );
   &.expanded:not(.top-bar) {
     overflow-y: visible;
+    .top-bar-section {
+    	height: auto;
+    	overflow: visible;
+    }
   }
 }
 
@@ -313,10 +317,13 @@ NAVIGATION STYLES
 	.name {
 		position: relative;
 		.circle {
-			background-color: red;
-			height: 55px;
-			width: 55px;
+			background-color: #fcfcfc;
+			height: 52px;
+			width: 52px;
 			border-radius: 50%;
+			margin-top: -3px;
+			margin-left: -10px;
+			box-shadow: 0 0 10px -1px rgba(0,0,0, 0.8);
 		}
 	}
 	.toggle-topbar {
@@ -331,12 +338,18 @@ NAVIGATION STYLES
 				height: 45px; //Hate setting exact, but no way to override. Set to same as .top-bar
 				padding: 0;
 				width: 100%;
-				span:after {
-					left: 0.9375rem;
+				span::after {
+					left: 8px;
+					top: 61%;
 					right: auto;
+					box-shadow: 0 0 0 1px #333, 0 7px 0 1px #333, 0 14px 0 1px #333;
 				}
 			}
 		}
+	}
+	.top-bar-section {
+		overflow: hidden;
+		height: 0;
 	}
 }
 
