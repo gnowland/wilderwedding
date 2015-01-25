@@ -8,6 +8,7 @@ and is called at the beginning, after that we call the rest
 of the styles inside media queries.
 ******************************************************************/
 @import "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700";
+@import "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -9933,8 +9934,9 @@ LAYOUT & GRID STYLES
 /* line 160, ../scss/_small.scss */
 #background #content {
   height: 100%;
+  overflow: hidden;
 }
-/* line 162, ../scss/_small.scss */
+/* line 163, ../scss/_small.scss */
 #background #content:before {
   content: '';
   background: url(../images/themoon.svg) no-repeat top right;
@@ -9946,7 +9948,7 @@ LAYOUT & GRID STYLES
   right: 11px;
   top: 0;
 }
-/* line 173, ../scss/_small.scss */
+/* line 174, ../scss/_small.scss */
 #background #content:after {
   content: '';
   background: url(../images/sidewalk-b.svg) repeat-x top center;
@@ -9957,13 +9959,13 @@ LAYOUT & GRID STYLES
   bottom: 0;
   left: 0;
 }
-/* line 184, ../scss/_small.scss */
+/* line 185, ../scss/_small.scss */
 #background #inner-content {
   position: relative;
   height: 100%;
   background-color: transparent;
 }
-/* line 188, ../scss/_small.scss */
+/* line 189, ../scss/_small.scss */
 #background #inner-content:before {
   content: '';
   background: url(../images/facade1.svg) repeat-x bottom right;
@@ -9976,7 +9978,7 @@ LAYOUT & GRID STYLES
   bottom: 23px;
   z-index: 1;
 }
-/* line 200, ../scss/_small.scss */
+/* line 201, ../scss/_small.scss */
 #background #inner-content:after {
   content: '';
   background: url(../images/facade2.svg) repeat-x bottom left;
@@ -9990,12 +9992,12 @@ LAYOUT & GRID STYLES
   z-index: 1;
 }
 
-/* line 216, ../scss/_small.scss */
+/* line 217, ../scss/_small.scss */
 #welcome #inner-content {
   background-color: transparent;
   color: #F9F9F9;
 }
-/* line 219, ../scss/_small.scss */
+/* line 220, ../scss/_small.scss */
 #welcome #inner-content h1 {
   color: inherit;
 }
@@ -10003,13 +10005,13 @@ LAYOUT & GRID STYLES
 /*********************
 LINK STYLES
 *********************/
-/* line 228, ../scss/_small.scss */
+/* line 229, ../scss/_small.scss */
 a, a:visited {
   /*adds highlight on hover */
   /* on click */
   /* mobile tap color */
 }
-/* line 242, ../scss/_small.scss */
+/* line 243, ../scss/_small.scss */
 a:link, a:visited:link {
   /*
   this highlights links on iPhones/iPads.
@@ -10022,7 +10024,7 @@ a:link, a:visited:link {
 /******************************************************************
 H1, H2, H3, H4, H5 P STYLES
 ******************************************************************/
-/* line 257, ../scss/_small.scss */
+/* line 258, ../scss/_small.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   /*
   if you're going to use webfonts, be sure to check your weights
@@ -10030,7 +10032,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   */
   /* removing text decoration from all headline links */
 }
-/* line 264, ../scss/_small.scss */
+/* line 265, ../scss/_small.scss */
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none;
 }
@@ -10038,7 +10040,7 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 /*********************
 HEADER STYLES
 *********************/
-/* line 294, ../scss/_small.scss */
+/* line 295, ../scss/_small.scss */
 .header ul.off-canvas-list li {
   list-style: none;
 }
@@ -10046,31 +10048,31 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 302, ../scss/_small.scss */
+/* line 303, ../scss/_small.scss */
 .fixed {
   top: calc( 5% + 3px );
   left: calc( 5% + 10px );
 }
-/* line 305, ../scss/_small.scss */
+/* line 306, ../scss/_small.scss */
 .fixed.expanded:not(.top-bar) {
   overflow-y: visible;
 }
-/* line 307, ../scss/_small.scss */
+/* line 308, ../scss/_small.scss */
 .fixed.expanded:not(.top-bar) .top-bar-section {
   height: auto;
   overflow: visible;
 }
 
-/* line 314, ../scss/_small.scss */
+/* line 315, ../scss/_small.scss */
 .home-nav {
   position: absolute;
   overflow: visible;
 }
-/* line 317, ../scss/_small.scss */
+/* line 318, ../scss/_small.scss */
 .home-nav .name {
   position: relative;
 }
-/* line 319, ../scss/_small.scss */
+/* line 320, ../scss/_small.scss */
 .home-nav .name .circle {
   background-color: #fcfcfc;
   height: 52px;
@@ -10080,51 +10082,51 @@ NAVIGATION STYLES
   margin-left: -10px;
   box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.8);
 }
-/* line 329, ../scss/_small.scss */
+/* line 330, ../scss/_small.scss */
 .home-nav .toggle-topbar {
   left: 0;
   right: auto;
 }
-/* line 332, ../scss/_small.scss */
+/* line 333, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon {
   top: 0;
   height: 100%;
   width: 100%;
   margin-top: 0;
 }
-/* line 337, ../scss/_small.scss */
+/* line 338, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon a {
   height: 45px;
   padding: 0;
   width: 100%;
 }
-/* line 341, ../scss/_small.scss */
+/* line 342, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon a span::after {
   left: 8px;
   top: 61%;
   right: auto;
   box-shadow: 0 0 0 1px #333, 0 7px 0 1px #333, 0 14px 0 1px #333;
 }
-/* line 350, ../scss/_small.scss */
+/* line 351, ../scss/_small.scss */
 .home-nav .top-bar-section {
   overflow: hidden;
   height: 0;
 }
 
-/* line 357, ../scss/_small.scss */
+/* line 358, ../scss/_small.scss */
 .top-bar .title-area {
   z-index: 1;
 }
 
-/* line 363, ../scss/_small.scss */
+/* line 364, ../scss/_small.scss */
 .off-canvas-list ul {
   margin-left: 0;
 }
-/* line 366, ../scss/_small.scss */
+/* line 367, ../scss/_small.scss */
 .off-canvas-list ul li a {
   border-bottom: 0px;
 }
-/* line 370, ../scss/_small.scss */
+/* line 371, ../scss/_small.scss */
 .off-canvas-list ul .dropdown {
   margin-left: 20px;
 }
@@ -10143,13 +10145,13 @@ POSTS & CONTENT STYLES
 /* style by category (i.e. category-videos) */
 /* style by tag (i.e. tag-news) */
 /* post meta */
-/* line 414, ../scss/_small.scss */
+/* line 415, ../scss/_small.scss */
 .byline {
   color: #999;
 }
 
 /* entry content */
-/* line 420, ../scss/_small.scss */
+/* line 421, ../scss/_small.scss */
 .entry-content {
   /*
   image alignment on a screen this size may be
@@ -10158,24 +10160,24 @@ POSTS & CONTENT STYLES
   but it's up to you. Feel free to change it up.
   */
 }
-/* line 454, ../scss/_small.scss */
+/* line 455, ../scss/_small.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 461, ../scss/_small.scss */
+/* line 462, ../scss/_small.scss */
 .entry-content img {
   max-width: 100%;
   height: auto;
 }
-/* line 476, ../scss/_small.scss */
+/* line 477, ../scss/_small.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 481, ../scss/_small.scss */
+/* line 482, ../scss/_small.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -10183,20 +10185,20 @@ POSTS & CONTENT STYLES
 }
 
 /* end .entry-content */
-/* line 489, ../scss/_small.scss */
+/* line 490, ../scss/_small.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 495, ../scss/_small.scss */
+/* line 496, ../scss/_small.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 501, ../scss/_small.scss */
+/* line 502, ../scss/_small.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -10210,7 +10212,7 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 538, ../scss/_small.scss */
+/* line 539, ../scss/_small.scss */
 .pagination a:hover {
   color: black;
 }
@@ -10219,17 +10221,17 @@ PAGE NAVI STYLES
 COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
-/* line 548, ../scss/_small.scss */
+/* line 549, ../scss/_small.scss */
 #comments {
   /* number of comments span */
 }
 
-/* line 556, ../scss/_small.scss */
+/* line 557, ../scss/_small.scss */
 #respond ul {
   margin-left: 0px;
 }
 
-/* line 571, ../scss/_small.scss */
+/* line 572, ../scss/_small.scss */
 .commentlist {
   /* general comment classes */
   /* vcard */
@@ -10240,7 +10242,7 @@ COMMENT STYLES
   /* comment reply link */
   /* end .commentlist .comment-reply-link */
 }
-/* line 573, ../scss/_small.scss */
+/* line 574, ../scss/_small.scss */
 .commentlist li {
   position: relative;
   clear: both;
@@ -10250,59 +10252,59 @@ COMMENT STYLES
   padding: 0.7335em 10px;
   /* end .commentlist li ul.children */
 }
-/* line 581, ../scss/_small.scss */
+/* line 582, ../scss/_small.scss */
 .commentlist li:last-child {
   margin-bottom: 0;
 }
-/* line 585, ../scss/_small.scss */
+/* line 586, ../scss/_small.scss */
 .commentlist li ul.children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 603, ../scss/_small.scss */
+/* line 604, ../scss/_small.scss */
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
 }
-/* line 607, ../scss/_small.scss */
+/* line 608, ../scss/_small.scss */
 .commentlist li.depth-1 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 612, ../scss/_small.scss */
+/* line 613, ../scss/_small.scss */
 .commentlist li:not(.depth-1) {
   margin-left: 10px;
   margin-top: 0;
   padding-bottom: 0;
   background: #e7e7e7;
 }
-/* line 620, ../scss/_small.scss */
+/* line 621, ../scss/_small.scss */
 .commentlist li.depth-3 {
   background: #dadada;
 }
-/* line 644, ../scss/_small.scss */
+/* line 645, ../scss/_small.scss */
 .commentlist .vcard {
   margin-left: 50px;
 }
-/* line 647, ../scss/_small.scss */
+/* line 648, ../scss/_small.scss */
 .commentlist .vcard cite.fn {
   font-weight: 700;
   font-style: normal;
 }
-/* line 655, ../scss/_small.scss */
+/* line 656, ../scss/_small.scss */
 .commentlist .vcard time {
   float: right;
 }
-/* line 658, ../scss/_small.scss */
+/* line 659, ../scss/_small.scss */
 .commentlist .vcard time a {
   color: #999;
   text-decoration: none;
 }
-/* line 662, ../scss/_small.scss */
+/* line 663, ../scss/_small.scss */
 .commentlist .vcard time a:hover {
   text-decoration: underline;
 }
-/* line 672, ../scss/_small.scss */
+/* line 673, ../scss/_small.scss */
 .commentlist .vcard img.avatar {
   position: absolute;
   left: 10px;
@@ -10310,13 +10312,13 @@ COMMENT STYLES
   border: 1px solid #cecece;
   background: #fff;
 }
-/* line 699, ../scss/_small.scss */
+/* line 700, ../scss/_small.scss */
 .commentlist .comment_content p {
   margin: 0.7335em 0 1.5em;
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 708, ../scss/_small.scss */
+/* line 709, ../scss/_small.scss */
 .commentlist .comment-reply-link {
   border-style: solid;
   border-width: 0;
@@ -10355,27 +10357,27 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 725, ../scss/_small.scss */
+/* line 726, ../scss/_small.scss */
 .respond-form {
   margin: 1.5em 10px;
   padding-bottom: 2.2em;
 }
-/* line 729, ../scss/_small.scss */
+/* line 730, ../scss/_small.scss */
 .respond-form form {
   margin: 0.75em 0;
 }
-/* line 732, ../scss/_small.scss */
+/* line 733, ../scss/_small.scss */
 .respond-form form li {
   list-style-type: none;
   clear: both;
   margin-bottom: 0.7335em;
 }
-/* line 737, ../scss/_small.scss */
+/* line 738, ../scss/_small.scss */
 .respond-form form li label,
 .respond-form form li small {
   display: none;
 }
-/* line 743, ../scss/_small.scss */
+/* line 744, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url],
@@ -10386,14 +10388,14 @@ COMMENT FORM STYLES
   line-height: 1.5em;
   /* form validation */
 }
-/* line 752, ../scss/_small.scss */
+/* line 753, ../scss/_small.scss */
 .respond-form form input[type=text]:focus,
 .respond-form form input[type=email]:focus,
 .respond-form form input[type=url]:focus,
 .respond-form form textarea:focus {
   background: #fff;
 }
-/* line 757, ../scss/_small.scss */
+/* line 758, ../scss/_small.scss */
 .respond-form form input[type=text]:invalid,
 .respond-form form input[type=email]:invalid,
 .respond-form form input[type=url]:invalid,
@@ -10406,14 +10408,14 @@ COMMENT FORM STYLES
   -ms-box-shadow: none;
   box-shadow: none;
 }
-/* line 768, ../scss/_small.scss */
+/* line 769, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url] {
   max-width: 400px;
   min-width: 250px;
 }
-/* line 775, ../scss/_small.scss */
+/* line 776, ../scss/_small.scss */
 .respond-form form textarea {
   resize: none;
   width: 97.3%;
@@ -10422,7 +10424,7 @@ COMMENT FORM STYLES
 
 /* comment submit button */
 /* comment form title */
-/* line 788, ../scss/_small.scss */
+/* line 789, ../scss/_small.scss */
 #comment-form-title {
   margin: 0 0 1.1em;
 }
@@ -10430,13 +10432,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 801, ../scss/_small.scss */
+/* line 802, ../scss/_small.scss */
 #allowed_tags {
   margin: 1.5em 10px 0.7335em 0;
 }
 
 /* no comments */
-/* line 806, ../scss/_small.scss */
+/* line 807, ../scss/_small.scss */
 .nocomments {
   margin: 0 20px 1.1em;
 }
@@ -10444,17 +10446,17 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 824, ../scss/_small.scss */
+/* line 825, ../scss/_small.scss */
 .widget ul {
   margin: 0;
 }
-/* line 827, ../scss/_small.scss */
+/* line 828, ../scss/_small.scss */
 .widget ul li {
   list-style: none;
   /* deep nesting */
 }
 
-/* line 846, ../scss/_small.scss */
+/* line 847, ../scss/_small.scss */
 #sidebar-offcanvas .widgettitle {
   color: #fff;
 }
@@ -10462,7 +10464,7 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 854, ../scss/_small.scss */
+/* line 855, ../scss/_small.scss */
 footer {
   clear: both;
   margin-top: 1em;
@@ -10482,7 +10484,7 @@ view.
 /*********************
 FOUNDATION STYLES
 *********************/
-/* line 885, ../scss/_small.scss */
+/* line 886, ../scss/_small.scss */
 .clearing-assembled.clearing-blackout a:hover {
   background: none;
 }
@@ -10490,7 +10492,7 @@ FOUNDATION STYLES
 /*********************
 PLUGIN STYLES
 *********************/
-/* line 893, ../scss/_small.scss */
+/* line 894, ../scss/_small.scss */
 .gform_body ul {
   list-style: none outside none;
   margin: 0;

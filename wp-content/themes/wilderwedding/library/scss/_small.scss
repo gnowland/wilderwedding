@@ -159,6 +159,7 @@ LAYOUT & GRID STYLES
 	}
 	#content {
 		height: 100%;
+		overflow: hidden;
 		&:before {
 			content: '';
 			background: url(../images/themoon.svg) no-repeat top right;
