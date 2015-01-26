@@ -3,7 +3,7 @@
 		<ul class="title-area">
 			<!-- Title Area -->
 			<li class="toggle-topbar menu-icon">
-				<a href="#"><span></span></a>
+				<a href="#"><span></span>Menu</a>
 			</li>
 		</ul>
 		<section class="top-bar-section">
