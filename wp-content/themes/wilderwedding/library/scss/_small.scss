@@ -300,14 +300,28 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-.fixed {
+
+.fixed { //overrides _top-bar.scss
+	width: auto;
+  &.expanded:not(.top-bar) {
+	   .title-area {
+	     width: auto;
+	   }
+	 }
+}
+
+
+.fixed.home-nav-wrapper {
 	top: calc( 5% + 3px );
-	left: calc( 5% + 10px );
+	left: calc( 5% + #{$topbar-dropdown-toggle-radius} );
   &.expanded:not(.top-bar) {
     overflow-y: visible;
     .top-bar-section {
     	height: auto;
     	overflow: visible;
+    	padding-top: calc(#{$topbar-height} / 2);
+    	margin-top: calc(#{$topbar-height} / 2);
+    	background: #333333;
     }
   }
 }
@@ -315,42 +329,51 @@ NAVIGATION STYLES
 .home-nav {
 	position: absolute;
 	overflow: visible;
-	.name {
-		position: relative;
-		.circle {
-			background-color: #fcfcfc;
-			height: 52px;
-			width: 52px;
-			border-radius: 50%;
-			margin-top: -3px;
-			margin-left: -10px;
-			box-shadow: 0 0 10px -1px rgba(0,0,0, 0.8);
-		}
-	}
+	width: 0;
 	.toggle-topbar {
-		left: 0;
-		right: auto;
+		#{$default-float}: 0;
+		#{$opposite-direction}: auto;
 		&.menu-icon {
 			top: 0;
 			height: 100%;
 			width: 100%;
 			margin-top: 0;
 			a {
-				height: 45px; //Hate setting exact, but no way to override. Set to same as .top-bar
+				background-color: $topbar-dropdown-toggle-background;
+				height: $topbar-dropdown-toggle-diameter;
+				width: $topbar-dropdown-toggle-diameter;
+				border-radius: 50%;
+				margin-top: -3px;
 				padding: 0;
-				width: 100%;
-				span::after {
-					left: 8px;
-					top: 61%;
-					right: auto;
-					box-shadow: 0 0 0 1px #333, 0 7px 0 1px #333, 0 14px 0 1px #333;
+				margin-left: -$topbar-dropdown-toggle-radius;
+				//box-shadow: 0 0 10px -1px rgba(0,0,0, 0.8);
+				border: 3px solid $topbar-dropdown-toggle-border-color;
+				transition: $default-transition;
+				&:hover, &:active {
+					border-color: $topbar-menu-icon-color-toggled;
 				}
+				span::after {
+					top: calc( 50% + 1px );
+					left: calc( #{$topbar-dropdown-toggle-radius} - 11px ); //11px = 8px icon + 3px border
+					right: auto;
+				}
+			}
+		}
+	}
+	&.expanded {
+		width: auto;
+		.menu-icon {
+			a {
+				border-color: $topbar-menu-icon-color-toggled;
 			}
 		}
 	}
 	.top-bar-section {
 		overflow: hidden;
 		height: 0;
+		ul li > a {
+			padding-#{$opposite-direction}: $topbar-link-padding;
+		}
 	}
 }
 
