@@ -310,9 +310,11 @@ NAVIGATION STYLES
 	&.expanded:not(.top-bar) {
 		 .title-area {
 			 width: auto;
+			 position: relative;
 		 }
 		 .top-bar-section {
-		 	margin-top: $topbar-dropdown-toggle-diameter - $topbar-dropdown-toggle-border-width;
+		 	//margin-top: $topbar-dropdown-toggle-diameter - $topbar-dropdown-toggle-border-width;
+		 	margin-top: -$topbar-dropdown-toggle-border-width;
 		 }
 	 }
 }
@@ -334,12 +336,17 @@ NAVIGATION STYLES
 .home-nav {
 	position: absolute;
 	overflow: visible;
-	width: 0;
+	background-color: transparent;
+	width: $topbar-dropdown-toggle-diameter;
 	left: 20px;
 	top: 20px;
+	.title-area {
+		position: relative;
+	}
 	.toggle-topbar {
 		#{$default-float}: 0;
 		#{$opposite-direction}: auto;
+		position: relative;
 		@include transition(#{$default-transition});
 		&.menu-icon-animated {
 			a {
@@ -354,7 +361,8 @@ NAVIGATION STYLES
 				border-radius: 50%;
 				//margin-top: -3px;
 				//margin-left: -$topbar-dropdown-toggle-radius;
-				margin: 0 auto;
+				margin: 0;
+				left:0;
 				padding: 0;
 				//box-shadow: 0 0 10px -1px rgba(0,0,0, 0.8);
 				border: $topbar-dropdown-toggle-border;
@@ -388,13 +396,16 @@ NAVIGATION STYLES
 	}
 	&.expanded {
 		width: auto;
+		.title-area {
+			background: transparent;
+		}
 		.toggle-topbar {
-			#{$default-float}: 60px;
 			&.menu-icon-animated {
 				a {
 					border-color: $topbar-menu-icon-color-toggled;
 					border-bottom-color: $topbar-dropdown-toggle-background;
 					border-radius: 50% 50% 0 0;
+					margin-left: calc(50% - #{$topbar-dropdown-toggle-radius});
 					span {
 						background-color: transparent;
 						&::before {
