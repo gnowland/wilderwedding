@@ -90,8 +90,8 @@ $default-transition: all 350ms ease-in-out;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-// $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-// $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+   $font-family-sans-serif: Lato, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+   $font-family-serif: Prata, Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
@@ -118,6 +118,7 @@ $default-transition: all 350ms ease-in-out;
 // $oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
+   $gold        : #D1AC5E;
 
 // We use these as default colors throughout
 // $primary-color: #008CBA;
@@ -201,7 +202,7 @@ $default-transition: all 350ms ease-in-out;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
+   $header-font-family: $font-family-serif;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
 // $header-font-color: $jet;
@@ -1393,7 +1394,9 @@ $default-transition: all 350ms ease-in-out;
    $topbar-dropdown-toggle-background: #FCFCFC;
    $topbar-dropdown-toggle-diameter: 52px;
    $topbar-dropdown-toggle-radius: 52px/2;
+   $topbar-dropdown-toggle-border-width: 3px;
    $topbar-dropdown-toggle-border-color: #A9A9A9;
+   $topbar-dropdown-toggle-border: $topbar-dropdown-toggle-border-width solid $topbar-dropdown-toggle-border-color;
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: $white;
