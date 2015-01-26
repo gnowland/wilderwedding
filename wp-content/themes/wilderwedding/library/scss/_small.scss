@@ -349,16 +349,14 @@ NAVIGATION STYLES
 				//box-shadow: 0 0 10px -1px rgba(0,0,0, 0.8);
 				border: 3px solid $topbar-dropdown-toggle-border-color;
 				transition: $default-transition;
+				text-indent: -999em;
 				&:hover, &:active {
 					border-color: $topbar-menu-icon-color-toggled;
 				}
-				span {
-					text-indent: -999em;
-					&::after {
-						top: calc( 50% + 1px );
-						left: calc( #{$topbar-dropdown-toggle-radius} - 11px ); //11px = 8px icon + 3px border
-						right: auto;
-					}
+				span::after {
+					top: calc( 50% + 1px );
+					left: calc( #{$topbar-dropdown-toggle-radius} - 11px ); //11px = 8px icon + 3px border
+					right: auto;
 				}
 			}
 		}
