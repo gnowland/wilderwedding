@@ -66,7 +66,7 @@ span.amp {
 }
 
 /*********************
-TRANSITION
+TRANSITION / TRANSFORM
 *********************/
 
 /*
@@ -78,12 +78,23 @@ USAGE: @include transition(all 0.2s ease-in-out);
 
 @mixin transition($transition...) {
 	// defining prefixes so we can use them in mixins below
-	$prefixes:      ("-webkit", "-ms", "-o",  "");
+	$prefixes:      ("-webkit", "-ms", "-o");
   @each $prefix in $prefixes {
     #{$prefix}-transition: $transition;
   }
 
   transition: $transition;
+}
+
+/* USAGE: @include transform(transform); */
+@mixin transform($transform...) {
+  // defining prefixes so we can use them in mixins below
+  $prefixes:      ("-webkit", "-moz", "-ms", "-o");
+  @each $prefix in $prefixes {
+    #{$prefix}-transform: $transform;
+  }
+
+  transform: $transform;
 }
 
 /*********************

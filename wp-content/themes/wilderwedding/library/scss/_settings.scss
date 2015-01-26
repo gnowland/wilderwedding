@@ -74,7 +74,7 @@ $include-html-classes: true;
 // $include-print-styles: true;
 $include-html-global-classes: $include-html-classes;
 
-$default-transition: all 300ms ease-in-out;
+$default-transition: all 350ms ease-in-out;
 
 // b. Grid
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1431,6 +1431,13 @@ $default-transition: all 300ms ease-in-out;
    $topbar-menu-icon-color: #042440; // hamburger menu
 // $topbar-menu-link-color-toggled: $jumbo;
    $topbar-menu-icon-color-toggled: #616161;// $jumbo;
+
+// Top menu icon animated styles
+   $topbar-animated-menu-icon-width: 20px;
+   $topbar-animated-menu-icon-thickness: 2px;
+   $topbar-animated-menu-icon-gap: 5px;
+   $topbar-animated-menu-icon-color: $topbar-menu-icon-color;
+// $topbar-menu-icon-anim-hover-color:;
 
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;

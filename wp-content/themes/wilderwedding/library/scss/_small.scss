@@ -303,10 +303,10 @@ NAVIGATION STYLES
 
 .fixed { //overrides _top-bar.scss
 	width: auto;
-  &.expanded:not(.top-bar) {
-	   .title-area {
-	     width: auto;
-	   }
+	&.expanded:not(.top-bar) {
+		 .title-area {
+			 width: auto;
+		 }
 	 }
 }
 
@@ -314,16 +314,13 @@ NAVIGATION STYLES
 .fixed.home-nav-wrapper {
 	top: calc( 5% + 3px );
 	left: calc( 5% + #{$topbar-dropdown-toggle-radius} );
-  &.expanded:not(.top-bar) {
-    overflow-y: visible;
-    .top-bar-section {
-    	height: auto;
-    	overflow: visible;
-    	padding-top: calc(#{$topbar-height} / 2);
-    	margin-top: calc(#{$topbar-height} / 2);
-    	background: #333333;
-    }
-  }
+	&.expanded:not(.top-bar) {
+		overflow-y: visible;
+		.top-bar-section {
+			height: auto;
+			overflow: visible;
+		}
+	}
 }
 
 .home-nav {
@@ -333,12 +330,13 @@ NAVIGATION STYLES
 	.toggle-topbar {
 		#{$default-float}: 0;
 		#{$opposite-direction}: auto;
-		&.menu-icon {
-			top: 0;
-			height: 100%;
-			width: 100%;
-			margin-top: 0;
+		&.menu-icon-animated {
 			a {
+				@if $text-direction == rtl { text-indent: -58px; }
+				line-height: 33px;
+				color: $topbar-menu-link-color;
+				position: relative;
+				//Hamburger Menu
 				background-color: $topbar-dropdown-toggle-background;
 				height: $topbar-dropdown-toggle-diameter;
 				width: $topbar-dropdown-toggle-diameter;
@@ -353,19 +351,47 @@ NAVIGATION STYLES
 				&:hover, &:active {
 					border-color: $topbar-menu-icon-color-toggled;
 				}
-				span::after {
-					top: calc( 50% + 1px );
-					left: calc( #{$topbar-dropdown-toggle-radius} - 11px ); //11px = 8px icon + 3px border
-					right: auto;
+				span {
+					top: calc(50% - 1px);
+					left: calc(50% - #{$topbar-animated-menu-icon-width/2}); //11px = 8px icon + 3px border
+					&, &::before, &::after {
+					  width: $topbar-animated-menu-icon-width;
+					  height: $topbar-animated-menu-icon-thickness;
+					  border-radius: 1px;
+					  background: $topbar-animated-menu-icon-color;
+					  content: "";
+					  position: absolute;
+					  display: block;
+					  @include transition(#{$default-transition});
+					}
+					&::before {
+					  top: -($topbar-animated-menu-icon-gap + $topbar-animated-menu-icon-thickness);
+					}
+					&::after {
+					  bottom: -($topbar-animated-menu-icon-gap + $topbar-animated-menu-icon-thickness);
+					}
 				}
 			}
 		}
 	}
 	&.expanded {
 		width: auto;
-		.menu-icon {
+		.toggle-topbar.menu-icon-animated {
 			a {
 				border-color: $topbar-menu-icon-color-toggled;
+				span {
+					background-color: transparent;
+					&::before {
+						background-color: $topbar-menu-icon-color-toggled;
+						top: 0;
+						@include transform(rotate(45deg));
+					}
+					&::after {
+						background-color: $topbar-menu-icon-color-toggled;
+						top: $topbar-animated-menu-icon-width/2;
+						@include transform(translateY(-10px) rotate(-45deg));
+					}
+				}
 			}
 		}
 	}
@@ -381,6 +407,9 @@ NAVIGATION STYLES
 .top-bar {
 	.title-area {
 		z-index: 1;
+	}
+	&.expanded .toggle-topbar a span::after {
+		box-shadow: none; //disable default hamburger
 	}
 }
 
