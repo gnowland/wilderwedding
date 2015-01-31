@@ -13,16 +13,29 @@ slow the page load.
 jQuery(document).ready(function($) {
 	// load Foundation
 	jQuery(document).foundation();
-	
+
     // load gravatars
     $('.comment img[data-gravatar]').each(function(){
         $(this).attr('src',$(this).attr('data-gravatar'));
     });
-    
+
 
 // add all your scripts here
-	
- 
+
+
+// //Modernizr Test for SVG, fallback
+// if (!Modernizr.svg) {
+//     var imgs = document.getElementsByTagName('img');
+//     var svgExtension = /.*\.svg$/
+//     var l = imgs.length;
+//     for(var i = 0; i < l; i++) {
+//         if(imgs[i].src.match(svgExtension)) {
+//             imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
+//             console.log(imgs[i].src);
+//         }
+//     }
+}
+
 }); /* end of as page load scripts */
 
 

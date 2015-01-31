@@ -13,6 +13,11 @@
 								<div id="main" class="large-12 medium-12 columns <?php if($post->post_name == 'welcome'){ echo 'text-center'; } ?>" role="main">
 									<article id="<?php the_ID(); ?>" role="article" itemprop="articleBody" >
 										<header class="article-header">
+											<?php
+											if ( has_post_thumbnail() ) {
+												the_post_thumbnail('large');
+											}
+											?>
 											<h1 class="page-title"><?php the_title(); ?></h1>
 										</header> <!-- end article header -->
 										<section class="entry-content" itemprop="articleBody">

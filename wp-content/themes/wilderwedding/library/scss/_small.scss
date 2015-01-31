@@ -151,7 +151,7 @@ LAYOUT & GRID STYLES
 	&:before {
 		content:'';
 		background: url(../images/stars.svg) repeat top left;
-		background-size: 150px 150px;
+		background-size: 115px 115px; //150px 150px;
 		z-index: -1;
 		height: 100%;
 		width: 100%;
@@ -164,7 +164,7 @@ LAYOUT & GRID STYLES
 			content: '';
 			background: url(../images/themoon.svg) no-repeat top right;
 			background-size: contain;
-			width: 40%;
+			width: 25%; // 40%;
 			max-height: 40%;
 			height: 215px;
 			position: absolute;
@@ -219,6 +219,16 @@ LAYOUT & GRID STYLES
 		color: $snow;
 		h1 {
 			color: inherit;
+		}
+		header {
+			h1 span {
+				margin: 0 10px;
+			}
+			img {
+				max-width: 300px;
+				width: 100%;
+				padding: 30px 20px;
+			}
 		}
 	}
 }
@@ -394,7 +404,7 @@ NAVIGATION STYLES
 			position: relative;
 			overflow: auto;
 			width: 0;
-			@include transition(width 350ms ease-in-out);
+			@include transition(width 300ms ease-in-out);
 			li {
 				background: $white;
 				& > a {
