@@ -14,10 +14,10 @@ jQuery(document).ready(function($) {
 	// load Foundation
 	jQuery(document).foundation();
 
-    // load gravatars
-    $('.comment img[data-gravatar]').each(function(){
-        $(this).attr('src',$(this).attr('data-gravatar'));
-    });
+	// load gravatars
+	$('.comment img[data-gravatar]').each(function(){
+		$(this).attr('src',$(this).attr('data-gravatar'));
+	});
 
 
 // add all your scripts here
@@ -34,7 +34,53 @@ jQuery(document).ready(function($) {
 //             console.log(imgs[i].src);
 //         }
 //     }
-}
+//}
+
+	/*
+	 *
+	 * Measure Scrollbars
+	 *
+	 */
+
+	// Create the measurement node
+	var scrollDiv = document.createElement("div");
+	scrollDiv.className = "scrollbar-measure";
+	document.body.appendChild(scrollDiv);
+
+	// Get the scrollbar width
+	var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+	$('#menu-home-menu').css('margin-right', scrollbarWidth);
+
+	// Delete the measurement DIV
+	document.body.removeChild(scrollDiv);
+
+	/*
+	 *
+	 * Smoothly scroll to the href # id
+	 * Older Chris Coyer scipt
+	 * additional functionality from http://wibblystuff.blogspot.com/2014/04/in-page-smooth-scroll-using-css3.html
+	 *
+	 */
+	$('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[id=' + this.hash.slice(1) +']');
+			if (target.length) {
+				//var offset = (target.outerHeight(true) - target.outerHeight())/2; (not needed with new history.pushState)
+				$('#scroll-container').animate({ //html,body
+				scrollTop: target.position().top //+ offset //offset().top
+				}, 800, 'swing', function () {
+					// window.location.hash = target.selector;
+					if(history.pushState) {
+						 history.pushState(null, null, target.selector);
+					}	else {
+						location.hash = target.selector;
+					}
+				});
+				return false;
+			}
+		}
+	});
 
 }); /* end of as page load scripts */
 
@@ -46,28 +92,28 @@ jQuery(document).ready(function($) {
 (function(w){
 	// This fix addresses an iOS bug, so return early if the UA claims it's something else.
 	if( !( /iPhone|iPad|iPod/.test( navigator.platform ) && navigator.userAgent.indexOf( "AppleWebKit" ) > -1 ) ){ return; }
-    var doc = w.document;
-    if( !doc.querySelector ){ return; }
-    var meta = doc.querySelector( "meta[name=viewport]" ),
-        initialContent = meta && meta.getAttribute( "content" ),
-        disabledZoom = initialContent + ",maximum-scale=1",
-        enabledZoom = initialContent + ",maximum-scale=10",
-        enabled = true,
+	var doc = w.document;
+	if( !doc.querySelector ){ return; }
+	var meta = doc.querySelector( "meta[name=viewport]" ),
+		initialContent = meta && meta.getAttribute( "content" ),
+		disabledZoom = initialContent + ",maximum-scale=1",
+		enabledZoom = initialContent + ",maximum-scale=10",
+		enabled = true,
 		x, y, z, aig;
-    if( !meta ){ return; }
-    function restoreZoom(){
-        meta.setAttribute( "content", enabledZoom );
-        enabled = true; }
-    function disableZoom(){
-        meta.setAttribute( "content", disabledZoom );
-        enabled = false; }
-    function checkTilt( e ){
+	if( !meta ){ return; }
+	function restoreZoom(){
+		meta.setAttribute( "content", enabledZoom );
+		enabled = true; }
+	function disableZoom(){
+		meta.setAttribute( "content", disabledZoom );
+		enabled = false; }
+	function checkTilt( e ){
 		aig = e.accelerationIncludingGravity;
 		x = Math.abs( aig.x );
 		y = Math.abs( aig.y );
 		z = Math.abs( aig.z );
 		// If portrait orientation and in one of the danger zones
-        if( !w.orientation && ( x > 7 || ( ( z > 6 && y < 8 || z < 8 && y > 6 ) && x > 5 ) ) ){
+		if( !w.orientation && ( x > 7 || ( ( z > 6 && y < 8 || z < 8 && y > 6 ) && x > 5 ) ) ){
 			if( enabled ){ disableZoom(); } }
 		else if( !enabled ){ restoreZoom(); } }
 	w.addEventListener( "orientationchange", restoreZoom, false );

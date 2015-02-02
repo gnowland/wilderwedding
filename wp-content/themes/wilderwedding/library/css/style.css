@@ -7,7 +7,7 @@ the separate media queries. The base mobile goes outside any query
 and is called at the beginning, after that we call the rest
 of the styles inside media queries.
 ******************************************************************/
-@import "//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Prata";
+@import "//fonts.googleapis.com/css?family=Prata|Noto+Serif:400,700,400italic,700italic|Lato:300,400,700,300italic,400italic,700italic";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -2226,7 +2226,7 @@ select {
   color: #222222;
   padding: 1rem;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1rem;
 }
 /* line 143, ../../bower_components/foundation/scss/foundation/components/_accordion.scss */
@@ -2933,7 +2933,7 @@ button, .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -4758,7 +4758,7 @@ select {
   border-color: #cccccc;
   padding: 0.5rem;
   font-size: 0.875rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
   color: rgba(0, 0, 0, 0.75);
   line-height: normal;
   border-radius: 0;
@@ -5396,7 +5396,7 @@ kbd {
 /* line 91, ../../bower_components/foundation/scss/foundation/components/_labels.scss */
 .label {
   font-weight: normal;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
   text-align: center;
   text-decoration: none;
   line-height: 1;
@@ -5967,7 +5967,7 @@ ul.pagination li {
   color: #EEEEEE;
   font-weight: normal;
   font-size: 1rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 }
 /* line 143, ../../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .price {
@@ -5977,7 +5977,7 @@ ul.pagination li {
   color: #333333;
   font-weight: normal;
   font-size: 2rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 }
 /* line 144, ../../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .description {
@@ -6362,7 +6362,7 @@ dialog[open] {
   padding: 0.875rem 0;
   list-style-type: none;
   list-style-position: outside;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 }
 /* line 70, ../../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li {
@@ -6386,7 +6386,7 @@ dialog[open] {
 .side-nav li.active > a:first-child:not(.button) {
   color: #1cc7ff;
   font-weight: normal;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 }
 /* line 93, ../../bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li.divider {
@@ -6556,7 +6556,7 @@ dialog[open] {
   display: inline;
   margin-left: 1rem;
   margin-bottom: 0;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: normal;
   font-size: 0.875rem;
   color: #999999;
@@ -6835,7 +6835,7 @@ table tr td {
   background-color: #EFEFEF;
   color: #222222;
   padding: 1rem 2rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 1rem;
 }
 /* line 49, ../../bower_components/foundation/scss/foundation/components/_tabs.scss */
@@ -7273,7 +7273,7 @@ meta.foundation-mq-topbar {
   color: #FFFFFF;
   padding: 12px 0 12px 0;
   padding-left: 0.9375rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
   font-size: 0.8125rem;
   font-weight: normal;
   text-transform: none;
@@ -9809,15 +9809,16 @@ html, body {
 /* line 44, ../scss/_small.scss */
 body {
   background-color: #01182B;
+  font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-/* line 50, ../scss/_small.scss */
+/* line 51, ../scss/_small.scss */
 #searchform #s {
   display: inline-block;
   width: 100%;
   max-width: 25rem;
 }
-/* line 55, ../scss/_small.scss */
+/* line 56, ../scss/_small.scss */
 #searchform .button {
   display: inline-block;
   padding-top: 0.5624rem;
@@ -9866,44 +9867,44 @@ style a page via class
 /*********************
 LAYOUT & GRID STYLES
 *********************/
-/* line 107, ../scss/_small.scss */
+/* line 108, ../scss/_small.scss */
 .one-page {
   min-height: 100%;
 }
-/* line 113, ../scss/_small.scss */
+/* line 114, ../scss/_small.scss */
 .one-page #inner-content {
   height: 100%;
   height: 100vh;
   display: table;
 }
-/* line 117, ../scss/_small.scss */
+/* line 118, ../scss/_small.scss */
 .one-page #inner-content #main {
   display: table-cell;
   vertical-align: middle;
   float: none;
 }
 
-/* line 125, ../scss/_small.scss */
+/* line 126, ../scss/_small.scss */
 #container > section {
   position: relative;
 }
-/* line 127, ../scss/_small.scss */
+/* line 128, ../scss/_small.scss */
 #container > section:not(.one-page) {
   margin: 50px 0;
 }
-/* line 129, ../scss/_small.scss */
+/* line 130, ../scss/_small.scss */
 #container > section:not(.one-page) #main {
   position: relative;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), inset 0 0 40px rgba(0, 0, 0, 0.29);
 }
 
-/* line 136, ../scss/_small.scss */
+/* line 137, ../scss/_small.scss */
 #inner-content {
   background-color: #F6F6F6;
   width: 70%;
 }
 
-/* line 141, ../scss/_small.scss */
+/* line 142, ../scss/_small.scss */
 #background {
   position: fixed;
   overflow-y: scroll;
@@ -9921,7 +9922,7 @@ LAYOUT & GRID STYLES
   background-image: -webkit-linear-gradient(top, #01182b 0%, #022644 60%, #123560 100%);
   background-image: linear-gradient(to bottom, #01182b 0%, #022644 60%, #123560 100%);
 }
-/* line 151, ../scss/_small.scss */
+/* line 152, ../scss/_small.scss */
 #background:before {
   content: '';
   background: url(../images/stars.svg) repeat top left;
@@ -9931,12 +9932,12 @@ LAYOUT & GRID STYLES
   width: 100%;
   position: absolute;
 }
-/* line 160, ../scss/_small.scss */
+/* line 161, ../scss/_small.scss */
 #background #content {
   height: 100%;
   overflow: hidden;
 }
-/* line 163, ../scss/_small.scss */
+/* line 164, ../scss/_small.scss */
 #background #content:before {
   content: '';
   background: url(../images/themoon.svg) no-repeat top right;
@@ -9948,7 +9949,7 @@ LAYOUT & GRID STYLES
   right: 11px;
   top: 0;
 }
-/* line 174, ../scss/_small.scss */
+/* line 175, ../scss/_small.scss */
 #background #content:after {
   content: '';
   background: url(../images/sidewalk-b.svg) repeat-x top center;
@@ -9959,13 +9960,13 @@ LAYOUT & GRID STYLES
   bottom: 0;
   left: 0;
 }
-/* line 185, ../scss/_small.scss */
+/* line 186, ../scss/_small.scss */
 #background #inner-content {
   position: relative;
   height: 100%;
   background-color: transparent;
 }
-/* line 189, ../scss/_small.scss */
+/* line 190, ../scss/_small.scss */
 #background #inner-content:before {
   content: '';
   background: url(../images/facade1.svg) repeat-x bottom right;
@@ -9978,7 +9979,7 @@ LAYOUT & GRID STYLES
   bottom: 23px;
   z-index: 1;
 }
-/* line 201, ../scss/_small.scss */
+/* line 202, ../scss/_small.scss */
 #background #inner-content:after {
   content: '';
   background: url(../images/facade2.svg) repeat-x bottom left;
@@ -9992,20 +9993,20 @@ LAYOUT & GRID STYLES
   z-index: 1;
 }
 
-/* line 217, ../scss/_small.scss */
+/* line 218, ../scss/_small.scss */
 #welcome #inner-content {
   background-color: transparent;
   color: #F9F9F9;
 }
-/* line 220, ../scss/_small.scss */
+/* line 221, ../scss/_small.scss */
 #welcome #inner-content h1 {
   color: inherit;
 }
-/* line 224, ../scss/_small.scss */
+/* line 225, ../scss/_small.scss */
 #welcome #inner-content header h1 span {
   margin: 0 10px;
 }
-/* line 227, ../scss/_small.scss */
+/* line 228, ../scss/_small.scss */
 #welcome #inner-content header img {
   max-width: 300px;
   width: 100%;
@@ -10015,13 +10016,13 @@ LAYOUT & GRID STYLES
 /*********************
 LINK STYLES
 *********************/
-/* line 239, ../scss/_small.scss */
+/* line 240, ../scss/_small.scss */
 a, a:visited {
   /*adds highlight on hover */
   /* on click */
   /* mobile tap color */
 }
-/* line 253, ../scss/_small.scss */
+/* line 254, ../scss/_small.scss */
 a:link, a:visited:link {
   /*
   this highlights links on iPhones/iPads.
@@ -10034,7 +10035,7 @@ a:link, a:visited:link {
 /******************************************************************
 H1, H2, H3, H4, H5 P STYLES
 ******************************************************************/
-/* line 268, ../scss/_small.scss */
+/* line 269, ../scss/_small.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   /*
   if you're going to use webfonts, be sure to check your weights
@@ -10042,12 +10043,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   */
   /* removing text decoration from all headline links */
 }
-/* line 275, ../scss/_small.scss */
+/* line 276, ../scss/_small.scss */
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none;
 }
 
-/* line 300, ../scss/_small.scss */
+/* line 301, ../scss/_small.scss */
 .gold {
   color: #D1AC5E;
 }
@@ -10055,7 +10056,7 @@ h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
 /*********************
 HEADER STYLES
 *********************/
-/* line 309, ../scss/_small.scss */
+/* line 310, ../scss/_small.scss */
 .header ul.off-canvas-list li {
   list-style: none;
 }
@@ -10063,37 +10064,42 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 318, ../scss/_small.scss */
+/* line 319, ../scss/_small.scss */
 .fixed {
   width: auto;
 }
 /* line 321, ../scss/_small.scss */
+.fixed.expanded:not(.top-bar) {
+  width: auto;
+  height: 100%;
+}
+/* line 324, ../scss/_small.scss */
 .fixed.expanded:not(.top-bar) .title-area {
   width: auto;
 }
-/* line 324, ../scss/_small.scss */
+/* line 327, ../scss/_small.scss */
 .fixed.expanded:not(.top-bar) .top-bar-section {
   margin-top: 49px;
 }
 
-/* line 334, ../scss/_small.scss */
+/* line 337, ../scss/_small.scss */
 .fixed.home-nav-wrapper.expanded:not(.top-bar) {
   overflow-y: visible;
 }
-/* line 336, ../scss/_small.scss */
+/* line 339, ../scss/_small.scss */
 .fixed.home-nav-wrapper.expanded:not(.top-bar) .top-bar-section {
-  height: auto;
+  max-height: calc(100% - 49px);
   overflow: auto;
 }
 
-/* line 343, ../scss/_small.scss */
+/* line 346, ../scss/_small.scss */
 .home-nav {
   position: absolute;
   overflow: visible;
   width: 0;
-  margin: 20px;
+  margin: 10px;
 }
-/* line 348, ../scss/_small.scss */
+/* line 351, ../scss/_small.scss */
 .home-nav .toggle-topbar {
   left: 0;
   right: auto;
@@ -10102,7 +10108,7 @@ NAVIGATION STYLES
   -o-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
-/* line 353, ../scss/_small.scss */
+/* line 356, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon-animated a {
   line-height: 33px;
   color: #FFFFFF;
@@ -10120,16 +10126,16 @@ NAVIGATION STYLES
   transition: all 350ms ease-in-out;
   text-indent: -999em;
 }
-/* line 371, ../scss/_small.scss */
+/* line 374, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon-animated a:hover, .home-nav .toggle-topbar.menu-icon-animated a:active {
   border-color: #616161;
 }
-/* line 374, ../scss/_small.scss */
+/* line 377, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon-animated a span {
   top: calc(50% - 1px);
   left: calc(50% - 10px);
 }
-/* line 377, ../scss/_small.scss */
+/* line 380, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon-animated a span, .home-nav .toggle-topbar.menu-icon-animated a span::before, .home-nav .toggle-topbar.menu-icon-animated a span::after {
   width: 20px;
   height: 2px;
@@ -10143,41 +10149,36 @@ NAVIGATION STYLES
   -o-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
-/* line 387, ../scss/_small.scss */
+/* line 390, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon-animated a span::before {
   top: -7px;
 }
-/* line 390, ../scss/_small.scss */
+/* line 393, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon-animated a span::after {
   bottom: -7px;
 }
-/* line 397, ../scss/_small.scss */
-.home-nav .top-bar-section {
-  overflow: hidden;
-  height: 0;
-}
 /* line 400, ../scss/_small.scss */
-.home-nav .top-bar-section ul {
+.home-nav .top-bar-section {
+  display: none;
   border: 3px solid #A9A9A9;
   border-color: #616161;
+}
+/* line 404, ../scss/_small.scss */
+.home-nav .top-bar-section ul {
   position: relative;
   overflow: auto;
-  width: 0;
-  -webkit-transition: width 300ms ease-in-out;
-  -ms-transition: width 300ms ease-in-out;
-  -o-transition: width 300ms ease-in-out;
-  transition: width 300ms ease-in-out;
 }
-/* line 408, ../scss/_small.scss */
+/* line 407, ../scss/_small.scss */
 .home-nav .top-bar-section ul li {
   background: #FFFFFF;
 }
-/* line 410, ../scss/_small.scss */
+/* line 409, ../scss/_small.scss */
 .home-nav .top-bar-section ul li > a {
   font-weight: 300;
   padding-right: 0.9375rem;
   text-align: center;
   color: #616161;
+  white-space: nowrap;
 }
 /* line 416, ../scss/_small.scss */
 .home-nav .top-bar-section ul li:hover:not(.has-form) > a {
@@ -10198,7 +10199,7 @@ NAVIGATION STYLES
 }
 /* line 432, ../scss/_small.scss */
 .home-nav.expanded .toggle-topbar {
-  left: 58px;
+  left: 73px;
 }
 /* line 435, ../scss/_small.scss */
 .home-nav.expanded .toggle-topbar.menu-icon-animated a {
@@ -10232,18 +10233,18 @@ NAVIGATION STYLES
 }
 /* line 455, ../scss/_small.scss */
 .home-nav.expanded .top-bar-section {
-  height: calc(100vh - 92px );
-}
-/* line 457, ../scss/_small.scss */
-.home-nav.expanded .top-bar-section ul {
-  width: 100%;
+  display: block;
 }
 
-/* line 465, ../scss/_small.scss */
+/* line 462, ../scss/_small.scss */
 .top-bar .title-area {
   z-index: 1;
 }
-/* line 468, ../scss/_small.scss */
+/* line 465, ../scss/_small.scss */
+.top-bar.expanded {
+  height: calc(100% - 20px);
+}
+/* line 467, ../scss/_small.scss */
 .top-bar.expanded .toggle-topbar a span::after {
   box-shadow: none;
 }
@@ -10258,7 +10259,7 @@ NAVIGATION STYLES
 }
 /* line 481, ../scss/_small.scss */
 .off-canvas-list ul .dropdown {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 /*********************
@@ -10453,7 +10454,7 @@ COMMENT STYLES
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -10977,4 +10978,19 @@ Modernizr Overrides
   .no-svg #background #inner-content:after {
     background: url(../images/facade2.png) repeat-x bottom left;
   }
+}
+/******************************************************************
+
+Stylesheet: Script CSS
+
+Styles related to JS functions.
+
+******************************************************************/
+/* line 9, ../scss/_script-css.scss */
+.scrollbar-measure {
+  width: 100px;
+  height: 100px;
+  overflow: scroll;
+  position: absolute;
+  top: -9999px;
 }

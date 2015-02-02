@@ -9,7 +9,7 @@ of the styles inside media queries.
 ******************************************************************/
 
 //@import "//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700";
-@import "//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Prata";
+@import "//fonts.googleapis.com/css?family=Prata|Noto+Serif:400,700,400italic,700italic|Lato:300,400,700,300italic,400italic,700italic";
 
 @import "compass";
 
@@ -106,9 +106,9 @@ iPHONE 5 MEDIA QUERY
 Want to get fancy for no good reason? Knock yourself out.
 */
 @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-  
+
   // iPhone 5 or iPod Touch 5th generation styles (you can include your own file if you want)
-  
+
 }
 
 /*
@@ -128,3 +128,5 @@ Modernizr Overrides
 @media print {
   @import "modernizr";
 }
+
+@import "script-css";

@@ -92,6 +92,7 @@ $default-transition: all 350ms ease-in-out;
 // We use these to define default font stacks
    $font-family-sans-serif: Lato, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
    $font-family-serif: Prata, Georgia, Cambria, "Times New Roman", Times, serif;
+   $font-family-serif-alt: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
@@ -131,7 +132,7 @@ $default-transition: all 350ms ease-in-out;
 // We use these to control various global styles
    $body-bg: $wwblue;
 // $body-font-color: $jet;
-// $body-font-family: $font-family-sans-serif;
+   $body-font-family: $font-family-serif-alt;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -1397,7 +1398,7 @@ $default-transition: all 350ms ease-in-out;
    $topbar-dropdown-toggle-border-width: 3px;
    $topbar-dropdown-toggle-border-color: #A9A9A9;
    $topbar-dropdown-toggle-border: $topbar-dropdown-toggle-border-width solid $topbar-dropdown-toggle-border-color;
-   $topbar-dropdown-toggle-margin: 20px;
+   $topbar-dropdown-toggle-margin: 10px;
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: $white;

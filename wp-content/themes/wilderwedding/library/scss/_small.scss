@@ -43,6 +43,7 @@ html, body {
 
 body {
 	background-color: $body-bg; //solid bg fallback
+	font-family: $body-font-family;
 }
 
 // Search Form
@@ -318,6 +319,8 @@ NAVIGATION STYLES
 .fixed { //overrides _top-bar.scss
 	width: auto;
 	&.expanded:not(.top-bar) {
+		width: auto;
+		height: 100%;
 		 .title-area {
 			 width: auto;
 		 }
@@ -334,7 +337,7 @@ NAVIGATION STYLES
 	&.expanded:not(.top-bar) {
 		overflow-y: visible;
 		.top-bar-section {
-			height: auto;
+			max-height: calc(100% - #{$topbar-dropdown-toggle-diameter - $topbar-dropdown-toggle-border-width});
 			overflow: auto;
 		}
 	}
@@ -395,16 +398,12 @@ NAVIGATION STYLES
 		}
 	}
 	.top-bar-section {
-		overflow: hidden;
-		height: 0;
+		display: none;
+		border: $topbar-dropdown-toggle-border;
+		border-color: $topbar-menu-icon-color-toggled;
 		ul{
-			border: $topbar-dropdown-toggle-border;
-			border-color: $topbar-menu-icon-color-toggled;
-			//left: calc(-52px - 6px);
 			position: relative;
 			overflow: auto;
-			width: 0;
-			@include transition(width 300ms ease-in-out);
 			li {
 				background: $white;
 				& > a {
@@ -412,6 +411,7 @@ NAVIGATION STYLES
 					padding-#{$opposite-direction}: $topbar-link-padding;
 					text-align: center;
 					color: $topbar-menu-icon-color-toggled;
+					white-space: nowrap;
 				}
 				&:hover:not(.has-form) > a {
 					background: $topbar-menu-icon-color-toggled;
@@ -430,7 +430,7 @@ NAVIGATION STYLES
 	&.expanded {
 		width: auto;
 		.toggle-topbar {
-			#{$default-float}: $topbar-dropdown-toggle-diameter + ($topbar-dropdown-toggle-border-width*2); // Slide animation
+			#{$default-float}: $topbar-dropdown-toggle-diameter + ($topbar-dropdown-toggle-border-width*2) + 15px; // Slide animation
 			&.menu-icon-animated {
 				a {
 					border-color: $topbar-menu-icon-color-toggled;
@@ -453,10 +453,7 @@ NAVIGATION STYLES
 			}
 		}
 		.top-bar-section {
-			height: calc(100vh - #{$topbar-dropdown-toggle-diameter + ($topbar-dropdown-toggle-margin*2)} );
-			ul {
-				width: 100%;
-			}
+			display: block;
 		}
 	}
 }
@@ -465,8 +462,11 @@ NAVIGATION STYLES
 	.title-area {
 		z-index: 1;
 	}
-	&.expanded .toggle-topbar a span::after {
-		box-shadow: none; //disable default hamburger
+	&.expanded {
+		height: calc(100% - #{$topbar-dropdown-toggle-margin *2});
+		.toggle-topbar a span::after {
+			box-shadow: none; //disable default hamburger
+		}
 	}
 }
 
@@ -479,7 +479,7 @@ NAVIGATION STYLES
 			}
 		}
 		.dropdown {
-			margin-left: 20px;
+			margin-left: $topbar-dropdown-toggle-margin;
 		}
 	}
 }
