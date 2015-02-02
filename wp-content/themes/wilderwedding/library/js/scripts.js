@@ -82,6 +82,25 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	/*
+	 *
+	 * Auto Close Menu
+	 * (sub-nav not tested)
+	 *
+	 */
+
+	$(document).mouseup(function (e){
+		var container = $(".top-bar");
+		var menuLinks = $(".menu-item a")
+
+		if (!container.is(e.target) // if the target of the click isn't the container...
+			&& container.has(e.target).length === 0){ // ... nor a descendant of the container
+			container.removeClass('expanded');
+		} else if (menuLinks.is(e.target)){
+			container.removeClass('expanded');
+		}
+	});
+
 }); /* end of as page load scripts */
 
 
