@@ -101,13 +101,14 @@ $default-transition: all 350ms ease-in-out;
 
    $wwblue      : #01182B; //#0D3057;
 // $white       : #FFFFFF;
-// $ghost       : #FAFAFA;
-// $snow        : #F9F9F9;
+   $ghost       : #FAFAFA;
+   $snow        : #F9F9F9;
    $vapor       : #F6F6F6;
 // $white-smoke : #F5F5F5;
 // $silver      : #EFEFEF;
 // $smoke       : #EEEEEE;
 // $gainsboro   : #DDDDDD;
+   $livingston  : #D5D5D5;
 // $iron        : #CCCCCC;
 // $base        : #AAAAAA;
 // $aluminum    : #999999;
@@ -136,7 +137,7 @@ $default-transition: all 350ms ease-in-out;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
-    $inner-content-bg: $vapor;
+    $inner-content-bg: $ghost; //$snow;
 
 // We use this to control font-smoothing
 // $font-smoothing: antialiased;

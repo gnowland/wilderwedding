@@ -66,11 +66,11 @@ jQuery(document).ready(function($) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[id=' + this.hash.slice(1) +']');
 			if (target.length) {
-				//var offset = (target.outerHeight(true) - target.outerHeight())/2; (not needed with new history.pushState)
+				//var offset = (target.outerHeight(true) - target.outerHeight())/2; <- (not needed with new history.pushState)
 				$('#scroll-container').animate({ //html,body
 				scrollTop: target.position().top //+ offset //offset().top
 				}, 800, 'swing', function () {
-					// window.location.hash = target.selector;
+					// window.location.hash = target.selector; <- caused jumping, replaced with the below:
 					if(history.pushState) {
 						 history.pushState(null, null, target.selector);
 					}	else {

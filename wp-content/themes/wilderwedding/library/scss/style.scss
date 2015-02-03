@@ -122,11 +122,29 @@ be set to display none.
 }
 
 /*
-MODERNIZR STYLESHEET
-Modernizr Overrides
+PLUGINS STYLESHEET
+ - Modernizr Overrides
+ - Ninja Forms Overrides
 */
-@media print {
-  @import "modernizr";
-}
+@import "plugins";
 
+/*
+SCRIPT-RELATED STYLESHEET
+*/
 @import "script-css";
+
+::-moz-selection {
+    text-shadow: none;
+    background: $gold;
+    color: #12446E;
+}
+::-webkit-selection {
+    text-shadow: none;
+    background: $gold;
+    color: #12446E;
+}
+::selection {
+    text-shadow: none;
+    background: $gold;
+    color: #12446E;
+}

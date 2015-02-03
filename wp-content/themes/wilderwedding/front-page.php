@@ -18,7 +18,7 @@
 												the_post_thumbnail('large');
 											}
 											?>
-											<h1 class="page-title"><?php the_title(); ?></h1>
+											<h1 class="<?php if($post->post_name == 'welcome'){ echo 'page-title'; } else { echo 'article-title'; } ?>"><?php the_title(); ?></h1>
 										</header> <!-- end article header -->
 										<section class="entry-content" itemprop="articleBody">
 											<?php the_content(); ?>

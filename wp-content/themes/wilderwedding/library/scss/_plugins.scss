@@ -1,0 +1,102 @@
+/********************
+Modernizr Fallbacks
+********************/
+
+.no-svg {
+  #background{
+    &:after {
+      background: url(../images/stars.png) repeat top left;
+    }
+    #content {
+      &:before {
+        background: url(../images/themoon.png) no-repeat top right;
+      }
+      &:after {
+        background: url(../images/sidewalk-b.png) repeat-x top center;
+      }
+    }
+    #inner-content {
+      &:before {
+        background: url(../images/facade1.png) repeat-x bottom right;
+      }
+      &:after {
+        background: url(../images/facade2.png) repeat-x bottom left;
+      }
+    }
+  }
+}
+
+/********************
+Ninja Forms Custom Columns
+********************/
+// modified grid-html-classes
+@mixin ninja-html-classes($size) {
+
+  @for $i from 0 through $total-columns - 1 {
+    .#{$size}-push-#{$i}-wrap {
+      @include grid-column($push:$i, $collapse:null, $float:false);
+    }
+    .#{$size}-pull-#{$i}-wrap {
+      @include grid-column($pull:$i, $collapse:null, $float:false);
+    }
+  }
+
+  .column-wrap,
+  .columns-wrap { @include grid-column($columns:false, $position:true); }
+
+  @for $i from 1 through $total-columns {
+    .#{$size}-#{$i}-wrap { @include grid-column($columns:$i,$collapse:null,$float:false); }
+  }
+
+  @for $i from 0 through $total-columns - 1 {
+    .#{$size}-offset-#{$i}-wrap { @include grid-column($offset:$i, $collapse:null,$float:false); }
+  }
+}
+
+//The CSS
+.ninja-forms-cont {
+  .column-wrap,
+  .columns-wrap { @include grid-column($columns:$total-columns); }
+
+  [class*="column-wrap"] + [class*="column-wrap"]:last-child { float: $last-child-float; }
+  [class*="column-wrap"] + [class*="column-wrap"].end { float: $default-float; }
+
+  @media #{$small-up} {
+    @include ninja-html-classes($size:small);
+  }
+  @media #{$medium-up} {
+    @include ninja-html-classes($size:medium);
+  }
+  @media #{$large-up} {
+    @include ninja-html-classes($size:large);
+  }
+
+  .field-wrap, #ninja_forms_required_items {
+    margin-bottom: 0;
+    display: inline-block;
+  }
+
+  .ninja-forms-required-items {
+    font-size: 0.9em;
+    font-family: sans-serif;
+    font-weight: 200;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .list-radio-wrap, .list-checkbox-wrap {
+    ul li {
+      display: inline-block;
+    }
+    span ul li input {
+      margin-top: 0.2em;
+      margin-bottom: 0.8em;
+    }
+  }
+  .button-wrap {
+    text-align: center;
+    input {
+      max-width: 250px;
+      margin-bottom: 0;
+    }
+  }
+}

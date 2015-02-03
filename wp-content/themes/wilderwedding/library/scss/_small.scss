@@ -58,7 +58,10 @@ body {
 		padding-top: 0.5624rem;
 		padding-bottom: 0.572rem;
 	}
+}
 
+input[type="submit"].button {
+  border-radius: 3px;
 }
 
 /********************
@@ -129,20 +132,26 @@ LAYOUT & GRID STYLES
 		margin: 50px 0;
 		#main {
 			position:relative;
-			box-shadow:0 1px 4px rgba(0,0,0, 0.3), inset 0 0 40px rgba(0, 0, 0, 0.29);
+			//box-shadow:0 1px 4px rgba(0,0,0, 0.3), inset 0 0 40px rgba(0, 0, 0, 0.29);
+			//box-shadow: 0 0 16px -4px rgba(73, 73, 73, 0.6);
+			margin: 10px;
+			width: calc(100% - 20px);
+			background: $inner-content-bg;
+			padding: $column-gutter / 2;
 		}
 	}
 }
 
 #inner-content {
 		background-color: $inner-content-bg;
+		background-color: rgba(255, 255, 255, 0.26);
 		width: 70%;
 }
 
 #background {
 	position: fixed;
 	overflow-y: scroll;
-	z-index: -1;
+	z-index: -2;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -510,6 +519,11 @@ POSTS & CONTENT STYLES
 .archive-title {}
 
 .article-header {}
+
+.article-title {
+	color: #383838;
+	text-shadow: -1px -1px 0px #F0F0F0;
+}
 
 /* want to style individual post classes? Booya! */
 .post-id {}         /* post by id (i.e. post-3) */
