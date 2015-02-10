@@ -65,9 +65,19 @@
 					<?php get_template_part( 'partials/nav', 'main-topbar-home' ); ?>
 
 					<div id="background">
+						<div id="stars"></div>
+						<script type='text/javascript'>
+						  document.getElementById("stars").style.zIndex = "0";
+						</script>
 						<div id="content">
 							<div id="inner-content" class="row"></div>
+							<script type='text/javascript'>
+							  document.getElementById("inner-content").style.zIndex = "0";
+							</script>
 						</div>
+						<script type='text/javascript'>
+						  document.getElementById("content").style.zIndex = "0";
+						</script>
 					</div>
 					<?php
 
