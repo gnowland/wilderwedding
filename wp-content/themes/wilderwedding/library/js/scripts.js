@@ -68,7 +68,7 @@ jQuery(document).ready(function($) {
 			if (target.length) {
 				//var offset = (target.outerHeight(true) - target.outerHeight())/2; <- (not needed with new history.pushState)
 				$('#scroll-container').animate({ //html,body
-				scrollTop: target.position().top //+ offset //offset().top
+				scrollTop: target.position().top //+ ((target.outerHeight(true) - target.outerHeight())/2) //+ offset //offset().top
 				}, 800, 'swing', function () {
 					// window.location.hash = target.selector; <- caused jumping, replaced with the below:
 					if(history.pushState) {

@@ -99,7 +99,8 @@ $default-transition: all 350ms ease-in-out;
 // $font-weight-normal: normal !default;
 // $font-weight-bold: bold !default;
 
-   $wwblue      : #01182B; //#0D3057;
+   $wwblue      : #01182B;
+   $wwblue2     : #0D3057;
 // $white       : #FFFFFF;
    $ghost       : #FAFAFA;
    $snow        : #F9F9F9;
@@ -635,7 +636,7 @@ $default-transition: all 350ms ease-in-out;
 // $input-font-color: rgba(0,0,0,0.75);
 // $input-font-size: rem-calc(14);
 // $input-bg-color: $white;
-// $input-focus-bg-color: scale-color($white, $lightness: -2%);
+   $input-focus-bg-color: $white; // scale-color($white, $lightness: -2%);
 // $input-border-color: scale-color($white, $lightness: -20%);
 // $input-focus-border-color: scale-color($white, $lightness: -40%);
 // $input-border-style: solid;

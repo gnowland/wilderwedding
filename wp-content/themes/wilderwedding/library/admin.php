@@ -122,4 +122,16 @@ function joints_custom_admin_footer() {
 // adding it to the admin area
 add_filter('admin_footer_text', 'joints_custom_admin_footer');
 */
+function gn_remove_menus(){
+
+  remove_menu_page( 'edit.php' );                   //Posts
+  //remove_menu_page( 'edit-comments.php' );          //Comments
+
+  global $menu;
+  $menu[5] = $menu[20]; // Moves Pages (position 20) to top (Posts' original position (5))
+  unset($menu[20]); // Removes empty position 20 where Pages used to be
+
+}
+add_action( 'admin_menu', 'gn_remove_menus' );
+
 ?>
