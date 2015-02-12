@@ -67,11 +67,89 @@
 									  'depth'               => 0,
 									  'wrap_class'          => 'wedding-party-categories',
 									  'level_class'         => 'wedding-paty-cat',
-									  'parent_title_format' => '<h2 class="section-title">%s</h2>',
+									  'parent_title_format' => '<h5>%s</h5>',
 
 									);
 									custom_list_categories( $args );
 
+
+
+/*									$custom_cat_args = array(
+									  'orderby' => 'term_group',
+									  'taxonomy' => 'custom_cat',
+									  'order' => 'ASC'
+									  );
+									// get all the categories from the database
+									$cats = get_categories($custom_cat_args);
+
+									// loop through the categries
+									foreach ($cats as $cat) {
+										echo($cat->name);
+									//	// setup the cateogory ID
+									//	$cat_id= $cat->term_id;
+									//	// Make a header for the cateogry
+									//	echo "<h2>".$cat->name."</h2>";
+									//	// create a custom wordpress query
+									//	query_posts("cat=$cat_id&posts_per_page=-1");
+									//	// start the wordpress loop!
+									//	if (have_posts()){
+									//		while (have_posts()){
+
+									//			the_post();
+
+									//			// create our link now that the post is setup
+									//			echo '<a href="'. the_permalink(); .'">'. the_title();.'</a>';
+									//			echo '<hr/>';
+
+									//		}
+									//		wp_reset_postdata();
+									//	} // done our wordpress loop. Will start again for each category
+									} // done the foreach statement
+*/
+
+
+
+
+
+
+
+/*
+									// the wedding party query
+									$query2_args = array(
+										'post_type' => 'wedding_party',
+									);
+									$query2 = new WP_Query( $query2_args );
+
+									if ( $query2->have_posts() ){
+										while ( $query2->have_posts() ){
+											$query2->the_post();
+
+											?>
+											<section id="<?php the_ID(); ?>" role="section" itemprop="articleBody" class="clearfix">
+												<header class="article-header">
+												<?php
+												if ( has_post_thumbnail() ) {
+													the_post_thumbnail('thumbnail');
+												}
+												?>
+												<h2 class="section-title"><?php the_title(); ?></h2>
+												</header> <!-- end section header -->
+												<section class="entry-content" itemprop="articleBody">
+													<?php the_content(); ?>
+												</section> <!-- end article section -->
+											</section><!-- end article section -->
+											<?php
+
+										} //end of the loop/endwhile
+
+										wp_reset_postdata();
+
+										} else {
+
+											get_template_part( 'partials/content', 'missing' );
+
+										}
+*/
 									?>
 									</article> <!-- end article -->
 								</div> <!-- end #main -->

@@ -204,4 +204,135 @@ function joints_comments($comment, $args, $depth) {
 <?php
 } // don't remove this bracket!
 
+
+/*********************
+CUSTOM CATEGORY WALKER (GN)
+*********************/
+
+class My_Category_Walker extends Walker_Category {
+
+  var $lev = -1;
+  var $skip = 0;
+  static $current_parent;
+
+  function start_lvl( &$output, $depth = 0, $args = array() ) {
+    $this->lev = 0;
+//    $output .= "<ul>" . PHP_EOL;
+  }
+
+  function end_lvl( &$output, $depth = 0, $args = array() ) {
+//    $output .= "</ul>" . PHP_EOL;
+    $this->lev = -1;
+  }
+
+  function start_el( &$output, $category, $depth = 0, $args = array(), $id = 0 ) {
+    extract($args);
+    $cat_name = esc_attr( $category->name );
+    if ( ! $category->parent ) {
+      if ( ! get_term_children( $category->term_id, $category->taxonomy ) ) {
+          $this->skip = 1;
+      } else {
+//        $output .= "<li class='" . $class . $level_class . "'>" . PHP_EOL;
+        $output .= "<section class='" . $class . $level_class . "'>" . PHP_EOL;
+        $output .= sprintf($parent_title_format, $cat_name) . PHP_EOL;
+      }
+    } else {
+      if ( $this->lev == 0 && $category->parent) {
+        $link = get_term_link(intval($category->parent) , $category->taxonomy);
+        $stored_parent = intval(self::$current_parent);
+        $now_parent = intval($category->parent);
+        self::$current_parent = null;
+      }
+      //$output .= print_r($category);
+
+//HARD CODED BECAUSE FTS
+      $post_args = array(
+      'post_type' => 'wedding_party',
+      'tax_query' => array(
+          array(
+          'taxonomy' => $category->taxonomy,
+          'field' => 'id',
+          'terms' => $category->term_id
+           )
+        )
+      );
+      $query2 = new WP_Query( $post_args );
+
+      if ( $query2->have_posts() ){
+
+        while ( $query2->have_posts() ){
+          $query2->the_post();
+
+          $outpost .= '<section id="<?php the_ID(); ?>" role="section" itemprop="articleBody" class="clearfix">' . PHP_EOL;
+          $outpost .= '<header class="article-header">' . PHP_EOL;
+            if ( has_post_thumbnail() ) {
+          $outpost .= '<div class="post-image-banner">' . PHP_EOL;
+          $outpost .= get_the_post_thumbnail($post->ID,'thumbnail') . PHP_EOL;
+          $outpost .= '<h3 class="section-title">' . get_the_title() .'</h3>' . PHP_EOL;
+          $outpost .= '<h4 class="category-title">' . $cat_name . '</h4>' . PHP_EOL;
+          $outpost .= '</div>' . PHP_EOL;
+            } else {
+          $outpost .= '<h3 class="section-title">' . get_the_title() .'</h3>' . PHP_EOL;
+          $outpost .= '<h4 class="category-title">' . $cat_name . '</h4>' . PHP_EOL;
+            }
+          $outpost .= '</header> <!-- end section header -->' . PHP_EOL;
+          $outpost .= '<section class="entry-content" itemprop="articleBody">' . PHP_EOL;
+          $outpost .= get_the_content() . PHP_EOL;
+          $outpost .= '</section> <!-- end article section -->' . PHP_EOL;
+          $outpost .= '</section><!-- end article section -->' . PHP_EOL;
+
+        } //end of the loop/endwhile
+
+        wp_reset_postdata();
+
+      }
+
+      //$output .= "<li";
+      //$class .= $category->taxonomy . '-item ' . $category->taxonomy . '-item-' . $category->term_id;
+      //$output .= ' class="' . $class . '"';
+      //$output .= '>';
+      $output .= $outpost;
+      $output .= "</section><hr>" . PHP_EOL;
+    }
+  }
+
+  function end_el( &$output, $page, $depth = 0, $args = array() ) {
+    $this->lev++;
+    if ( $this->skip == 1 ) {
+      $this->skip = 0;
+      return;
+    }
+
+//    $output .= "</li>" . PHP_EOL;
+  }
+
+}
+
+function custom_list_categories( $args = '' ) {
+  $defaults = array(
+    'taxonomy' => 'category',
+    'show_option_none' => '',
+    'echo' => 1,
+    'depth' => 2,
+    'wrap_class' => '',
+    'level_class' => '',
+    'parent_title_format' => '%s',
+  );
+  $r = wp_parse_args( $args, $defaults );
+  if ( ! isset( $r['wrap_class'] ) ) $r['wrap_class'] = ( 'category' == $r['taxonomy'] ) ? 'categories' : $r['taxonomy'];
+  extract( $r );
+  if ( ! taxonomy_exists($taxonomy) ) return false;
+  $categories = get_categories( $r );
+//  $output = "<ul class='" . esc_attr( $wrap_class ) . "'>" . PHP_EOL;
+  if ( empty( $categories ) ) {
+    if ( ! empty( $show_option_none ) ) $output .= /*"<li>" .*/ $show_option_none /*. "</li>"*/ . PHP_EOL;
+  } else {
+    $depth = $r['depth'];
+    $walker = new My_Category_Walker;
+    $output .= $walker->walk($categories, $depth, $r);
+  }
+//  $output .= "</ul>" . PHP_EOL;
+  if ( $echo ) echo $output; else return $output;
+}
+
 ?>

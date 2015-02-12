@@ -143,10 +143,10 @@ LAYOUT & GRID STYLES
 }
 
 #inner-content {
-		background-color: $inner-content-bg;
 		background-color: rgba(255, 255, 255, 0.26);
 		width: 70%;
 }
+
 
 #background {
 	position: fixed;
@@ -231,6 +231,7 @@ LAYOUT & GRID STYLES
 			color: inherit;
 		}
 		header {
+			margin-bottom: 1.25rem; 
 			h1 span {
 				margin: 0 10px;
 			}
@@ -249,21 +250,57 @@ LAYOUT & GRID STYLES
 		vertical-align: top;
 		box-shadow: 0 0 15px -6px rgba(0, 0, 0, 0.4);
 		transform: scale(1);
+		z-index: 0;
 		transition: $default-transition;
 		margin: 0 10px 10px 0;
 		float: left;
-		&:hover {
-			box-shadow: 0 0 15px -3px rgba(0, 0, 0, 0.4);
-			transform: scale(1.02);
-		}
+		position: relative;
 	}
-	h2 {
+	h3 {
 		text-align: left;
 	}
-	section {
-
+	h4 {
+		background: rgba(208, 172, 95, 0.87);
+		display: inline-block;
+		padding: 0.2rem 0.5rem 0.1rem;
+		font-size: 0.9rem;
+		color: #F9F9F9;
+		border-radius: 2px;
+		box-shadow: 0 1px 0px 0px rgba(1, 24, 43, 0.78);
+		text-shadow: 1px 1px 0px rgb(118, 118, 118);
+		text-align: center;
+		transform: scale(1);
+		transition: $default-transition;
+	}
+	.post-image-banner {
+		position: relative;
+		h4 {
+			position: absolute;
+			left: 0;
+			width: 150px;
+			top: 8rem;
+		}
+		&:hover {
+			img {
+				box-shadow: 0 0 15px -3px rgba(0, 0, 0, 0.4);
+				transform: scale(1.02);
+				z-index: 1;
+			}
+			h4 {
+				transform: scale(0.98);
+			}
+		}
+	}
+	.wedding-paty-cat + hr {
+		//padding-bottom: 2rem;
+		//border-bottom: 1px dotted #ddd;
+		margin: 2.3rem 0 2.1rem;
+		&:last-of-type + hr {
+			border-width: 0;
+		}
 	}
 }
+
 /*********************
 LINK STYLES
 *********************/
@@ -562,7 +599,7 @@ POSTS & CONTENT STYLES
 		height: 1px;
 		display: block;
 		position: absolute;
-		bottom: 9px;
+		bottom: 0.3rem;
 		z-index: 1;
 	}
 }
@@ -582,6 +619,11 @@ POSTS & CONTENT STYLES
 .byline {
 	color: #999;
 	time {}
+}
+
+hr {
+	border-width: 3px 0 0;
+	border-style: double;
 }
 
 /* entry content */
@@ -1071,3 +1113,4 @@ PLUGIN STYLES
 
 //Just Playlist form
 #ninja_forms_form_3_all_fields_wrap .textarea-wrap textarea { height: 120px; }
+.ninja-forms-cont ~ hr { margin-bottom: 2.45rem;  }
