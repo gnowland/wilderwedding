@@ -290,10 +290,12 @@ LAYOUT & GRID STYLES
 			}
 		}
 	}
-	.wedding-paty-cat + hr {
-		//padding-bottom: 2rem;
-		//border-bottom: 1px dotted #ddd;
-		margin: 2.3rem 0 2.1rem;
+	.wedding-paty-cat{
+		+ hr {
+			//padding-bottom: 2rem;
+			//border-bottom: 1px dotted #ddd;
+			margin: 2.3rem 0 2.1rem;
+		}
 		&:last-of-type + hr {
 			border-width: 0;
 		}
