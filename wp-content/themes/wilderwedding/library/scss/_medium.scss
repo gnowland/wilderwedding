@@ -64,6 +64,25 @@ POSTS & CONTENT STYLES
 
 } /* end .entry-content */
 
+#the-wedding-party {
+	.post-image-banner {
+		display: block;
+		h3 {
+			float: none;
+			clear: none;
+			text-align: left;
+			width: auto;
+		}
+		h4 {
+			left: 0;
+			margin-left: 0;
+		}
+		img {
+			margin: 0 10px 10px 0;
+			float: left;
+		}
+	}
+}
 /*********************
 SIDEBARS & ASIDES
 *********************/

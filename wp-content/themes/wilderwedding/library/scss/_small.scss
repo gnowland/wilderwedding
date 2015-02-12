@@ -251,9 +251,10 @@ LAYOUT & GRID STYLES
 		transform: scale(1);
 		z-index: 0;
 		transition: $default-transition;
-		margin: 0 10px 10px 0;
-		float: left;
 		position: relative;
+		float: none;
+		margin: 0 auto 10px;
+		display: block;
 	}
 	h3 {
 		text-align: left;
@@ -272,12 +273,21 @@ LAYOUT & GRID STYLES
 		transition: $default-transition;
 	}
 	.post-image-banner {
+		width: 100%;
+		display: inline-block;
 		position: relative;
+		h3 {
+			float: left;
+			clear: both;
+			text-align: center;
+			width: 100%;
+		}
 		h4 {
 			position: absolute;
-			left: 0;
+			left: 50%;
 			width: 150px;
 			top: 8rem;
+			margin-left: -75px;
 		}
 		&:hover {
 			img {
