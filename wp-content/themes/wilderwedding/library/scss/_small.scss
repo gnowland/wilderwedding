@@ -194,7 +194,7 @@ LAYOUT & GRID STYLES
 	#inner-content {
 		position: relative;
 		height: 100%;
-		//background-color: transparent;
+		background-color: transparent; //?????
 		&:before {
 			content:'';
 			background: url(../images/facade1.svg) repeat-x bottom right;
