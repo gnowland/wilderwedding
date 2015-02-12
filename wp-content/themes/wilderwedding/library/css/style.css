@@ -9931,8 +9931,7 @@ LAYOUT & GRID STYLES
   background-image: linear-gradient(to bottom, #01182b 0%, #022644 60%, #123560 100%);
 }
 /* line 161, ../scss/_small.scss */
-#background:before {
-  content: '';
+#background #stars {
   background: url(../images/stars.svg) repeat top left;
   background-size: 115px 115px;
   z-index: -1;
@@ -9940,12 +9939,12 @@ LAYOUT & GRID STYLES
   width: 100%;
   position: absolute;
 }
-/* line 170, ../scss/_small.scss */
+/* line 169, ../scss/_small.scss */
 #background #content {
   height: 100%;
   overflow: hidden;
 }
-/* line 173, ../scss/_small.scss */
+/* line 172, ../scss/_small.scss */
 #background #content:before {
   content: '';
   background: url(../images/themoon.svg) no-repeat top right;
@@ -9957,7 +9956,7 @@ LAYOUT & GRID STYLES
   right: 11px;
   top: 0;
 }
-/* line 184, ../scss/_small.scss */
+/* line 183, ../scss/_small.scss */
 #background #content:after {
   content: '';
   background: url(../images/sidewalk-b.svg) repeat-x top center;
@@ -9968,13 +9967,12 @@ LAYOUT & GRID STYLES
   bottom: 0;
   left: 0;
 }
-/* line 195, ../scss/_small.scss */
+/* line 194, ../scss/_small.scss */
 #background #inner-content {
   position: relative;
   height: 100%;
-  background-color: transparent;
 }
-/* line 199, ../scss/_small.scss */
+/* line 198, ../scss/_small.scss */
 #background #inner-content:before {
   content: '';
   background: url(../images/facade1.svg) repeat-x bottom right;
@@ -9987,7 +9985,7 @@ LAYOUT & GRID STYLES
   bottom: 23px;
   z-index: 1;
 }
-/* line 211, ../scss/_small.scss */
+/* line 210, ../scss/_small.scss */
 #background #inner-content:after {
   content: '';
   background: url(../images/facade2.svg) repeat-x bottom left;
@@ -10001,31 +9999,31 @@ LAYOUT & GRID STYLES
   z-index: 1;
 }
 
-/* line 227, ../scss/_small.scss */
+/* line 226, ../scss/_small.scss */
 #welcome #inner-content {
   background-color: transparent;
   color: #F9F9F9;
 }
-/* line 230, ../scss/_small.scss */
+/* line 229, ../scss/_small.scss */
 #welcome #inner-content h1 {
   color: inherit;
 }
-/* line 233, ../scss/_small.scss */
+/* line 232, ../scss/_small.scss */
 #welcome #inner-content header {
   margin-bottom: 1.25rem;
 }
-/* line 235, ../scss/_small.scss */
+/* line 234, ../scss/_small.scss */
 #welcome #inner-content header h1 span {
   margin: 0 10px;
 }
-/* line 238, ../scss/_small.scss */
+/* line 237, ../scss/_small.scss */
 #welcome #inner-content header img {
   max-width: 300px;
   width: 100%;
   padding: 30px 20px;
 }
 
-/* line 247, ../scss/_small.scss */
+/* line 246, ../scss/_small.scss */
 #the-wedding-party img {
   border: 4px solid #fff;
   border-radius: 50%;
@@ -10038,11 +10036,11 @@ LAYOUT & GRID STYLES
   float: left;
   position: relative;
 }
-/* line 259, ../scss/_small.scss */
+/* line 258, ../scss/_small.scss */
 #the-wedding-party h3 {
   text-align: left;
 }
-/* line 262, ../scss/_small.scss */
+/* line 261, ../scss/_small.scss */
 #the-wedding-party h4 {
   background: rgba(208, 172, 95, 0.87);
   display: inline-block;
@@ -10056,32 +10054,32 @@ LAYOUT & GRID STYLES
   transform: scale(1);
   transition: all 350ms ease-in-out;
 }
-/* line 275, ../scss/_small.scss */
+/* line 274, ../scss/_small.scss */
 #the-wedding-party .post-image-banner {
   position: relative;
 }
-/* line 277, ../scss/_small.scss */
+/* line 276, ../scss/_small.scss */
 #the-wedding-party .post-image-banner h4 {
   position: absolute;
   left: 0;
   width: 150px;
   top: 8rem;
 }
-/* line 284, ../scss/_small.scss */
+/* line 283, ../scss/_small.scss */
 #the-wedding-party .post-image-banner:hover img {
   box-shadow: 0 0 15px -3px rgba(0, 0, 0, 0.4);
   transform: scale(1.02);
   z-index: 1;
 }
-/* line 289, ../scss/_small.scss */
+/* line 288, ../scss/_small.scss */
 #the-wedding-party .post-image-banner:hover h4 {
   transform: scale(0.98);
 }
-/* line 294, ../scss/_small.scss */
+/* line 293, ../scss/_small.scss */
 #the-wedding-party .wedding-paty-cat + hr {
   margin: 2.3rem 0 2.1rem;
 }
-/* line 298, ../scss/_small.scss */
+/* line 297, ../scss/_small.scss */
 #the-wedding-party .wedding-paty-cat + hr:last-of-type + hr {
   border-width: 0;
 }
@@ -10089,13 +10087,13 @@ LAYOUT & GRID STYLES
 /*********************
 LINK STYLES
 *********************/
-/* line 308, ../scss/_small.scss */
+/* line 307, ../scss/_small.scss */
 a, a:visited {
   /*adds highlight on hover */
   /* on click */
   /* mobile tap color */
 }
-/* line 322, ../scss/_small.scss */
+/* line 321, ../scss/_small.scss */
 a:link, a:visited:link {
   /*
   this highlights links on iPhones/iPads.
@@ -10108,12 +10106,12 @@ a:link, a:visited:link {
 /******************************************************************
 H1, H2, H3, H4, H5 P STYLES
 ******************************************************************/
-/* line 335, ../scss/_small.scss */
+/* line 334, ../scss/_small.scss */
 p {
   font-size: 0.95rem;
 }
 
-/* line 339, ../scss/_small.scss */
+/* line 338, ../scss/_small.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   /*
   if you're going to use webfonts, be sure to check your weights
@@ -10121,17 +10119,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   */
   /* removing text decoration from all headline links */
 }
-/* line 346, ../scss/_small.scss */
+/* line 345, ../scss/_small.scss */
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
   text-decoration: none;
 }
 
-/* line 351, ../scss/_small.scss */
+/* line 350, ../scss/_small.scss */
 h1, .h1 {
   font-size: 2rem;
 }
 
-/* line 372, ../scss/_small.scss */
+/* line 371, ../scss/_small.scss */
 .gold {
   color: #D1AC5E;
 }
@@ -10139,7 +10137,7 @@ h1, .h1 {
 /*********************
 HEADER STYLES
 *********************/
-/* line 381, ../scss/_small.scss */
+/* line 380, ../scss/_small.scss */
 .header ul.off-canvas-list li {
   list-style: none;
 }
@@ -10147,42 +10145,42 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-/* line 390, ../scss/_small.scss */
+/* line 389, ../scss/_small.scss */
 .fixed {
   width: auto;
 }
-/* line 392, ../scss/_small.scss */
+/* line 391, ../scss/_small.scss */
 .fixed.expanded:not(.top-bar) {
   width: auto;
   height: 100%;
 }
-/* line 395, ../scss/_small.scss */
+/* line 394, ../scss/_small.scss */
 .fixed.expanded:not(.top-bar) .title-area {
   width: auto;
 }
-/* line 398, ../scss/_small.scss */
+/* line 397, ../scss/_small.scss */
 .fixed.expanded:not(.top-bar) .top-bar-section {
   margin-top: 49px;
 }
 
-/* line 408, ../scss/_small.scss */
+/* line 407, ../scss/_small.scss */
 .fixed.home-nav-wrapper.expanded:not(.top-bar) {
   overflow-y: visible;
 }
-/* line 410, ../scss/_small.scss */
+/* line 409, ../scss/_small.scss */
 .fixed.home-nav-wrapper.expanded:not(.top-bar) .top-bar-section {
   max-height: calc(100% - 49px);
   overflow: auto;
 }
 
-/* line 417, ../scss/_small.scss */
+/* line 416, ../scss/_small.scss */
 .home-nav {
   position: absolute;
   overflow: visible;
   width: 0;
   margin: 10px;
 }
-/* line 422, ../scss/_small.scss */
+/* line 421, ../scss/_small.scss */
 .home-nav .toggle-topbar {
   left: 0;
   right: auto;
@@ -10191,7 +10189,7 @@ NAVIGATION STYLES
   -o-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
-/* line 427, ../scss/_small.scss */
+/* line 426, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon-animated a {
   line-height: 33px;
   color: #FFFFFF;
@@ -10209,16 +10207,16 @@ NAVIGATION STYLES
   transition: all 350ms ease-in-out;
   text-indent: -999em;
 }
-/* line 445, ../scss/_small.scss */
+/* line 444, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon-animated a:hover, .home-nav .toggle-topbar.menu-icon-animated a:active {
   border-color: #616161;
 }
-/* line 448, ../scss/_small.scss */
+/* line 447, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon-animated a span {
   top: calc(50% - 1px);
   left: calc(50% - 10px);
 }
-/* line 451, ../scss/_small.scss */
+/* line 450, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon-animated a span, .home-nav .toggle-topbar.menu-icon-animated a span::before, .home-nav .toggle-topbar.menu-icon-animated a span::after {
   width: 20px;
   height: 2px;
@@ -10232,30 +10230,30 @@ NAVIGATION STYLES
   -o-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
-/* line 461, ../scss/_small.scss */
+/* line 460, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon-animated a span::before {
   top: -7px;
 }
-/* line 464, ../scss/_small.scss */
+/* line 463, ../scss/_small.scss */
 .home-nav .toggle-topbar.menu-icon-animated a span::after {
   bottom: -7px;
 }
-/* line 471, ../scss/_small.scss */
+/* line 470, ../scss/_small.scss */
 .home-nav .top-bar-section {
   display: none;
   border: 3px solid #A9A9A9;
   border-color: #616161;
 }
-/* line 475, ../scss/_small.scss */
+/* line 474, ../scss/_small.scss */
 .home-nav .top-bar-section ul {
   position: relative;
   overflow: auto;
 }
-/* line 478, ../scss/_small.scss */
+/* line 477, ../scss/_small.scss */
 .home-nav .top-bar-section ul li {
   background: #FFFFFF;
 }
-/* line 480, ../scss/_small.scss */
+/* line 479, ../scss/_small.scss */
 .home-nav .top-bar-section ul li > a {
   font-weight: 300;
   padding-right: 0.9375rem;
@@ -10263,38 +10261,38 @@ NAVIGATION STYLES
   color: #616161;
   white-space: nowrap;
 }
-/* line 487, ../scss/_small.scss */
+/* line 486, ../scss/_small.scss */
 .home-nav .top-bar-section ul li:hover:not(.has-form) > a {
   background: #616161;
   box-shadow: inset 0 9px 10px -10px rgba(0, 0, 0, 0.8), inset 0 -9px 10px -10px rgba(0, 0, 0, 0.8);
 }
-/* line 492, ../scss/_small.scss */
+/* line 491, ../scss/_small.scss */
 .home-nav .top-bar-section ul li:first-of-type:hover:not(.has-form) > a {
   box-shadow: inset 0 -9px 10px -10px rgba(0, 0, 0, 0.8);
 }
-/* line 495, ../scss/_small.scss */
+/* line 494, ../scss/_small.scss */
 .home-nav .top-bar-section ul li:last-of-type:hover:not(.has-form) > a {
   box-shadow: inset 0 9px 10px -10px rgba(0, 0, 0, 0.8);
 }
-/* line 501, ../scss/_small.scss */
+/* line 500, ../scss/_small.scss */
 .home-nav.expanded {
   width: auto;
 }
-/* line 503, ../scss/_small.scss */
+/* line 502, ../scss/_small.scss */
 .home-nav.expanded .toggle-topbar {
   left: 73px;
 }
-/* line 506, ../scss/_small.scss */
+/* line 505, ../scss/_small.scss */
 .home-nav.expanded .toggle-topbar.menu-icon-animated a {
   border-color: #616161;
   border-bottom-color: #FCFCFC;
   border-radius: 50% 50% 0 0;
 }
-/* line 510, ../scss/_small.scss */
+/* line 509, ../scss/_small.scss */
 .home-nav.expanded .toggle-topbar.menu-icon-animated a span {
   background-color: transparent;
 }
-/* line 512, ../scss/_small.scss */
+/* line 511, ../scss/_small.scss */
 .home-nav.expanded .toggle-topbar.menu-icon-animated a span::before {
   background-color: #616161;
   top: 0;
@@ -10304,7 +10302,7 @@ NAVIGATION STYLES
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 517, ../scss/_small.scss */
+/* line 516, ../scss/_small.scss */
 .home-nav.expanded .toggle-topbar.menu-icon-animated a span::after {
   background-color: #616161;
   top: 10px;
@@ -10314,33 +10312,33 @@ NAVIGATION STYLES
   -o-transform: translateY(-10px) rotate(-45deg);
   transform: translateY(-10px) rotate(-45deg);
 }
-/* line 526, ../scss/_small.scss */
+/* line 525, ../scss/_small.scss */
 .home-nav.expanded .top-bar-section {
   display: block;
 }
 
-/* line 533, ../scss/_small.scss */
+/* line 532, ../scss/_small.scss */
 .top-bar .title-area {
   z-index: 1;
 }
-/* line 536, ../scss/_small.scss */
+/* line 535, ../scss/_small.scss */
 .top-bar.expanded {
   height: calc(100% - 20px);
 }
-/* line 538, ../scss/_small.scss */
+/* line 537, ../scss/_small.scss */
 .top-bar.expanded .toggle-topbar a span::after {
   box-shadow: none;
 }
 
-/* line 545, ../scss/_small.scss */
+/* line 544, ../scss/_small.scss */
 .off-canvas-list ul {
   margin-left: 0;
 }
-/* line 548, ../scss/_small.scss */
+/* line 547, ../scss/_small.scss */
 .off-canvas-list ul li a {
   border-bottom: 0px;
 }
-/* line 552, ../scss/_small.scss */
+/* line 551, ../scss/_small.scss */
 .off-canvas-list ul .dropdown {
   margin-left: 10px;
 }
@@ -10349,7 +10347,7 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 /* end .hentry */
-/* line 585, ../scss/_small.scss */
+/* line 584, ../scss/_small.scss */
 .article-title, .section-title, .ninja-forms-form-title {
   color: #383838;
   text-shadow: -1px -1px 0px #F0F0F0;
@@ -10358,12 +10356,12 @@ POSTS & CONTENT STYLES
   line-height: 1.1;
 }
 
-/* line 592, ../scss/_small.scss */
+/* line 591, ../scss/_small.scss */
 .article-title, .ninja-forms-form-title {
   position: relative;
   z-index: 2;
 }
-/* line 595, ../scss/_small.scss */
+/* line 594, ../scss/_small.scss */
 .article-title:after, .ninja-forms-form-title:after {
   content: '';
   border-bottom: 1px dotted #ddd;
@@ -10385,19 +10383,19 @@ POSTS & CONTENT STYLES
 /* style by category (i.e. category-videos) */
 /* style by tag (i.e. tag-news) */
 /* post meta */
-/* line 619, ../scss/_small.scss */
+/* line 618, ../scss/_small.scss */
 .byline {
   color: #999;
 }
 
-/* line 624, ../scss/_small.scss */
+/* line 623, ../scss/_small.scss */
 hr {
   border-width: 3px 0 0;
   border-style: double;
 }
 
 /* entry content */
-/* line 630, ../scss/_small.scss */
+/* line 629, ../scss/_small.scss */
 .entry-content {
   /*
   image alignment on a screen this size may be
@@ -10406,32 +10404,32 @@ hr {
   but it's up to you. Feel free to change it up.
   */
 }
-/* line 632, ../scss/_small.scss */
+/* line 631, ../scss/_small.scss */
 .entry-content hr {
   margin: 1.65rem 0;
 }
-/* line 640, ../scss/_small.scss */
+/* line 639, ../scss/_small.scss */
 .entry-content ul, .entry-content ol {
   margin-left: 2.1rem;
 }
-/* line 669, ../scss/_small.scss */
+/* line 668, ../scss/_small.scss */
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-/* line 676, ../scss/_small.scss */
+/* line 675, ../scss/_small.scss */
 .entry-content img {
   max-width: 100%;
   height: auto;
 }
-/* line 691, ../scss/_small.scss */
+/* line 690, ../scss/_small.scss */
 .entry-content video, .entry-content object {
   max-width: 100%;
   height: auto;
 }
-/* line 696, ../scss/_small.scss */
+/* line 695, ../scss/_small.scss */
 .entry-content pre {
   background: #eee;
   border: 1px solid #cecece;
@@ -10439,20 +10437,20 @@ hr {
 }
 
 /* end .entry-content */
-/* line 704, ../scss/_small.scss */
+/* line 703, ../scss/_small.scss */
 .wp-caption {
   max-width: 100%;
   background: #eee;
   padding: 5px;
   /* images inside wp-caption */
 }
-/* line 710, ../scss/_small.scss */
+/* line 709, ../scss/_small.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 716, ../scss/_small.scss */
+/* line 715, ../scss/_small.scss */
 .wp-caption p.wp-caption-text {
   font-size: 0.85em;
   margin: 4px 0 7px;
@@ -10466,7 +10464,7 @@ hr {
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 753, ../scss/_small.scss */
+/* line 752, ../scss/_small.scss */
 .pagination a:hover {
   color: black;
 }
@@ -10475,17 +10473,17 @@ PAGE NAVI STYLES
 COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
-/* line 763, ../scss/_small.scss */
+/* line 762, ../scss/_small.scss */
 #comments {
   /* number of comments span */
 }
 
-/* line 771, ../scss/_small.scss */
+/* line 770, ../scss/_small.scss */
 #respond ul {
   margin-left: 0px;
 }
 
-/* line 786, ../scss/_small.scss */
+/* line 785, ../scss/_small.scss */
 .commentlist {
   /* general comment classes */
   /* vcard */
@@ -10496,7 +10494,7 @@ COMMENT STYLES
   /* comment reply link */
   /* end .commentlist .comment-reply-link */
 }
-/* line 788, ../scss/_small.scss */
+/* line 787, ../scss/_small.scss */
 .commentlist li {
   position: relative;
   clear: both;
@@ -10506,59 +10504,59 @@ COMMENT STYLES
   padding: 0.7335em 10px;
   /* end .commentlist li ul.children */
 }
-/* line 796, ../scss/_small.scss */
+/* line 795, ../scss/_small.scss */
 .commentlist li:last-child {
   margin-bottom: 0;
 }
-/* line 800, ../scss/_small.scss */
+/* line 799, ../scss/_small.scss */
 .commentlist li ul.children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 818, ../scss/_small.scss */
+/* line 817, ../scss/_small.scss */
 .commentlist li[class*=depth-] {
   margin-top: 1.1em;
 }
-/* line 822, ../scss/_small.scss */
+/* line 821, ../scss/_small.scss */
 .commentlist li.depth-1 {
   margin-left: 0;
   margin-top: 0;
 }
-/* line 827, ../scss/_small.scss */
+/* line 826, ../scss/_small.scss */
 .commentlist li:not(.depth-1) {
   margin-left: 10px;
   margin-top: 0;
   padding-bottom: 0;
   background: #e7e7e7;
 }
-/* line 835, ../scss/_small.scss */
+/* line 834, ../scss/_small.scss */
 .commentlist li.depth-3 {
   background: #dadada;
 }
-/* line 859, ../scss/_small.scss */
+/* line 858, ../scss/_small.scss */
 .commentlist .vcard {
   margin-left: 50px;
 }
-/* line 862, ../scss/_small.scss */
+/* line 861, ../scss/_small.scss */
 .commentlist .vcard cite.fn {
   font-weight: 700;
   font-style: normal;
 }
-/* line 870, ../scss/_small.scss */
+/* line 869, ../scss/_small.scss */
 .commentlist .vcard time {
   float: right;
 }
-/* line 873, ../scss/_small.scss */
+/* line 872, ../scss/_small.scss */
 .commentlist .vcard time a {
   color: #999;
   text-decoration: none;
 }
-/* line 877, ../scss/_small.scss */
+/* line 876, ../scss/_small.scss */
 .commentlist .vcard time a:hover {
   text-decoration: underline;
 }
-/* line 887, ../scss/_small.scss */
+/* line 886, ../scss/_small.scss */
 .commentlist .vcard img.avatar {
   position: absolute;
   left: 10px;
@@ -10566,13 +10564,13 @@ COMMENT STYLES
   border: 1px solid #cecece;
   background: #fff;
 }
-/* line 914, ../scss/_small.scss */
+/* line 913, ../scss/_small.scss */
 .commentlist .comment_content p {
   margin: 0.7335em 0 1.5em;
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 923, ../scss/_small.scss */
+/* line 922, ../scss/_small.scss */
 .commentlist .comment-reply-link {
   border-style: solid;
   border-width: 0;
@@ -10611,27 +10609,27 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 940, ../scss/_small.scss */
+/* line 939, ../scss/_small.scss */
 .respond-form {
   margin: 1.5em 10px;
   padding-bottom: 2.2em;
 }
-/* line 944, ../scss/_small.scss */
+/* line 943, ../scss/_small.scss */
 .respond-form form {
   margin: 0.75em 0;
 }
-/* line 947, ../scss/_small.scss */
+/* line 946, ../scss/_small.scss */
 .respond-form form li {
   list-style-type: none;
   clear: both;
   margin-bottom: 0.7335em;
 }
-/* line 952, ../scss/_small.scss */
+/* line 951, ../scss/_small.scss */
 .respond-form form li label,
 .respond-form form li small {
   display: none;
 }
-/* line 958, ../scss/_small.scss */
+/* line 957, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url],
@@ -10642,14 +10640,14 @@ COMMENT FORM STYLES
   line-height: 1.5em;
   /* form validation */
 }
-/* line 967, ../scss/_small.scss */
+/* line 966, ../scss/_small.scss */
 .respond-form form input[type=text]:focus,
 .respond-form form input[type=email]:focus,
 .respond-form form input[type=url]:focus,
 .respond-form form textarea:focus {
   background: #fff;
 }
-/* line 972, ../scss/_small.scss */
+/* line 971, ../scss/_small.scss */
 .respond-form form input[type=text]:invalid,
 .respond-form form input[type=email]:invalid,
 .respond-form form input[type=url]:invalid,
@@ -10662,14 +10660,14 @@ COMMENT FORM STYLES
   -ms-box-shadow: none;
   box-shadow: none;
 }
-/* line 983, ../scss/_small.scss */
+/* line 982, ../scss/_small.scss */
 .respond-form form input[type=text],
 .respond-form form input[type=email],
 .respond-form form input[type=url] {
   max-width: 400px;
   min-width: 250px;
 }
-/* line 990, ../scss/_small.scss */
+/* line 989, ../scss/_small.scss */
 .respond-form form textarea {
   resize: none;
   width: 97.3%;
@@ -10678,7 +10676,7 @@ COMMENT FORM STYLES
 
 /* comment submit button */
 /* comment form title */
-/* line 1003, ../scss/_small.scss */
+/* line 1002, ../scss/_small.scss */
 #comment-form-title {
   margin: 0 0 1.1em;
 }
@@ -10686,13 +10684,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 1016, ../scss/_small.scss */
+/* line 1015, ../scss/_small.scss */
 #allowed_tags {
   margin: 1.5em 10px 0.7335em 0;
 }
 
 /* no comments */
-/* line 1021, ../scss/_small.scss */
+/* line 1020, ../scss/_small.scss */
 .nocomments {
   margin: 0 20px 1.1em;
 }
@@ -10700,17 +10698,17 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 1039, ../scss/_small.scss */
+/* line 1038, ../scss/_small.scss */
 .widget ul {
   margin: 0;
 }
-/* line 1042, ../scss/_small.scss */
+/* line 1041, ../scss/_small.scss */
 .widget ul li {
   list-style: none;
   /* deep nesting */
 }
 
-/* line 1061, ../scss/_small.scss */
+/* line 1060, ../scss/_small.scss */
 #sidebar-offcanvas .widgettitle {
   color: #fff;
 }
@@ -10718,7 +10716,7 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 1069, ../scss/_small.scss */
+/* line 1068, ../scss/_small.scss */
 footer {
   clear: both;
   margin-top: 1em;
@@ -10739,7 +10737,7 @@ view.
 /*********************
 FOUNDATION STYLES
 *********************/
-/* line 1101, ../scss/_small.scss */
+/* line 1100, ../scss/_small.scss */
 .clearing-assembled.clearing-blackout a:hover {
   background: none;
 }
@@ -10747,18 +10745,23 @@ FOUNDATION STYLES
 /*********************
 PLUGIN STYLES
 *********************/
-/* line 1109, ../scss/_small.scss */
+/* line 1108, ../scss/_small.scss */
 .gform_body ul {
   list-style: none outside none;
   margin: 0;
 }
 
 /* line 1115, ../scss/_small.scss */
-#ninja_forms_form_3_all_fields_wrap .textarea-wrap textarea {
-  height: 120px;
+#ninja_forms_form_2_all_fields_wrap .textarea-wrap textarea {
+  height: 4.5rem;
 }
 
-/* line 1116, ../scss/_small.scss */
+/* line 1117, ../scss/_small.scss */
+#ninja_forms_form_3_all_fields_wrap .textarea-wrap textarea {
+  height: 7.5rem;
+}
+
+/* line 1119, ../scss/_small.scss */
 .ninja-forms-cont ~ hr {
   margin-bottom: 2.45rem;
 }

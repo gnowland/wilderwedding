@@ -158,8 +158,7 @@ LAYOUT & GRID STYLES
 	right: 0;
 	@include filter-gradient(#01182b, #123560, vertical);
 	@include background-image(linear-gradient(top,  rgb(1,24,43) 0%,rgb(2,38,68) 60%,rgb(18,53,96) 100%));
-	&:before {
-		content:'';
+	#stars {
 		background: url(../images/stars.svg) repeat top left;
 		background-size: 115px 115px; //150px 150px;
 		z-index: -1;
@@ -195,7 +194,7 @@ LAYOUT & GRID STYLES
 	#inner-content {
 		position: relative;
 		height: 100%;
-		background-color: transparent;
+		//background-color: transparent;
 		&:before {
 			content:'';
 			background: url(../images/facade1.svg) repeat-x bottom right;
@@ -1111,6 +1110,10 @@ PLUGIN STYLES
 	margin: 0;
 }
 
-//Just Playlist form
-#ninja_forms_form_3_all_fields_wrap .textarea-wrap textarea { height: 120px; }
+// Ninja Forms - Form Specific overrides
+// RSVP form
+#ninja_forms_form_2_all_fields_wrap .textarea-wrap textarea { height: 4.5rem; }
+// Playlist form
+#ninja_forms_form_3_all_fields_wrap .textarea-wrap textarea { height: 7.5rem; }
+
 .ninja-forms-cont ~ hr { margin-bottom: 2.45rem;  }
