@@ -111,14 +111,14 @@ LAYOUT & GRID STYLES
 .one-page {
 	// height: 100%;
 	min-height: 100%;
-	// #content {
+	// .content {
 	// 	height: 100%;
 	// }
-	#inner-content {
+	.inner-content {
 		height: 100%;
 		height: 100vh;
 		display: table;
-		#main {
+		.main {
 			display: table-cell;
 			vertical-align: middle;
 			float: none;
@@ -130,7 +130,7 @@ LAYOUT & GRID STYLES
 	position: relative;
 	&:not(.one-page) {
 		margin: 0 0 50px 0;
-		#main {
+		#main, .main {
 			position:relative;
 			//box-shadow:0 1px 4px rgba(0,0,0, 0.3), inset 0 0 40px rgba(0, 0, 0, 0.29);
 			//box-shadow: 0 0 16px -4px rgba(73, 73, 73, 0.6);
@@ -142,7 +142,7 @@ LAYOUT & GRID STYLES
 	}
 }
 
-#inner-content {
+#inner-content, .inner-content {
 		background-color: rgba(255, 255, 255, 0.26);
 		width: 70%;
 }
@@ -166,7 +166,7 @@ LAYOUT & GRID STYLES
 		width: 100%;
 		position: absolute;
 	}
-	#content {
+	.content {
 		height: 100%;
 		overflow: hidden;
 		&:before {
@@ -191,7 +191,7 @@ LAYOUT & GRID STYLES
 			left: 0;
 		}
 	}
-	#inner-content {
+	.inner-content {
 		position: relative;
 		height: 100%;
 		background-color: transparent; //?????
@@ -223,7 +223,7 @@ LAYOUT & GRID STYLES
 }
 
 #welcome {
-	#inner-content {
+	.inner-content {
 		background-color: transparent;
 		color: $snow;
 		h1 {
@@ -570,7 +570,7 @@ NAVIGATION STYLES
 POSTS & CONTENT STYLES
 *********************/
 
-#content {
+.content {
 
 }
 

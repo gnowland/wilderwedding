@@ -9877,13 +9877,13 @@ LAYOUT & GRID STYLES
   min-height: 100%;
 }
 /* line 117, ../scss/_small.scss */
-.one-page #inner-content {
+.one-page .inner-content {
   height: 100%;
   height: 100vh;
   display: table;
 }
 /* line 121, ../scss/_small.scss */
-.one-page #inner-content #main {
+.one-page .inner-content .main {
   display: table-cell;
   vertical-align: middle;
   float: none;
@@ -9898,7 +9898,7 @@ LAYOUT & GRID STYLES
   margin: 0 0 50px 0;
 }
 /* line 133, ../scss/_small.scss */
-#container > section:not(.one-page) #main {
+#container > section:not(.one-page) #main, #container > section:not(.one-page) .main {
   position: relative;
   margin: 10px;
   width: calc(100% - 20px);
@@ -9907,7 +9907,7 @@ LAYOUT & GRID STYLES
 }
 
 /* line 145, ../scss/_small.scss */
-#inner-content {
+#inner-content, .inner-content {
   background-color: rgba(255, 255, 255, 0.26);
   width: 70%;
 }
@@ -9940,12 +9940,12 @@ LAYOUT & GRID STYLES
   position: absolute;
 }
 /* line 169, ../scss/_small.scss */
-#background #content {
+#background .content {
   height: 100%;
   overflow: hidden;
 }
 /* line 172, ../scss/_small.scss */
-#background #content:before {
+#background .content:before {
   content: '';
   background: url(../images/themoon.svg) no-repeat top right;
   background-size: contain;
@@ -9957,7 +9957,7 @@ LAYOUT & GRID STYLES
   top: 0;
 }
 /* line 183, ../scss/_small.scss */
-#background #content:after {
+#background .content:after {
   content: '';
   background: url(../images/sidewalk-b.svg) repeat-x top center;
   background-size: 1057px 33px;
@@ -9968,13 +9968,13 @@ LAYOUT & GRID STYLES
   left: 0;
 }
 /* line 194, ../scss/_small.scss */
-#background #inner-content {
+#background .inner-content {
   position: relative;
   height: 100%;
   background-color: transparent;
 }
 /* line 198, ../scss/_small.scss */
-#background #inner-content:before {
+#background .inner-content:before {
   content: '';
   background: url(../images/facade1.svg) repeat-x bottom right;
   background-size: contain;
@@ -9987,7 +9987,7 @@ LAYOUT & GRID STYLES
   z-index: 1;
 }
 /* line 210, ../scss/_small.scss */
-#background #inner-content:after {
+#background .inner-content:after {
   content: '';
   background: url(../images/facade2.svg) repeat-x bottom left;
   background-size: contain;
@@ -10001,24 +10001,24 @@ LAYOUT & GRID STYLES
 }
 
 /* line 226, ../scss/_small.scss */
-#welcome #inner-content {
+#welcome .inner-content {
   background-color: transparent;
   color: #F9F9F9;
 }
 /* line 229, ../scss/_small.scss */
-#welcome #inner-content h1 {
+#welcome .inner-content h1 {
   color: inherit;
 }
 /* line 232, ../scss/_small.scss */
-#welcome #inner-content header {
+#welcome .inner-content header {
   margin-bottom: 1.25rem;
 }
 /* line 234, ../scss/_small.scss */
-#welcome #inner-content header h1 span {
+#welcome .inner-content header h1 span {
   margin: 0 10px;
 }
 /* line 237, ../scss/_small.scss */
-#welcome #inner-content header img {
+#welcome .inner-content header img {
   max-width: 300px;
   width: 100%;
   padding: 30px 20px;
@@ -10814,7 +10814,7 @@ MEDIUM
   POSTS & CONTENT STYLES
   *********************/
   /* line 39, ../scss/_medium.scss */
-  #inner-content {
+  #inner-content, .inner-content {
     width: 55%;
   }
 
@@ -11152,19 +11152,19 @@ Modernizr Fallbacks
   background: url(../images/stars.png) repeat top left;
 }
 /* line 11, ../scss/_plugins.scss */
-.no-svg #background #content:before {
+.no-svg #background .content:before {
   background: url(../images/themoon.png) no-repeat top right;
 }
 /* line 14, ../scss/_plugins.scss */
-.no-svg #background #content:after {
+.no-svg #background .content:after {
   background: url(../images/sidewalk-b.png) repeat-x top center;
 }
 /* line 19, ../scss/_plugins.scss */
-.no-svg #background #inner-content:before {
+.no-svg #background .inner-content:before {
   background: url(../images/facade1.png) repeat-x bottom right;
 }
 /* line 22, ../scss/_plugins.scss */
-.no-svg #background #inner-content:after {
+.no-svg #background .inner-content:after {
   background: url(../images/facade2.png) repeat-x bottom left;
 }
 

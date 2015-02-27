@@ -15,9 +15,9 @@
 
 			?>
 				<section id="<?php echo $post->post_name; ?>" class="one-page">
-					<div id="content">
-						<div id="inner-content" class="row">
-							<div id="main" class="large-12 medium-12 columns text-center" role="main">
+					<div class="content">
+						<div class="inner-content row">
+							<div class="main large-12 medium-12 columns text-center" role="main">
 								<article id="<?php the_ID(); ?>" role="article" itemprop="articleBody" >
 									<header class="article-header">
 										<?php
@@ -44,9 +44,9 @@
 
 			?>
 				<section id="<?php echo $post->post_name; ?>">
-					<div id="content">
-						<div id="inner-content" class="row">
-							<div id="main" class="large-12 medium-12 columns" role="main">
+					<div class="content">
+						<div class="inner-content row">
+							<div class="main large-12 medium-12 columns" role="main">
 								<article id="<?php the_ID(); ?>" role="article" itemprop="articleBody" >
 									<header class="article-header">
 										<?php
@@ -87,9 +87,9 @@
 
 			?>
 					<section id="<?php echo $post->post_name; ?>" >
-						<div id="content">
-							<div id="inner-content" class="row">
-								<div id="main" class="large-12 medium-12 columns" role="main">
+						<div class="content">
+							<div class="inner-content row">
+								<div class="main large-12 medium-12 columns" role="main">
 									<article id="<?php the_ID(); ?>" role="article" itemprop="articleBody" >
 										<header class="article-header">
 											<?php

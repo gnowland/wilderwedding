@@ -7,7 +7,7 @@ Modernizr Fallbacks
     &:after {
       background: url(../images/stars.png) repeat top left;
     }
-    #content {
+    .content {
       &:before {
         background: url(../images/themoon.png) no-repeat top right;
       }
@@ -15,7 +15,7 @@ Modernizr Fallbacks
         background: url(../images/sidewalk-b.png) repeat-x top center;
       }
     }
-    #inner-content {
+    .inner-content {
       &:before {
         background: url(../images/facade1.png) repeat-x bottom right;
       }
