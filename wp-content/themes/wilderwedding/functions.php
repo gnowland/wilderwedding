@@ -263,7 +263,7 @@ class My_Category_Walker extends Walker_Category {
         while ( $query2->have_posts() ){
           $query2->the_post();
 
-          $outpost .= '<section id="<?php the_ID(); ?>" role="section" itemprop="articleBody" class="clearfix">' . PHP_EOL;
+          $outpost .= '<section id="'. get_the_ID() .'" role="section" itemprop="articleBody" class="clearfix">' . PHP_EOL;
           $outpost .= '<header class="article-header">' . PHP_EOL;
             if ( has_post_thumbnail() ) {
           $outpost .= '<div class="post-image-banner">' . PHP_EOL;
