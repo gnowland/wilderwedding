@@ -233,7 +233,7 @@ class My_Category_Walker extends Walker_Category {
           $this->skip = 1;
       } else {
 //        $output .= "<li class='" . $class . $level_class . "'>" . PHP_EOL;
-        $output .= "<section class='" . $class . $level_class . "'>" . PHP_EOL;
+        //$output .= "<section class='" . $class . $level_class . "'>" . PHP_EOL;
         $output .= sprintf($parent_title_format, $cat_name) . PHP_EOL;
       }
     } else {
@@ -263,7 +263,7 @@ class My_Category_Walker extends Walker_Category {
         while ( $query2->have_posts() ){
           $query2->the_post();
 
-          $outpost .= '<section id="'. get_the_ID() .'" role="article" itemprop="articleBody" class="clearfix">' . PHP_EOL;
+          $outpost .= '<div id="'. get_the_ID() .'" itemprop="articleBody" class="clearfix">' . PHP_EOL;
           $outpost .= '<header class="article-header">' . PHP_EOL;
             if ( has_post_thumbnail() ) {
           $outpost .= '<div class="post-image-banner">' . PHP_EOL;
@@ -276,10 +276,10 @@ class My_Category_Walker extends Walker_Category {
           $outpost .= '<h4 class="category-title">' . $cat_name . '</h4>' . PHP_EOL;
             }
           $outpost .= '</header> <!-- end section header -->' . PHP_EOL;
-          $outpost .= '<section class="entry-content" itemprop="articleBody">' . PHP_EOL;
+          $outpost .= '<div class="entry-content" itemprop="articleBody">' . PHP_EOL;
           $outpost .= get_the_content() . PHP_EOL;
-          $outpost .= '</section> <!-- end article section -->' . PHP_EOL;
-          $outpost .= '</section><!-- end article section -->' . PHP_EOL;
+          $outpost .= '</div> <!-- end entry-content -->' . PHP_EOL;
+          $outpost .= '</div><!-- end articleBody -->' . PHP_EOL;
 
         } //end of the loop/endwhile
 
@@ -292,7 +292,6 @@ class My_Category_Walker extends Walker_Category {
       //$output .= ' class="' . $class . '"';
       //$output .= '>';
       $output .= $outpost;
-      $output .= "</section><hr>" . PHP_EOL;
     }
   }
 
@@ -302,7 +301,6 @@ class My_Category_Walker extends Walker_Category {
       $this->skip = 0;
       return;
     }
-
 //    $output .= "</li>" . PHP_EOL;
   }
 
@@ -314,8 +312,8 @@ function custom_list_categories( $args = '' ) {
     'show_option_none' => '',
     'echo' => 1,
     'depth' => 2,
-    'wrap_class' => '',
-    'level_class' => '',
+    'wrap_class' => 'wrap-section',
+    'level_class' => 'level-section',
     'parent_title_format' => '%s',
   );
   $r = wp_parse_args( $args, $defaults );
