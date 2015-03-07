@@ -8,7 +8,7 @@ Template Name: Custom Page Example
 			
 			<div id="content">
 			
-				<div id="inner-content" class="row">
+				<div class="inner-content wrapwidth row">
 			
 				    <div id="main" class="large-8 medium-8 columns first" role="main">
 					

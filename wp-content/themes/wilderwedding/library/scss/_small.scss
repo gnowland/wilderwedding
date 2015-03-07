@@ -18,6 +18,16 @@ GLOBAL STYLES
 .together {
 	white-space:nowrap;
 }
+.table {
+	display: table;
+	table-layout: fixed;
+}
+.table-row {
+	display: table-row;
+}
+.table-cell {
+	display: table-cell;
+}
 
 /*********************
 GENERAL STYLES
@@ -144,14 +154,17 @@ LAYOUT & GRID STYLES
 
 #inner-content, .inner-content {
 		background-color: rgba(255, 255, 255, 0.26);
-		width: 70%;
+}
+
+.wrapwidth {
+	width: 70%;
 }
 
 
-#background {
+#background-gradient {
 	position: fixed;
 	overflow-y: scroll;
-	z-index: -2;
+	z-index: -10;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -161,63 +174,67 @@ LAYOUT & GRID STYLES
 	#stars {
 		background: url(../images/stars.svg) repeat top left;
 		background-size: 115px 115px; //150px 150px;
-		z-index: -1;
+		z-index: -9;
 		height: 100%;
 		width: 100%;
 		position: absolute;
 	}
-	.content {
-		height: 100%;
-		overflow: hidden;
-		&:before {
-			content: '';
-			background: url(../images/themoon.svg) no-repeat top right;
-			background-size: contain;
-			width: 25%; // 40%;
-			max-height: 40%;
-			height: 215px;
-			position: absolute;
-			right: 11px;
-			top: 0;
-		}
-		&:after {
-			content:'';
-			background: url(../images/sidewalk-b.svg) repeat-x top center;
-			background-size: 1057px 33px;
-			height: 33px;
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
+	#moon {
+		background: url(../images/themoon.svg) no-repeat top right;
+		background-size: contain;
+		width: 25%;
+		max-height: 40%;
+		height: 215px;
+		position: absolute;
+		right: 11px;
+		top: 0;
+		z-index: -8;
 	}
-	.inner-content {
+	#sidewalk {
+		background: url(../images/sidewalk-b.svg) repeat-x top center;
+		background-size: 1057px 33px;
+		height: 33px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -8;
+	}
+	#buildings {
 		position: relative;
 		height: 100%;
-		background-color: transparent; //?????
-		&:before {
-			content:'';
+		width: 100%;
+		overflow: hidden;
+		z-index: -7;
+		.table-row {
+			width: 100%;
+			height: 100%;
+		}
+		.table-cell {
+			overflow: hidden;
+			position: relative;
+		}
+	 	#buildings-left {
 			background: url(../images/facade1.svg) repeat-x bottom right;
 			background-size: contain;
-			width: 300%;
+			width: 999px;
 			height: 425px;
 			max-height: 90%;
 			position: absolute;
-			right: 100%;
+			right: 0;
 			bottom: 23px;
-			z-index: 1;
+			z-index: -6;
 		}
-		&:after {
-			content:'';
+		#buildings-right {
 			background: url(../images/facade2.svg) repeat-x bottom left;
 			background-size: contain;
-			width: 300%;
+			width: 999px;
 			height: 447px;
 			max-height: 90%;
 			position: absolute;
-			left: 100%;
+			left: 0;
 			bottom: 21px;
-			z-index: 1;
+			z-index: -6;
 		}
 	}
 }
@@ -1104,7 +1121,7 @@ footer {
 	} /* end .footer-links */
 
 
-	.copyright { }
+	.copyright { color: $gold; }
 
 /*********************
 FOUNDATION STYLES

@@ -3,26 +3,20 @@ Modernizr Fallbacks
 ********************/
 
 .no-svg {
-  #background{
-    &:after {
-      background: url(../images/stars.png) repeat top left;
+  #stars {
+    background: url(../images/stars.png) repeat top left;
+  }
+  #moon {
+    background: url(../images/themoon.png) no-repeat top right;
     }
-    .content {
-      &:before {
-        background: url(../images/themoon.png) no-repeat top right;
-      }
-      &:after {
-        background: url(../images/sidewalk-b.png) repeat-x top center;
-      }
-    }
-    .inner-content {
-      &:before {
-        background: url(../images/facade1.png) repeat-x bottom right;
-      }
-      &:after {
-        background: url(../images/facade2.png) repeat-x bottom left;
-      }
-    }
+  #sidewalk {
+    background: url(../images/sidewalk-b.png) repeat-x top center;
+  }
+  #buildings-left {
+    background: url(../images/facade1.png) repeat-x bottom right;
+  }
+  #buildings-right {
+    background: url(../images/facade2.png) repeat-x bottom left;
   }
 }
 

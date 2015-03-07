@@ -2,7 +2,7 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="row">
+				<div class="inner-content wrapwidth row">
 
 					<div id="main" class="<?php if (is_active_sidebar( 'sidebar1' )) { echo 'large-8 medium-8'; } else { echo 'large-12 medium-12'; } ?> columns first" role="main">
 						<h1 class="archive-title"><span><?php _e('Search Results for:', 'jointstheme'); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>

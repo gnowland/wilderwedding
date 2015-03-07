@@ -8,7 +8,7 @@ Template Name: Full Width (No Sidebar)
 			
 			<div id="content">
 			
-				<div id="inner-content" class="row">
+				<div class="inner-content wrapwidth row">
 			
 				    <div id="main" class="large-12 medium-12 columns" role="main">
 					

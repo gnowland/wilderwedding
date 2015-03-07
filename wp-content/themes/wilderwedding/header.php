@@ -62,22 +62,25 @@
 						if(is_front_page()) {
 
 					?>
-					<?php get_template_part( 'partials/nav', 'main-topbar-home' ); ?>
+					<?php get_template_part( 'partials/nav', 'main-topbar-home' );
 
-					<div id="background">
+					// Body Background Layers:
+					?>
+					<div id="background-gradient">
 						<div id="stars"></div>
-						<script type='text/javascript'>
-						  document.getElementById("stars").style.zIndex = "0";
-						</script>
-						<div id="content">
-							<div id="inner-content" class="row"></div>
-							<script type='text/javascript'>
-							  document.getElementById("inner-content").style.zIndex = "0";
-							</script>
+						<div id="moon"></div>
+						<div id="sidewalk"></div>
+						<div id="buildings" class="table">
+							<div class="table-row">
+								<div class="table-cell">
+									<div id="buildings-left"></div>
+								</div>
+								<div class="table-cell wrapwidth"></div>
+								<div class="table-cell">
+									<div id="buildings-right"></div>
+								</div>
+							</div>
 						</div>
-						<script type='text/javascript'>
-						  document.getElementById("content").style.zIndex = "0";
-						</script>
 					</div>
 					<?php
 
