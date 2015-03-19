@@ -73,11 +73,15 @@
 						<div id="buildings" class="table">
 							<div class="table-row">
 								<div class="table-cell">
-									<div id="buildings-left"></div>
+									<div class="relative-wrap">
+										<div id="buildings-left"></div>
+									</div>
 								</div>
 								<div class="table-cell wrapwidth"></div>
 								<div class="table-cell">
-									<div id="buildings-right"></div>
+									<div class="relative-wrap">
+										<div id="buildings-right"></div>
+									</div>
 								</div>
 							</div>
 						</div>
