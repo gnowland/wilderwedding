@@ -69,7 +69,9 @@
 					<div id="background-gradient">
 						<div id="stars"></div>
 						<div id="moon"></div>
-						<div id="sidewalk"></div>
+						<div id="sidewalk">
+							<div id="lamp"></div>
+						</div>
 						<div id="buildings" class="table">
 							<div class="table-row">
 								<div class="table-cell">
@@ -77,7 +79,9 @@
 										<div id="buildings-left"></div>
 									</div>
 								</div>
-								<div class="table-cell wrapwidth"></div>
+								<div class="table-cell wrapwidth">
+									<div id="lamp"></div>
+								</div>
 								<div class="table-cell">
 									<div class="relative-wrap">
 										<div id="buildings-right"></div>
