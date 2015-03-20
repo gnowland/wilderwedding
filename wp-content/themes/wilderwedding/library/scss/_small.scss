@@ -51,8 +51,7 @@ html, body {
 	height: 100%;
 }
 
-.off-canvas-wrap{
-	height: 100%;
+.off-canvas-wrap > .inner-wrap {
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 }
