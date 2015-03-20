@@ -9970,7 +9970,7 @@ LAYOUT & GRID STYLES
 #background-gradient #moon {
   background: url(../images/themoon.svg) no-repeat top right;
   background-size: contain;
-  width: 35%;
+  width: 30%;
   max-height: 40%;
   height: 215px;
   position: absolute;
