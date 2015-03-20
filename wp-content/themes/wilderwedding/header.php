@@ -53,8 +53,8 @@
 	</head>
 
 	<body <?php body_class(); ?>> <!-- Closes in footer.php -->
-		<div class="off-canvas-wrap" id="scroll-container" data-offcanvas> <!-- Closes in footer.php -->
-			<div class="inner-wrap">
+		<div class="off-canvas-wrap" data-offcanvas> <!-- Closes in footer.php -->
+			<div class="inner-wrap" id="scroll-container"> <!-- #scroll-container used in smoothscroll -->
 				<div id="container"> <!-- Closes in footer.php -->
 
 					<?php

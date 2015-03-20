@@ -67,8 +67,9 @@ jQuery(document).ready(function($) {
 			target = target.length ? target : $('[id=' + this.hash.slice(1) +']');
 			if (target.length) {
 				//var offset = (target.outerHeight(true) - target.outerHeight())/2; <- (not needed with new history.pushState)
+				var offsetContainer = $('#scroll-container').scrollTop();
 				$('#scroll-container').animate({ //html,body
-				scrollTop: target.position().top //+ ((target.outerHeight(true) - target.outerHeight())/2) //+ offset //offset().top
+				scrollTop: target.position().top + offsetContainer //+ ((target.outerHeight(true) - target.outerHeight())/2) //+ offset //offset().top
 				}, 800, 'swing', function () {
 					// window.location.hash = target.selector; <- caused jumping, replaced with the below:
 					if(history.pushState) {

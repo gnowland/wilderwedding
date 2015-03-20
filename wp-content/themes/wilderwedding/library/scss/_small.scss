@@ -49,9 +49,10 @@ html, body {
 	position:relative;
 	overflow: hidden;
 	height: 100%;
+	z-index: -20;
 }
 
-.off-canvas-wrap > .inner-wrap {
+#scroll-container {
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 }
