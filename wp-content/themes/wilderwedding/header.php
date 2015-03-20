@@ -80,7 +80,8 @@
 									</div>
 								</div>
 								<div class="table-cell wrapwidth">
-									<div id="lamp"></div>
+									<div id="lamp1"></div>
+									<!--div id="lamp2"></div-->
 								</div>
 								<div class="table-cell">
 									<div class="relative-wrap">
