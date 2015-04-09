@@ -1,0 +1,30 @@
+{
+  "name": "jGravity",
+  "main": "jGravity.js",
+  "homepage": "http://tinybigideas.com/plugins/jquery-gravity/#",
+  "authors": [
+    "craig@tinybigideas.com"
+  ],
+  "description": "Make your website come alive by adding a lil' jGravity.",
+  "keywords": [
+    "jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "32bb20a2b7",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "32bb20a2b7a16de7c53665ff2f2cf023509101d4"
+  },
+  "_source": "git://github.com/shedali/jGravity.git",
+  "_target": "*",
+  "_originalSource": "jgravity",
+  "_direct": true
+}
