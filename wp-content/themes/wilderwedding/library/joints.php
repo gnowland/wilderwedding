@@ -133,6 +133,9 @@ function joints_scripts_and_styles() {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
+		// jGravity
+		wp_enqueue_script( 'jgravity', get_template_directory_uri() . '/bower_components/jgravity/jGravity-min.js', array('jquery' ), '0.8', false );
+
 		//adding scripts file in the footer
 		wp_enqueue_script( 'joints-js', get_template_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), $theme_version, true );
 
