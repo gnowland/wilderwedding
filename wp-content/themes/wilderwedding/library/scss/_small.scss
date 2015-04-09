@@ -28,7 +28,13 @@ GLOBAL STYLES
 .table-cell {
 	display: table-cell;
 }
-
+.small {
+	font-size: 0.79em;
+	font-style: italic;
+}
+.ninja-forms-field.outline {
+	display: block;
+}
 /*********************
 GENERAL STYLES
 *********************/
@@ -660,7 +666,21 @@ section:not(#welcome) article .article-header > img {
 		z-index: 1;
 	}
 }
-
+ // Hotel choices: 
+#ninja_forms_field_25_label {
+	margin-bottom: 0;
+}
+.ninja-forms-field-description p {
+	margin-bottom: 5px;
+}
+#ninja_forms_field_25_options_span, #ninja_forms_field_11_options_span {
+	li {
+		width: 100%;
+	}
+}
+.ninja-forms-field-25-options, .ninja-forms-field-25-options input {
+	margin-bottom: 0!important;
+}
 
 /* want to style individual post classes? Booya! */
 .post-id {}         /* post by id (i.e. post-3) */
