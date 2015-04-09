@@ -24,11 +24,11 @@ jQuery(document).ready(function($) {
  * Add all your scripts here
  */
 
-// Animate Stars
-$('#scroll-container').scroll(function() {
-    var y = $('#scroll-container').scrollTop();
-    $("#stars").css('background-position', '0px ' + parseInt(-y / 40) + 'px');
-});
+	// Animate Stars
+	$('#scroll-container').scroll(function() {
+	    var y = $('#scroll-container').scrollTop();
+	    $("#stars").css('background-position', '0px ' + parseInt(-y / 40) + 'px');
+	});
 
 
 // //Modernizr Test for SVG, fallback
