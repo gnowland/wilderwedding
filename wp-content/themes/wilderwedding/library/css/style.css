@@ -10848,26 +10848,41 @@ FOUNDATION STYLES
   background: none;
 }
 
+/* line 1182, ../scss/_small.scss */
+.accordion dd h3 {
+  margin-bottom: 0;
+}
+
+/* line 1183, ../scss/_small.scss */
+.accordion dd br {
+  display: none;
+}
+
+/* line 1184, ../scss/_small.scss */
+.accordion dd a {
+  padding: 7px 15px;
+}
+
 /*********************
 PLUGIN STYLES
 *********************/
-/* line 1186, ../scss/_small.scss */
+/* line 1190, ../scss/_small.scss */
 .gform_body ul {
   list-style: none outside none;
   margin: 0;
 }
 
-/* line 1193, ../scss/_small.scss */
+/* line 1197, ../scss/_small.scss */
 #ninja_forms_form_2_all_fields_wrap .textarea-wrap textarea {
   height: 4.5rem;
 }
 
-/* line 1195, ../scss/_small.scss */
+/* line 1199, ../scss/_small.scss */
 #ninja_forms_form_3_all_fields_wrap .textarea-wrap textarea {
   height: 7.5rem;
 }
 
-/* line 1197, ../scss/_small.scss */
+/* line 1201, ../scss/_small.scss */
 .ninja-forms-cont ~ hr {
   margin-bottom: 2.45rem;
 }
