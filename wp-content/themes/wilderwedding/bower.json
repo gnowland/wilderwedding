@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "foundation": "~5.5.0",
+    "magnific-popup": "~1.0.0"
   },
   "resolutions": {
     "foundation": "~5.5.0"
