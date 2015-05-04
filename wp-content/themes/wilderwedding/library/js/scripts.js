@@ -69,7 +69,7 @@ jQuery(document).ready(function($) {
 	 * additional functionality from http://wibblystuff.blogspot.com/2014/04/in-page-smooth-scroll-using-css3.html
 	 *
 	 */
-	$('a[href*=#]:not([href=#])').not('.panel-link').click(function() {
+	$('a[href*=#]:not([href=#])').not('.open-popup-link').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[id=' + this.hash.slice(1) +']');
@@ -91,11 +91,15 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-	$('#doAccordion').on('toggled', function (event, accordion) {
-	  var containerPos = $(accordion).scrollTop();
-	  var offsetContainer = $('#scroll-container').scrollTop();
-	  var scrollPos = offsetContainer + containerPos;
-	  $('#scroll-container').animate({ scrollTop: scrollPos }, 800, 'swing' );
+	/*
+	 *
+	 * Magnific Popup
+	 *
+	 */
+
+	$('.open-popup-link').magnificPopup({
+	  type:'inline',
+	  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 	});
 
 	/*

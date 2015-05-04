@@ -1192,6 +1192,20 @@ PLUGIN STYLES
 	margin: 0;
 }
 
+// Magnific Popup
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 740px;
+  margin: 20px auto;
+}
+.mfp-content {
+	overflow-y: scroll;
+	height: 100%;
+}
+
 // Ninja Forms - Form Specific overrides
 // RSVP form
 #ninja_forms_form_2_all_fields_wrap .textarea-wrap textarea { height: 4.5rem; }

@@ -122,6 +122,12 @@ function joints_scripts_and_styles() {
 		// adding Foundation scripts file in the footer
 		wp_enqueue_script( 'foundation-js', get_template_directory_uri() . '/bower_components/foundation/js/foundation.min.js', array( 'jquery' ), $theme_version, true );
 
+		// adding Magnific Popup JS
+		wp_enqueue_script( 'magnific-js', get_template_directory_uri() . '/bower_components/magnific-popup/dist/jquery.magnific-popup.min.js', array( 'jquery' ), $theme_version, true );
+
+		// adding Magnific Popup CSS
+		wp_enqueue_style( 'magnific-css', get_template_directory_uri() . '/bower_components/magnific-popup/dist/magnific-popup.css', array(), $theme_version, 'all' );
+
 		// register main stylesheet
 		wp_enqueue_style( 'joints-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), $theme_version, 'all' );
 

@@ -10872,17 +10872,33 @@ PLUGIN STYLES
   margin: 0;
 }
 
-/* line 1197, ../scss/_small.scss */
+/* line 1196, ../scss/_small.scss */
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 740px;
+  margin: 20px auto;
+}
+
+/* line 1204, ../scss/_small.scss */
+.mfp-content {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+/* line 1211, ../scss/_small.scss */
 #ninja_forms_form_2_all_fields_wrap .textarea-wrap textarea {
   height: 4.5rem;
 }
 
-/* line 1199, ../scss/_small.scss */
+/* line 1213, ../scss/_small.scss */
 #ninja_forms_form_3_all_fields_wrap .textarea-wrap textarea {
   height: 7.5rem;
 }
 
-/* line 1201, ../scss/_small.scss */
+/* line 1215, ../scss/_small.scss */
 .ninja-forms-cont ~ hr {
   margin-bottom: 2.45rem;
 }
